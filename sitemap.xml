@@ -2,33 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/</loc>
+    <loc>https://hai-nguyen-21.github.io/</loc>
     <lastmod>2021-09-06T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/java/</loc>
+    <loc>https://hai-nguyen-21.github.io/tags/java/</loc>
     <lastmod>2021-09-06T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/oop/</loc>
+    <loc>https://hai-nguyen-21.github.io/tags/oop/</loc>
     <lastmod>2021-09-06T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>http://example.org/series/oop-nh%E1%BB%AFng-%C4%91i%E1%BB%81u-ch%C6%B0a-k%E1%BB%83/</loc>
+    <loc>https://hai-nguyen-21.github.io/series/oop-nh%E1%BB%AFng-%C4%91i%E1%BB%81u-ch%C6%B0a-k%E1%BB%83/</loc>
     <lastmod>2021-09-06T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>http://example.org/posts/oop1/</loc>
+    <loc>https://hai-nguyen-21.github.io/posts/oop1/</loc>
     <lastmod>2021-09-06T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>http://example.org/posts/</loc>
+    <loc>https://hai-nguyen-21.github.io/posts/</loc>
     <lastmod>2021-09-06T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>http://example.org/series/</loc>
+    <loc>https://hai-nguyen-21.github.io/series/</loc>
     <lastmod>2021-09-06T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://hai-nguyen-21.github.io/tags/</loc>
     <lastmod>2021-09-06T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>http://example.org/contact/</loc>
+    <loc>https://hai-nguyen-21.github.io/contact/</loc>
     <lastmod>2019-12-17T23:58:33+09:00</lastmod>
   </url><url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://hai-nguyen-21.github.io/categories/</loc>
   </url>
 </urlset>

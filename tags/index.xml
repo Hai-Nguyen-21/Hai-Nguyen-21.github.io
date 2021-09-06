@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Tags on Hải Nguyễn Blog</title>
-    <link>http://example.org/tags/</link>
+    <link>https://hai-nguyen-21.github.io/tags/</link>
     <description>Recent content in Tags on Hải Nguyễn Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
@@ -16,17 +16,17 @@
     <copyright>©2021, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 06 Sep 2021 12:00:06 +0900</lastBuildDate>
     
-        <atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://hai-nguyen-21.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>java</title>
-        <link>http://example.org/tags/java/</link>
+        <link>https://hai-nguyen-21.github.io/tags/java/</link>
         <pubDate>Mon, 06 Sep 2021 12:00:06 +0900</pubDate>
         <author>hainlph17388@gmail.com (Nguyễn Lê Hải)</author>
         
-        <guid>http://example.org/tags/java/</guid>
+        <guid>https://hai-nguyen-21.github.io/tags/java/</guid>
         <description></description>
         
         <dc:creator>Nguyễn Lê Hải</dc:creator>
@@ -40,11 +40,11 @@
       
       <item>
         <title>oop</title>
-        <link>http://example.org/tags/oop/</link>
+        <link>https://hai-nguyen-21.github.io/tags/oop/</link>
         <pubDate>Mon, 06 Sep 2021 12:00:06 +0900</pubDate>
         <author>hainlph17388@gmail.com (Nguyễn Lê Hải)</author>
         
-        <guid>http://example.org/tags/oop/</guid>
+        <guid>https://hai-nguyen-21.github.io/tags/oop/</guid>
         <description></description>
         
         <dc:creator>Nguyễn Lê Hải</dc:creator>

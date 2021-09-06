@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Series on Hải Nguyễn Blog</title>
-    <link>http://example.org/series/</link>
+    <link>https://hai-nguyen-21.github.io/series/</link>
     <description>Recent content in Series on Hải Nguyễn Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
@@ -16,17 +16,17 @@
     <copyright>©2021, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 06 Sep 2021 12:00:06 +0900</lastBuildDate>
     
-        <atom:link href="http://example.org/series/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://hai-nguyen-21.github.io/series/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>OOP - Những điều chưa kể</title>
-        <link>http://example.org/series/oop-nh%E1%BB%AFng-%C4%91i%E1%BB%81u-ch%C6%B0a-k%E1%BB%83/</link>
+        <link>https://hai-nguyen-21.github.io/series/oop-nh%E1%BB%AFng-%C4%91i%E1%BB%81u-ch%C6%B0a-k%E1%BB%83/</link>
         <pubDate>Mon, 06 Sep 2021 12:00:06 +0900</pubDate>
         <author>hainlph17388@gmail.com (Nguyễn Lê Hải)</author>
         
-        <guid>http://example.org/series/oop-nh%E1%BB%AFng-%C4%91i%E1%BB%81u-ch%C6%B0a-k%E1%BB%83/</guid>
+        <guid>https://hai-nguyen-21.github.io/series/oop-nh%E1%BB%AFng-%C4%91i%E1%BB%81u-ch%C6%B0a-k%E1%BB%83/</guid>
         <description></description>
         
         <dc:creator>Nguyễn Lê Hải</dc:creator>
