@@ -11,13 +11,50 @@
     <description>Recent content in Tags on Hải Nguyễn Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
-    <managingEditor>hainl@gmail.com (Nguyễn Lê Hải)</managingEditor>
-    <webMaster>hainl@gmail.com (Nguyễn Lê Hải)</webMaster>
+    <managingEditor>hainlph17388@gmail.com (Nguyễn Lê Hải)</managingEditor>
+    <webMaster>hainlph17388@gmail.com (Nguyễn Lê Hải)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
+    <lastBuildDate>Mon, 06 Sep 2021 12:00:06 +0900</lastBuildDate>
     
         <atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>java</title>
+        <link>http://example.org/tags/java/</link>
+        <pubDate>Mon, 06 Sep 2021 12:00:06 +0900</pubDate>
+        <author>hainlph17388@gmail.com (Nguyễn Lê Hải)</author>
+        
+        <guid>http://example.org/tags/java/</guid>
+        <description></description>
+        
+        <dc:creator>Nguyễn Lê Hải</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>oop</title>
+        <link>http://example.org/tags/oop/</link>
+        <pubDate>Mon, 06 Sep 2021 12:00:06 +0900</pubDate>
+        <author>hainlph17388@gmail.com (Nguyễn Lê Hải)</author>
+        
+        <guid>http://example.org/tags/oop/</guid>
+        <description></description>
+        
+        <dc:creator>Nguyễn Lê Hải</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
 
     

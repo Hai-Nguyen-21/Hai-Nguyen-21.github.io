@@ -6,9 +6,9 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Posts on Hải Nguyễn Blog</title>
-    <link>http://example.org/posts/</link>
-    <description>Recent content in Posts on Hải Nguyễn Blog</description>
+    <title>OOP - Những điều chưa kể on Hải Nguyễn Blog</title>
+    <link>http://example.org/series/oop-nh%E1%BB%AFng-%C4%91i%E1%BB%81u-ch%C6%B0a-k%E1%BB%83/</link>
+    <description>Recent content in OOP - Những điều chưa kể on Hải Nguyễn Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
     <managingEditor>hainlph17388@gmail.com (Nguyễn Lê Hải)</managingEditor>
@@ -16,7 +16,7 @@
     <copyright>©2021, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 06 Sep 2021 12:00:06 +0900</lastBuildDate>
     
-        <atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://example.org/series/oop-nh%E1%BB%AFng-%C4%91i%E1%BB%81u-ch%C6%B0a-k%E1%BB%83/index.xml" rel="self" type="application/rss+xml" />
     
 
       
