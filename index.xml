@@ -42,11 +42,46 @@
 
       
       <item>
-        <title>OOP - Những điều chưa kể (Phần 1)</title>
-        <link>https://hai-nguyen-21.github.io/posts/oop1/</link>
+        <title>OOP - Những điều chưa kể (Phần 2)</title>
+        <link>https://hai-nguyen-21.github.io/posts/oop2/</link>
         <pubDate>Mon, 06 Sep 2021 12:00:06 +0900</pubDate>
         <author>hainlph17388@gmail.com (Nguyễn Lê Hải)</author>
         <atom:modified>Mon, 06 Sep 2021 12:00:06 +0900</atom:modified>
+        <guid>https://hai-nguyen-21.github.io/posts/oop2/</guid>
+        <description>Tiếp nối bài viết trước, chúng ta dừng lại ở tính chất thứ nhất, hôm nay tôi sẽ giới thiệu tiếp cho các bạn 3 tính chất còn lại của lập trình hướng đối tượng nhé.
+Tâm pháp tầng thứ hai : Encapsulation  Nghe đến đây chắc hẳn các bạn cũng đã mường tượng ra tính chất này nói về cái gì rồi đúng không? Và nội dung của tính chất này được hiểu như sau:</description>
+        
+        <dc:creator>Hải Nguyễn</dc:creator>
+        <media:content url="https://hai-nguyen-21.github.io//static/image/content/OOP/anhbiabaiviet.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>oop</category>
+            
+          
+            
+              <category>java</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>OOP - Những điều chưa kể</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>OOP - Những điều chưa kể (Phần 1)</title>
+        <link>https://hai-nguyen-21.github.io/posts/oop1/</link>
+        <pubDate>Sun, 05 Sep 2021 12:00:06 +0900</pubDate>
+        <author>hainlph17388@gmail.com (Nguyễn Lê Hải)</author>
+        <atom:modified>Sun, 05 Sep 2021 12:00:06 +0900</atom:modified>
         <guid>https://hai-nguyen-21.github.io/posts/oop1/</guid>
         <description>[NHỮNG ĐIỀU CƠ BẢN VỀ OOP MÀ BẠN CHƯA BIẾT]
 Nếu như những ai học lập trình thì không còn quá xa lạ với chủ đề này nhưng để hiểu nó thì không phải ai cũng có thể hiểu được luôn. Chính vì vậy hôm nay mình sẽ giới thiệu lại cho mọi người để có cái nhìn tổng quan và sâu sắc hơn về OOP.
