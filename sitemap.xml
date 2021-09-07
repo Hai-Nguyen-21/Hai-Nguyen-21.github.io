@@ -3,10 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://hai-nguyen-21.github.io/</loc>
-    <lastmod>2021-09-06T12:00:06+09:00</lastmod>
+    <lastmod>2021-09-07T12:00:06+09:00</lastmod>
   </url><url>
     <loc>https://hai-nguyen-21.github.io/tags/java/</loc>
-    <lastmod>2021-09-06T12:00:06+09:00</lastmod>
+    <lastmod>2021-09-07T12:00:06+09:00</lastmod>
+  </url><url>
+    <loc>https://hai-nguyen-21.github.io/series/java-8/</loc>
+    <lastmod>2021-09-07T12:00:06+09:00</lastmod>
+  </url><url>
+    <loc>https://hai-nguyen-21.github.io/posts/lambda-expression/</loc>
+    <lastmod>2021-09-07T12:00:06+09:00</lastmod>
+  </url><url>
+    <loc>https://hai-nguyen-21.github.io/posts/</loc>
+    <lastmod>2021-09-07T12:00:06+09:00</lastmod>
+  </url><url>
+    <loc>https://hai-nguyen-21.github.io/series/</loc>
+    <lastmod>2021-09-07T12:00:06+09:00</lastmod>
+  </url><url>
+    <loc>https://hai-nguyen-21.github.io/tags/</loc>
+    <lastmod>2021-09-07T12:00:06+09:00</lastmod>
   </url><url>
     <loc>https://hai-nguyen-21.github.io/tags/oop/</loc>
     <lastmod>2021-09-06T12:00:06+09:00</lastmod>
@@ -16,21 +31,6 @@
   </url><url>
     <loc>https://hai-nguyen-21.github.io/posts/oop2/</loc>
     <lastmod>2021-09-06T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://hai-nguyen-21.github.io/posts/</loc>
-    <lastmod>2021-09-06T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://hai-nguyen-21.github.io/series/</loc>
-    <lastmod>2021-09-06T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://hai-nguyen-21.github.io/tags/</loc>
-    <lastmod>2021-09-06T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://hai-nguyen-21.github.io/series/java-8/</loc>
-    <lastmod>2021-09-05T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://hai-nguyen-21.github.io/posts/lambda-expression/</loc>
-    <lastmod>2021-09-05T12:00:06+09:00</lastmod>
   </url><url>
     <loc>https://hai-nguyen-21.github.io/posts/oop1/</loc>
     <lastmod>2021-09-05T12:00:06+09:00</lastmod>

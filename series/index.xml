@@ -14,19 +14,19 @@
     <managingEditor>hainlph17388@gmail.com (Nguyễn Lê Hải)</managingEditor>
     <webMaster>hainlph17388@gmail.com (Nguyễn Lê Hải)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 06 Sep 2021 12:00:06 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 07 Sep 2021 12:00:06 +0900</lastBuildDate>
     
         <atom:link href="https://hai-nguyen-21.github.io/series/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
-        <title>OOP - Những điều chưa kể</title>
-        <link>https://hai-nguyen-21.github.io/series/oop-nh%E1%BB%AFng-%C4%91i%E1%BB%81u-ch%C6%B0a-k%E1%BB%83/</link>
-        <pubDate>Mon, 06 Sep 2021 12:00:06 +0900</pubDate>
+        <title>Java 8</title>
+        <link>https://hai-nguyen-21.github.io/series/java-8/</link>
+        <pubDate>Tue, 07 Sep 2021 12:00:06 +0900</pubDate>
         <author>hainlph17388@gmail.com (Nguyễn Lê Hải)</author>
         
-        <guid>https://hai-nguyen-21.github.io/series/oop-nh%E1%BB%AFng-%C4%91i%E1%BB%81u-ch%C6%B0a-k%E1%BB%83/</guid>
+        <guid>https://hai-nguyen-21.github.io/series/java-8/</guid>
         <description></description>
         
         <dc:creator>Nguyễn Lê Hải</dc:creator>
@@ -39,12 +39,12 @@
       </item>
       
       <item>
-        <title>Java 8</title>
-        <link>https://hai-nguyen-21.github.io/series/java-8/</link>
-        <pubDate>Sun, 05 Sep 2021 12:00:06 +0900</pubDate>
+        <title>OOP - Những điều chưa kể</title>
+        <link>https://hai-nguyen-21.github.io/series/oop-nh%E1%BB%AFng-%C4%91i%E1%BB%81u-ch%C6%B0a-k%E1%BB%83/</link>
+        <pubDate>Mon, 06 Sep 2021 12:00:06 +0900</pubDate>
         <author>hainlph17388@gmail.com (Nguyễn Lê Hải)</author>
         
-        <guid>https://hai-nguyen-21.github.io/series/java-8/</guid>
+        <guid>https://hai-nguyen-21.github.io/series/oop-nh%E1%BB%AFng-%C4%91i%E1%BB%81u-ch%C6%B0a-k%E1%BB%83/</guid>
         <description></description>
         
         <dc:creator>Nguyễn Lê Hải</dc:creator>

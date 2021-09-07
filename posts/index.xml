@@ -14,11 +14,45 @@
     <managingEditor>hainlph17388@gmail.com (Nguyễn Lê Hải)</managingEditor>
     <webMaster>hainlph17388@gmail.com (Nguyễn Lê Hải)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 06 Sep 2021 12:00:06 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 07 Sep 2021 12:00:06 +0900</lastBuildDate>
     
         <atom:link href="https://hai-nguyen-21.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Lambda Expression và những điều thú vị.</title>
+        <link>https://hai-nguyen-21.github.io/posts/lambda-expression/</link>
+        <pubDate>Tue, 07 Sep 2021 12:00:06 +0900</pubDate>
+        <author>hainlph17388@gmail.com (Nguyễn Lê Hải)</author>
+        <atom:modified>Tue, 07 Sep 2021 12:00:06 +0900</atom:modified>
+        <guid>https://hai-nguyen-21.github.io/posts/lambda-expression/</guid>
+        <description>Lambda Expression- Tính năng thú vị của Java 8
+ Định nghĩa  - Là một hàm không có tên (anonymous function) với các tham số (parameters) và nội dung thực thi (body).
+- Nội dung thực thi của Lambda expression có thể là một khối lệnh hoặc một biểu thức.
+- Dấu “-&amp;gt;” tách biệt các tham số và nội dung thực thi.
+ Cú pháp  (argument-list) -&amp;gt; {body}</description>
+        
+        <dc:creator>Nguyễn Khánh Nam</dc:creator>
+        <media:content url="https://hai-nguyen-21.github.io//static/image/content/OOP/anhbiabaiviet.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>java</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>Java 8</category>
+            
+          
+        
+      </item>
       
       <item>
         <title>OOP - Những điều chưa kể (Phần 2)</title>
@@ -50,40 +84,6 @@ Tâm pháp tầng thứ hai : Encapsulation  Nghe đến đây chắc hẳn các
           
             
               <category>OOP - Những điều chưa kể</category>
-            
-          
-        
-      </item>
-      
-      <item>
-        <title>Lambda Expression và những điều thú vị.</title>
-        <link>https://hai-nguyen-21.github.io/posts/lambda-expression/</link>
-        <pubDate>Sun, 05 Sep 2021 12:00:06 +0900</pubDate>
-        <author>hainlph17388@gmail.com (Nguyễn Lê Hải)</author>
-        <atom:modified>Sun, 05 Sep 2021 12:00:06 +0900</atom:modified>
-        <guid>https://hai-nguyen-21.github.io/posts/lambda-expression/</guid>
-        <description>Lambda Expression- Tính năng thú vị của Java 8
- Định nghĩa  - Là một hàm không có tên (anonymous function) với các tham số (parameters) và nội dung thực thi (body).
-- Nội dung thực thi của Lambda expression có thể là một khối lệnh hoặc một biểu thức.
-- Dấu “-&amp;gt;” tách biệt các tham số và nội dung thực thi.
- Cú pháp  (argument-list) -&amp;gt; {body}</description>
-        
-        <dc:creator>Nguyễn Khánh Nam</dc:creator>
-        <media:content url="https://hai-nguyen-21.github.io//static/image/content/OOP/anhbiabaiviet.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>java</category>
-            
-          
-        
-        
-        
-          
-            
-              <category>Java 8</category>
             
           
         
