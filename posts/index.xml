@@ -125,6 +125,26 @@ Trong bài viết này mình sẽ lấy ví dụ khá nhiều thông qua ngôn n
         
       </item>
       
+      <item>
+        <title></title>
+        <link>https://hai-nguyen-21.github.io/posts/default-method/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <author>hainlph17388@gmail.com (Nguyễn Lê Hải)</author>
+        
+        <guid>https://hai-nguyen-21.github.io/posts/default-method/</guid>
+        <description>Default Method
+ Như chúng ta đã biết từ java 7 đổ xuống thì trong các method trong interface chỉ được phép miêu tả (declaration) mà không được phép định nghĩa nó (definition). Nhưng đối với java 8 thì có thêm 2 khái niệm mới về interface đó là default method.  Trong bài viết lần này, tôi sẽ chỉ giới thiệu về default method thôi nhé.
+ Default Method- Phương pháp mặc định:  1.</description>
+        
+        <dc:creator>Nguyễn Lê Hải</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
 
     
   </channel>
