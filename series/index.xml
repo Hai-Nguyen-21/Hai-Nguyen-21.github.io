@@ -14,11 +14,29 @@
     <managingEditor>hainlph17388@gmail.com (Nguyễn Lê Hải)</managingEditor>
     <webMaster>hainlph17388@gmail.com (Nguyễn Lê Hải)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 08 Sep 2021 12:00:06 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 13 Sep 2021 12:00:06 +0900</lastBuildDate>
     
         <atom:link href="https://hai-nguyen-21.github.io/series/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Những câu chuyện làm &#34;Ngành&#34;</title>
+        <link>https://hai-nguyen-21.github.io/series/nh%E1%BB%AFng-c%C3%A2u-chuy%E1%BB%87n-l%C3%A0m-ng%C3%A0nh/</link>
+        <pubDate>Mon, 13 Sep 2021 12:00:06 +0900</pubDate>
+        <author>hainlph17388@gmail.com (Nguyễn Lê Hải)</author>
+        
+        <guid>https://hai-nguyen-21.github.io/series/nh%E1%BB%AFng-c%C3%A2u-chuy%E1%BB%87n-l%C3%A0m-ng%C3%A0nh/</guid>
+        <description></description>
+        
+        <dc:creator>Nguyễn Lê Hải</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>Java 8</title>

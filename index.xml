@@ -14,7 +14,7 @@
     <managingEditor>hainlph17388@gmail.com (Nguyễn Lê Hải)</managingEditor>
     <webMaster>hainlph17388@gmail.com (Nguyễn Lê Hải)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 08 Sep 2021 12:00:06 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 13 Sep 2021 12:00:06 +0900</lastBuildDate>
     
         <atom:link href="https://hai-nguyen-21.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -42,6 +42,38 @@
 
       
       <item>
+        <title>Công nghệ thông tin – Những câu chuyện trong “Ngành”</title>
+        <link>https://hai-nguyen-21.github.io/posts/c%C3%B4ng-ngh%E1%BB%87-th%C3%B4ng-tin/</link>
+        <pubDate>Mon, 13 Sep 2021 12:00:06 +0900</pubDate>
+        <author>hainlph17388@gmail.com (Nguyễn Lê Hải)</author>
+        <atom:modified>Mon, 13 Sep 2021 12:00:06 +0900</atom:modified>
+        <guid>https://hai-nguyen-21.github.io/posts/c%C3%B4ng-ngh%E1%BB%87-th%C3%B4ng-tin/</guid>
+        <description>Công nghệ thông tin – Những câu chuyện trong “Ngành”
+Heyyo, chào mừng các bạn đến với blog của mình, mình là Hải, hiện đang là sinh viên năm 2 ngành công nghệ thông tin.
+Có thể các bạn đã từng nghe những câu nói kinh điển từ những cánh báo trí như là “Lương tháng khởi điểm 1000$”, “Vua của mọi nghề”… hay là nghe phong phanh thiên hạ đồn thổi về một ông anh Bính Tý học cơ khí Bách Khoa, tất cả đều nói về độ hào nhoáng mà ngành này mang lại vậy liệu những điều trên có đúng không?</description>
+        
+        <dc:creator>Nguyễn Lê Hải</dc:creator>
+        <media:content url="https://hai-nguyen-21.github.io//static/image/content/OOP/anhbiabaiviet.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>tâm sự</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>Những câu chuyện làm &#34;Ngành&#34;</category>
+            
+          
+        
+      </item>
+      
+      <item>
         <title>Default Mothod - trông cũ mà mới.</title>
         <link>https://hai-nguyen-21.github.io/posts/default-method/</link>
         <pubDate>Wed, 08 Sep 2021 12:00:06 +0900</pubDate>
@@ -60,6 +92,14 @@
           
             
               <category>java</category>
+            
+          
+            
+              <category>java 8</category>
+            
+          
+            
+              <category>hoc thuật</category>
             
           
         
@@ -94,6 +134,14 @@
           
             
               <category>java</category>
+            
+          
+            
+              <category>java 8</category>
+            
+          
+            
+              <category>học thuật</category>
             
           
         
@@ -131,6 +179,10 @@ Tâm pháp tầng thứ hai : Encapsulation  Nghe đến đây chắc hẳn các
               <category>java</category>
             
           
+            
+              <category>học thuật</category>
+            
+          
         
         
         
@@ -165,6 +217,10 @@ Trong bài viết này mình sẽ lấy ví dụ khá nhiều thông qua ngôn n
           
             
               <category>java</category>
+            
+          
+            
+              <category>học thuật</category>
             
           
         
