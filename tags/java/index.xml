@@ -181,6 +181,35 @@ Trong bài viết này mình sẽ lấy ví dụ khá nhiều thông qua ngôn n
         
       </item>
       
+      <item>
+        <title>Anh em sinh đôi - Abstract Class và Interface</title>
+        <link>https://hai-nguyen-21.github.io/posts/so-s%C3%A1nh-l%E1%BB%9Bp-abtract-v%C3%A0-inteface/</link>
+        <pubDate>Wed, 10 Mar 2021 12:00:06 +0900</pubDate>
+        <author>hainlph17388@gmail.com (Nguyễn Lê Hải)</author>
+        <atom:modified>Wed, 10 Mar 2021 12:00:06 +0900</atom:modified>
+        <guid>https://hai-nguyen-21.github.io/posts/so-s%C3%A1nh-l%E1%BB%9Bp-abtract-v%C3%A0-inteface/</guid>
+        <description>“Anh em sinh đôi ?”
+Hey yo what’s up, chào mừng các bạn đã quay trở lại với cái bờ lóc của mình. Cơ duyên để mình lên bài này nó cũng éo le lắm, hôm đó thầy lớp mình có kiểm tra nhanh bài của mấy bạn trong lớp và có hỏi “Thế tại sao chỗ này em không dùng Interface và lại dùng Abstract Class?”, “Thế sự khác nhau giữa hai cái này là gì?</description>
+        
+        <dc:creator>Hải Nguyễn</dc:creator>
+        <media:content url="https://hai-nguyen-21.github.io//static/image/content/OOP/anhbiabaiviet.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>java</category>
+            
+          
+            
+              <category>học thuật</category>
+            
+          
+        
+        
+        
+      </item>
+      
 
     
   </channel>
