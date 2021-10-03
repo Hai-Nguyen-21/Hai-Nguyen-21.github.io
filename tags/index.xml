@@ -14,11 +14,47 @@
     <managingEditor>hainlph17388@gmail.com (Nguyễn Lê Hải)</managingEditor>
     <webMaster>hainlph17388@gmail.com (Nguyễn Lê Hải)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 13 Sep 2021 12:00:06 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 03 Oct 2021 12:00:06 +0900</lastBuildDate>
     
         <atom:link href="https://hai-nguyen-21.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>học thuật</title>
+        <link>https://hai-nguyen-21.github.io/tags/h%E1%BB%8Dc-thu%E1%BA%ADt/</link>
+        <pubDate>Sun, 03 Oct 2021 12:00:06 +0900</pubDate>
+        <author>hainlph17388@gmail.com (Nguyễn Lê Hải)</author>
+        
+        <guid>https://hai-nguyen-21.github.io/tags/h%E1%BB%8Dc-thu%E1%BA%ADt/</guid>
+        <description></description>
+        
+        <dc:creator>Nguyễn Lê Hải</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>java</title>
+        <link>https://hai-nguyen-21.github.io/tags/java/</link>
+        <pubDate>Sun, 03 Oct 2021 12:00:06 +0900</pubDate>
+        <author>hainlph17388@gmail.com (Nguyễn Lê Hải)</author>
+        
+        <guid>https://hai-nguyen-21.github.io/tags/java/</guid>
+        <description></description>
+        
+        <dc:creator>Nguyễn Lê Hải</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>tâm sự</title>
@@ -57,48 +93,12 @@
       </item>
       
       <item>
-        <title>java</title>
-        <link>https://hai-nguyen-21.github.io/tags/java/</link>
-        <pubDate>Wed, 08 Sep 2021 12:00:06 +0900</pubDate>
-        <author>hainlph17388@gmail.com (Nguyễn Lê Hải)</author>
-        
-        <guid>https://hai-nguyen-21.github.io/tags/java/</guid>
-        <description></description>
-        
-        <dc:creator>Nguyễn Lê Hải</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
         <title>java 8</title>
         <link>https://hai-nguyen-21.github.io/tags/java-8/</link>
         <pubDate>Wed, 08 Sep 2021 12:00:06 +0900</pubDate>
         <author>hainlph17388@gmail.com (Nguyễn Lê Hải)</author>
         
         <guid>https://hai-nguyen-21.github.io/tags/java-8/</guid>
-        <description></description>
-        
-        <dc:creator>Nguyễn Lê Hải</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>học thuật</title>
-        <link>https://hai-nguyen-21.github.io/tags/h%E1%BB%8Dc-thu%E1%BA%ADt/</link>
-        <pubDate>Tue, 07 Sep 2021 12:00:06 +0900</pubDate>
-        <author>hainlph17388@gmail.com (Nguyễn Lê Hải)</author>
-        
-        <guid>https://hai-nguyen-21.github.io/tags/h%E1%BB%8Dc-thu%E1%BA%ADt/</guid>
         <description></description>
         
         <dc:creator>Nguyễn Lê Hải</dc:creator>
