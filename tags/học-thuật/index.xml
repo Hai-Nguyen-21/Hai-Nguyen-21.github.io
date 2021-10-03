@@ -50,6 +50,46 @@ Hey yo what’s up, chào mừng các bạn đã quay trở lại với cái b�
       </item>
       
       <item>
+        <title>Default Mothod - trông cũ mà mới.</title>
+        <link>https://hai-nguyen-21.github.io/posts/default-method/</link>
+        <pubDate>Wed, 08 Sep 2021 12:00:06 +0900</pubDate>
+        <author>hainlph17388@gmail.com (Nguyễn Lê Hải)</author>
+        <atom:modified>Wed, 08 Sep 2021 12:00:06 +0900</atom:modified>
+        <guid>https://hai-nguyen-21.github.io/posts/default-method/</guid>
+        <description>Default Method
+ Như chúng ta đã biết từ java 7 đổ xuống thì trong các method trong interface chỉ được phép miêu tả (declaration) mà không được phép định nghĩa nó (definition). Nhưng đối với java 8 thì có thêm 2 khái niệm mới về interface đó là default method.  Trong bài viết lần này, tôi sẽ chỉ giới thiệu về default method thôi nhé.
+ Default Method- Phương pháp mặc định:  1.</description>
+        
+        <dc:creator>Nguyễn Khánh Nam</dc:creator>
+        <media:content url="https://hai-nguyen-21.github.io//static/image/content/OOP/anhbiabaiviet.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>java</category>
+            
+          
+            
+              <category>java 8</category>
+            
+          
+            
+              <category>học thuật</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>Java 8</category>
+            
+          
+        
+      </item>
+      
+      <item>
         <title>Lambda Expression và những điều thú vị..</title>
         <link>https://hai-nguyen-21.github.io/posts/lambda-expression/</link>
         <pubDate>Tue, 07 Sep 2021 12:00:06 +0900</pubDate>
