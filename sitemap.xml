@@ -2,10 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://hai-nguyen-21.github.io/posts/so-s%C3%A1nh-l%E1%BB%9Bp-abtract-v%C3%A0-inteface/</loc>
-    <lastmod>2021-10-03T12:00:06+09:00</lastmod>
+    <loc>https://hai-nguyen-21.github.io/tags/c&#43;&#43;/</loc>
+    <lastmod>2021-12-03T12:00:06+09:00</lastmod>
+  </url><url>
+    <loc>https://hai-nguyen-21.github.io/tags/gi%E1%BA%A3i-thu%E1%BA%ADt/</loc>
+    <lastmod>2021-12-03T12:00:06+09:00</lastmod>
+  </url><url>
+    <loc>https://hai-nguyen-21.github.io/series/gi%E1%BA%A3i-thu%E1%BA%ADt-th%E1%BA%ADt-vui/</loc>
+    <lastmod>2021-12-03T12:00:06+09:00</lastmod>
   </url><url>
     <loc>https://hai-nguyen-21.github.io/</loc>
+    <lastmod>2021-12-03T12:00:06+09:00</lastmod>
+  </url><url>
+    <loc>https://hai-nguyen-21.github.io/posts/</loc>
+    <lastmod>2021-12-03T12:00:06+09:00</lastmod>
+  </url><url>
+    <loc>https://hai-nguyen-21.github.io/series/</loc>
+    <lastmod>2021-12-03T12:00:06+09:00</lastmod>
+  </url><url>
+    <loc>https://hai-nguyen-21.github.io/tags/</loc>
+    <lastmod>2021-12-03T12:00:06+09:00</lastmod>
+  </url><url>
+    <loc>https://hai-nguyen-21.github.io/posts/giaithuat/</loc>
+    <lastmod>2021-12-03T12:00:06+09:00</lastmod>
+  </url><url>
+    <loc>https://hai-nguyen-21.github.io/posts/so-s%C3%A1nh-l%E1%BB%9Bp-abtract-v%C3%A0-inteface/</loc>
     <lastmod>2021-10-03T12:00:06+09:00</lastmod>
   </url><url>
     <loc>https://hai-nguyen-21.github.io/tags/h%E1%BB%8Dc-thu%E1%BA%ADt/</loc>
@@ -14,19 +35,10 @@
     <loc>https://hai-nguyen-21.github.io/tags/java/</loc>
     <lastmod>2021-10-03T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>https://hai-nguyen-21.github.io/posts/</loc>
-    <lastmod>2021-10-03T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://hai-nguyen-21.github.io/tags/</loc>
-    <lastmod>2021-10-03T12:00:06+09:00</lastmod>
-  </url><url>
     <loc>https://hai-nguyen-21.github.io/series/chuyennganh/</loc>
     <lastmod>2021-09-13T12:00:06+09:00</lastmod>
   </url><url>
     <loc>https://hai-nguyen-21.github.io/posts/c%C3%B4ng-ngh%E1%BB%87-th%C3%B4ng-tin/</loc>
-    <lastmod>2021-09-13T12:00:06+09:00</lastmod>
-  </url><url>
-    <loc>https://hai-nguyen-21.github.io/series/</loc>
     <lastmod>2021-09-13T12:00:06+09:00</lastmod>
   </url><url>
     <loc>https://hai-nguyen-21.github.io/tags/t%C3%A2m-s%E1%BB%B1/</loc>

@@ -14,7 +14,7 @@
     <managingEditor>hainlph17388@gmail.com (Nguyễn Lê Hải)</managingEditor>
     <webMaster>hainlph17388@gmail.com (Nguyễn Lê Hải)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 03 Oct 2021 12:00:06 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 03 Dec 2021 12:00:06 +0900</lastBuildDate>
     
         <atom:link href="https://hai-nguyen-21.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,6 +40,42 @@
         
       
 
+      
+      <item>
+        <title>Tìm kiếm một số trong mảng</title>
+        <link>https://hai-nguyen-21.github.io/posts/giaithuat/</link>
+        <pubDate>Fri, 03 Dec 2021 12:00:06 +0900</pubDate>
+        <author>hainlph17388@gmail.com (Nguyễn Lê Hải)</author>
+        <atom:modified>Fri, 03 Dec 2021 12:00:06 +0900</atom:modified>
+        <guid>https://hai-nguyen-21.github.io/posts/giaithuat/</guid>
+        <description>Khi mọi người nhắc đến giải thuật thì thường liên tưởng tới những kiến thức cao siêu, và đúng là nó cao siêu thật&amp;hellip; Tuy nhiên để enjoy cái moments này thì các em phải trải qua từ những thứ rất cơ bản, và cái series này dành cho các bạn.
+Đầu tiên chúng ta phải tìm hiểu giải thuật là gì chứ nhỉ?
+Disclaimer: Trong series này mình hướng tới những bạn mới học lập trình và ngôn ngữ mình sử dụng chính là C và Java.</description>
+        
+        <dc:creator>Nguyễn Lê Hải</dc:creator>
+        <media:content url="https://hai-nguyen-21.github.io//static/image/content/OOP/anhbiabaiviet.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>C&#43;&#43;</category>
+            
+          
+            
+              <category>Giải thuật</category>
+            
+          
+        
+        
+        
+          
+            
+              <category>Giải thuật thật vui</category>
+            
+          
+        
+      </item>
       
       <item>
         <title>Anh em sinh đôi - Abstract Class và Interface</title>
