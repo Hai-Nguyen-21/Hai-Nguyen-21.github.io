@@ -1,0 +1,22 @@
+# Static site — no build tools needed
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.local
+
+# Temp
+*.tmp
+*.bak

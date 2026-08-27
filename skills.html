@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills & Expertise — Nguyen Le Hai | Business Analyst</title>
+  <meta name="description" content="Explore technical differentiators, core BA competencies, process modeling, documentation, tools, and languages of Nguyen Le Hai." />
+  <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,300&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── Reset & Base Styling ──────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #1A1A1A;
+      --black: #FAF8F4;
+      --gray-900: #F2EFE9;
+      --gray-800: #E8E3DA;
+      --gray-700: #D0C9BC;
+      --gray-500: #7A7060;
+      --gray-400: #9A9080;
+      --gray-300: #3D3830;
+      --accent: #8B6B3D;
+      --accent-dim: rgba(139,107,61,0.12);
+      --accent-glow: rgba(139,107,61,0.07);
+      --glass: rgba(0,0,0,0.03);
+      --glass-border: rgba(0,0,0,0.09);
+      --radius: 4px;
+      --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      background: var(--black);
+      color: var(--cream);
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    ::selection { background: var(--accent); color: #FAF8F4; }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+    /* ─── Layout & Utilities ────────────────────────────────── */
+    .font-display { font-family: 'Outfit', sans-serif; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+    @media (max-width: 768px) { .container { padding: 0 1.25rem; } }
+
+    /* ─── Navbar ─────────────────────────────────────────────── */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 1.25rem 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid transparent;
+      background: rgba(250,248,244,0.88);
+      backdrop-filter: blur(20px);
+      border-color: var(--glass-border);
+      transition: all var(--transition);
+    }
+    .nav-brand {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700; font-size: 1.1rem; letter-spacing: 0.05em;
+      color: var(--cream);
+    }
+    .nav-brand span { color: var(--accent); }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a {
+      font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--gray-500); transition: color var(--transition);
+      position: relative;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: -3px; left: 0; right: 0;
+      height: 1px; background: var(--accent);
+      transform: scaleX(0); transition: transform var(--transition);
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--cream); font-weight: 600; }
+    .nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
+    .nav-controls { display: flex; align-items: center; gap: 1rem; }
+    #lang-toggle {
+      font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--gray-500); padding: 0.3rem 0.7rem;
+      border: 1px solid var(--gray-700); border-radius: var(--radius);
+      transition: all var(--transition);
+    }
+    #lang-toggle:hover { color: var(--accent); border-color: var(--accent); }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; }
+    .nav-hamburger span { width: 22px; height: 1.5px; background: var(--cream); display: block; }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+    }
+
+    /* Mobile Menu */
+    #mobile-menu {
+      display: none; position: fixed; inset: 0; z-index: 999;
+      background: #FAF8F4; flex-direction: column;
+      align-items: center; justify-content: center; gap: 2rem;
+    }
+    #mobile-menu.open { display: flex; }
+    #mobile-menu a {
+      font-family: 'Outfit', sans-serif; font-size: 1.8rem; font-weight: 600;
+      color: #1A1A1A; letter-spacing: 0.05em; transition: color var(--transition);
+    }
+    #mobile-menu a:hover, #mobile-menu a.active { color: var(--accent); }
+    #mobile-close {
+      position: absolute; top: 1.5rem; right: 2rem;
+      font-size: 1.5rem; color: var(--gray-500);
+    }
+    #mobile-lang {
+      font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--accent); padding: 0.4rem 1rem;
+      border: 1px solid var(--accent); border-radius: var(--radius);
+    }
+
+    /* ─── Page Header ────────────────────────────────────────── */
+    .page-header {
+      padding-top: 8.5rem; padding-bottom: 3.5rem;
+      border-bottom: 1px solid var(--glass-border);
+      background: linear-gradient(180deg, #FAF8F4 0%, #F2EFE9 100%);
+    }
+    .section-label {
+      font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 1rem; font-weight: 600;
+    }
+    .page-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 700; line-height: 1.15; color: #1A1A1A;
+      margin-bottom: 1rem;
+    }
+    .page-subtitle {
+      font-size: 1rem; color: #5A5040; max-width: 680px; line-height: 1.7;
+    }
+
+    /* ─── Featured Technical Fluency Banner ──────────────────── */
+    .tech-banner {
+      background: #1A1A1A; color: #FAF8F4; padding: 3rem 2rem;
+      border-radius: 8px; margin: 3.5rem 0 4.5rem; position: relative; overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+    }
+    .tech-banner::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(circle at 90% 10%, rgba(139,107,61,0.25) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .tech-banner-label {
+      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--accent); font-weight: 700; margin-bottom: 0.5rem; display: inline-block;
+      padding: 0.2rem 0.6rem; background: rgba(139,107,61,0.15); border-radius: 2px;
+    }
+    .tech-banner-title {
+      font-family: 'Outfit', sans-serif; font-size: 1.6rem; font-weight: 700;
+      color: #FAF8F4; margin-bottom: 0.75rem;
+    }
+    .tech-banner-desc {
+      font-size: 0.92rem; color: #D0C9BC; max-width: 750px; line-height: 1.7; margin-bottom: 2rem;
+    }
+    .tech-items-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem;
+    }
+    .tech-item-card {
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+      padding: 1.25rem; border-radius: 6px; backdrop-filter: blur(5px);
+      transition: all var(--transition);
+    }
+    .tech-item-card:hover {
+      background: rgba(255,255,255,0.09); border-color: rgba(139,107,61,0.5); transform: translateY(-2px);
+    }
+    .tech-item-name { font-family: 'Outfit', sans-serif; font-size: 1.05rem; font-weight: 600; color: #FAF8F4; margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.5rem; }
+    .tech-item-detail { font-size: 0.8rem; color: #9A9080; line-height: 1.5; }
+
+    /* ─── Filter Tabs ────────────────────────────────────────── */
+    .filter-wrap {
+      display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem;
+    }
+    .filter-btn {
+      padding: 0.5rem 1.1rem; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase;
+      font-weight: 500; border: 1px solid var(--gray-700); border-radius: 20px;
+      color: var(--gray-500); background: #FFFFFF; transition: all var(--transition);
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: #1A1A1A; color: #FAF8F4; border-color: #1A1A1A; font-weight: 600;
+    }
+
+    /* ─── Category Skill Cards Grid ───────────────────────────── */
+    .skills-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 4.5rem;
+    }
+    .category-card {
+      background: #FFFFFF; border: 1px solid var(--glass-border);
+      padding: 2rem; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+      transition: border-color var(--transition), transform var(--transition);
+      display: flex; flex-direction: column;
+    }
+    .category-card:hover { border-color: rgba(139,107,61,0.35); transform: translateY(-3px); }
+    .category-header {
+      display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;
+      border-bottom: 1px solid var(--gray-800); padding-bottom: 0.75rem;
+    }
+    .category-icon {
+      width: 36px; height: 36px; border-radius: 6px; background: var(--accent-glow);
+      border: 1px solid var(--accent-dim); color: var(--accent);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .category-title {
+      font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 600; color: #1A1A1A;
+    }
+    .skill-pills-list {
+      display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; margin-top: 0.5rem;
+    }
+    .skill-tag {
+      font-size: 0.82rem; color: #3D3830; background: var(--gray-900);
+      padding: 0.4rem 0.85rem; border-radius: 4px; border: 1px solid var(--glass-border);
+      transition: all var(--transition); display: inline-flex; align-items: center; gap: 0.4rem;
+    }
+    .skill-tag::before { content: '•'; color: var(--accent); font-size: 1rem; }
+    .category-card:hover .skill-tag { border-color: rgba(139,107,61,0.2); }
+
+    /* Languages Grid */
+    .lang-section {
+      background: var(--gray-900); padding: 4.5rem 0;
+      border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);
+    }
+    .lang-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
+    @media (max-width: 600px) { .lang-grid { grid-template-columns: 1fr; } }
+    .lang-card {
+      background: #FFFFFF; border: 1px solid var(--glass-border);
+      padding: 1.75rem; border-radius: 8px; display: flex; align-items: center; gap: 1.25rem;
+    }
+    .lang-flag {
+      font-size: 2rem; line-height: 1;
+    }
+    .lang-name { font-family: 'Outfit', sans-serif; font-size: 1.1rem; font-weight: 600; color: #1A1A1A; }
+    .lang-desc { font-size: 0.84rem; color: var(--gray-500); margin-top: 0.2rem; }
+
+    /* CTA Banner */
+    .skills-cta { padding: 4.5rem 0; text-align: center; background: #FFFFFF; }
+    .btn-primary {
+      display: inline-block; padding: 0.75rem 2rem; background: #1A1A1A; color: #FAF8F4;
+      font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase;
+      font-weight: 600; border-radius: 2px; transition: all var(--transition); margin: 0.4rem;
+    }
+    .btn-primary:hover { background: #2d2d2d; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+    .btn-outline {
+      display: inline-block; padding: 0.75rem 2rem; border: 1px solid rgba(26,26,26,0.35);
+      color: #1A1A1A; font-size: 0.75rem; letter-spacing: 0.14em;
+      text-transform: uppercase; font-weight: 500; border-radius: 2px; transition: all var(--transition); margin: 0.4rem;
+    }
+    .btn-outline:hover { border-color: #1A1A1A; background: rgba(26,26,26,0.05); transform: translateY(-2px); }
+
+    /* Footer */
+    footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--glass-border); background: var(--black); }
+    footer p { font-size: 0.75rem; color: var(--gray-500); letter-spacing: 0.08em; }
+  </style>
+</head>
+<body>
+
+  <!-- ─── Navbar ──────────────────────────────────────────────── -->
+  <nav id="navbar">
+    <a href="index.html#hero" class="nav-brand">NLH<span>.</span></a>
+    <div class="nav-links">
+      <a href="index.html#hero" data-i18n="nav_home">Home</a>
+      <a href="about.html" data-i18n="nav_about">About</a>
+      <a href="skills.html" class="active" data-i18n="nav_skills">Skills</a>
+      <a href="index.html#projects" data-i18n="nav_projects">Projects</a>
+      <a href="experience.html" data-i18n="nav_experience">Experience</a>
+      <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
+    </div>
+    <div class="nav-controls">
+      <button id="lang-toggle" aria-label="Toggle language">VI</button>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" role="dialog" aria-label="Navigation menu">
+    <button id="mobile-close" aria-label="Close menu">✕</button>
+    <a href="index.html#hero" data-i18n="nav_home">Home</a>
+    <a href="about.html" data-i18n="nav_about">About</a>
+    <a href="skills.html" class="active" data-i18n="nav_skills">Skills</a>
+    <a href="index.html#projects" data-i18n="nav_projects">Projects</a>
+    <a href="experience.html" data-i18n="nav_experience">Experience</a>
+    <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
+    <button id="mobile-lang">Switch to VI</button>
+  </div>
+
+  <!-- ─── Page Header ────────────────────────────────────────── -->
+  <header class="page-header">
+    <div class="container">
+      <p class="section-label" id="skills-label">Skills &amp; Toolkit</p>
+      <h1 class="page-title" id="skills-title">Core Competencies &amp; Technical Capabilities</h1>
+      <p class="page-subtitle" id="skills-subtitle">A balanced toolkit combining deep Business Analysis methodology, systematic documentation, process modeling, and technical engineering fluency.</p>
+
+      <!-- Technical Differentiator Highlight Banner -->
+      <div class="tech-banner">
+        <span class="tech-banner-label" id="tech-banner-label">Key Differentiator</span>
+        <h2 class="tech-banner-title" id="tech-banner-title">Technical Fluency &amp; AI Capability</h2>
+        <p class="tech-banner-desc" id="tech-banner-desc">Having a background in software development allows me to bridge business intent with technical architecture seamlessly, verifying API specs, DB queries, and system constraints early in the requirement phase.</p>
+
+        <div class="tech-items-grid" id="tech-items-grid">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ─── Skills Catalog & Category Filter ────────────────────── -->
+  <section style="padding: 4.5rem 0 2rem;">
+    <div class="container">
+      <div class="filter-wrap" id="filter-wrap">
+        <!-- Injected by JS -->
+      </div>
+
+      <div class="skills-grid" id="skills-grid">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Languages Section ───────────────────────────────────── -->
+  <section class="lang-section">
+    <div class="container">
+      <p class="section-label" id="lang-label">Languages</p>
+      <h2 class="font-display" id="lang-title" style="font-size:1.8rem;font-weight:700;color:#1A1A1A;">Communication Languages</h2>
+      <div class="lang-grid" id="lang-grid">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA Banner ─────────────────────────────────────────── -->
+  <section class="skills-cta">
+    <div class="container">
+      <h2 class="font-display" id="cta-headline" style="font-size:1.8rem;font-weight:700;margin-bottom:0.75rem;">See These Skills in Action</h2>
+      <p id="cta-desc" style="color:var(--gray-500);font-size:0.92rem;max-width:550px;margin:0 auto 1.5rem;">Explore real-world case studies where these analytical, technical, and process capabilities delivered measurable impact.</p>
+      <a href="index.html#projects" class="btn-primary" id="btn-projects">View Case Studies</a>
+      <a href="about.html" class="btn-outline" id="btn-about">Read Background</a>
+    </div>
+  </section>
+
+  <!-- ─── Footer ──────────────────────────────────────────────── -->
+  <footer>
+    <div class="container">
+      <p id="footer-text">Nguyen Le Hai — Business Analyst Portfolio &copy; <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script>
+    const DATA = {
+      en: {
+        nav: { home: 'Home', about: 'About', skills: 'Skills', projects: 'Projects', experience: 'Experience', contact: 'Contact', lang: 'VI' },
+        label: 'Skills & Toolkit',
+        title: 'Core Competencies & Technical Capabilities',
+        subtitle: 'A balanced toolkit combining deep Business Analysis methodology, systematic documentation, process modeling, and technical engineering fluency.',
+        techBannerLabel: 'Key Differentiator',
+        techBannerTitle: 'Technical Fluency & AI Capability',
+        techBannerDesc: 'Having a background in software development allows me to bridge business intent with technical architecture seamlessly, verifying API specs, DB queries, and system constraints early in the requirement phase.',
+        techItems: [
+          { name: 'SQL Querying', detail: 'Data extraction, analysis, and DB schema understanding for validation' },
+          { name: 'REST API & JSON', detail: 'Interface specs mapping, payload structures, and endpoint definition' },
+          { name: 'AI-assisted BA', detail: '20+ custom prompt templates for rapid BRD, wireframe, and test scenario generation' },
+          { name: 'System Architecture', detail: 'Reading technical documentation & speaking developer language natively' }
+        ],
+        filters: [
+          { id: 'all', label: 'All Categories' },
+          { id: 'core', label: 'BA Core' },
+          { id: 'doc', label: 'Documentation' },
+          { id: 'modeling', label: 'Process Modeling' },
+          { id: 'agile', label: 'Agile & Scrum' },
+          { id: 'tools', label: 'Tools' }
+        ],
+        categories: [
+          {
+            id: 'core',
+            title: 'Business Analysis Core',
+            icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>`,
+            skills: ['Requirement Elicitation', 'Requirement Management', 'Stakeholder Management', 'Business Process Analysis', 'Gap Analysis', 'Impact Analysis']
+          },
+          {
+            id: 'doc',
+            title: 'Documentation Standard',
+            icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>`,
+            skills: ['BRD (Business Requirement Document)', 'PRD (Product Requirement Document)', 'FSD (Functional Spec)', 'User Stories & Acceptance Criteria', 'Use Case Specifications']
+          },
+          {
+            id: 'modeling',
+            title: 'Process Modeling & UML',
+            icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>`,
+            skills: ['BPMN 2.0 Diagrams', 'UML Use Case Diagrams', 'UML Activity Diagrams', 'UML Sequence Diagrams', 'Business Flow Mapping']
+          },
+          {
+            id: 'agile',
+            title: 'Agile & Scrum Execution',
+            icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>`,
+            skills: ['Sprint Planning', 'Sprint Review & Demo', 'Sprint Retrospective', 'Backlog Grooming', 'Feature Prioritization']
+          },
+          {
+            id: 'tools',
+            title: 'Tools & Design Platforms',
+            icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>`,
+            skills: ['Jira & Confluence', 'Figma (UI/UX & Prototyping)', 'Draw.io', 'Balsamiq Wireframes', 'AI Prompt Toolkits']
+          }
+        ],
+        langLabel: 'Languages',
+        langTitle: 'Language Proficiency',
+        languages: [
+          { flag: '🇻🇳', name: 'Vietnamese', desc: 'Native speaker — clear business communication and stakeholder management' },
+          { flag: '🇬🇧', name: 'English', desc: 'Technical documentation reading, comprehension, and specification writing' }
+        ],
+        ctaTitle: 'See These Skills in Action',
+        ctaDesc: 'Explore real-world case studies where these analytical, technical, and process capabilities delivered measurable impact.',
+        btnProjects: 'View Case Studies',
+        btnAbout: 'Read Background'
+      },
+      vi: {
+        nav: { home: 'Trang chủ', about: 'Giới thiệu', skills: 'Kỹ năng', projects: 'Dự án', experience: 'Kinh nghiệm', contact: 'Liên hệ', lang: 'EN' },
+        label: 'Kỹ năng & Năng lực',
+        title: 'Bộ Năng lực Chuyên môn & Kỹ thuật',
+        subtitle: 'Bộ kỹ năng cân bằng kết hợp phương pháp Phân tích Nghiệp vụ bài bản, chuẩn hoá tài liệu, mô hình hoá quy trình và nền tảng kỹ thuật.',
+        techBannerLabel: 'Điểm Khác biệt Nổi bật',
+        techBannerTitle: 'Năng lực Kỹ thuật & Ứng dụng AI',
+        techBannerDesc: 'Xuất phát điểm từ Công nghệ thông tin giúp tôi tự tin kết nối bài toán kinh doanh với kiến trúc kỹ thuật, thẩm định API specs, truy vấn dữ liệu SQL và cấu trúc hệ thống ngay từ bước làm rõ yêu cầu.',
+        techItems: [
+          { name: 'Truy vấn SQL', detail: 'Trích xuất, phân tích dữ liệu và hiểu schema DB để kiểm chứng yêu cầu' },
+          { name: 'REST API & JSON', detail: 'Đặc tả interface, cấu trúc JSON payload và định nghĩa endpoints' },
+          { name: 'Phân tích Nghiệp vụ với AI', detail: 'Bộ 20+ prompt AI chuyên dụng giúp tăng tốc viết BRD, wireframe & test scenarios' },
+          { name: 'Khả năng Hiểu Kiến trúc', detail: 'Đọc hiểu tài liệu kỹ thuật và làm việc trực tiếp cùng lập trình viên' }
+        ],
+        filters: [
+          { id: 'all', label: 'Tất cả Kỹ năng' },
+          { id: 'core', label: 'Nghiệp vụ BA' },
+          { id: 'doc', label: 'Tài liệu hoá' },
+          { id: 'modeling', label: 'Mô hình hoá' },
+          { id: 'agile', label: 'Agile & Scrum' },
+          { id: 'tools', label: 'Công cụ' }
+        ],
+        categories: [
+          {
+            id: 'core',
+            title: 'Nghiệp vụ Phân tích Lõi',
+            icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>`,
+            skills: ['Khai thác yêu cầu (Elicitation)', 'Quản lý yêu cầu (Requirement Mgmt)', 'Quản lý Stakeholder', 'Phân tích quy trình nghiệp vụ', 'Phân tích khoảng cách (Gap Analysis)', 'Đánh giá tác động (Impact Analysis)']
+          },
+          {
+            id: 'doc',
+            title: 'Tài liệu hoá Chuẩn hoá',
+            icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>`,
+            skills: ['BRD (Tài liệu Yêu cầu Nghiệp vụ)', 'PRD (Tài liệu Yêu cầu Sản phẩm)', 'FSD (Đặc tả Chức năng)', 'User Stories & Acceptance Criteria', 'Use Case Specifications']
+          },
+          {
+            id: 'modeling',
+            title: 'Mô hình hoá Quy trình & UML',
+            icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>`,
+            skills: ['Sơ đồ BPMN 2.0', 'Sơ đồ UML Use Case', 'Sơ đồ UML Activity', 'Sơ đồ UML Sequence', 'Sơ đồ Luồng Nghiệp vụ (Business Flow)']
+          },
+          {
+            id: 'agile',
+            title: 'Vận hành Agile & Scrum',
+            icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>`,
+            skills: ['Sprint Planning', 'Sprint Review & Demo', 'Sprint Retrospective', 'Backlog Grooming', 'Ưu tiên hoá tính năng (Prioritization)']
+          },
+          {
+            id: 'tools',
+            title: 'Công cụ & Nền tảng Thiết kế',
+            icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>`,
+            skills: ['Jira & Confluence', 'Figma (UI/UX & Prototype)', 'Draw.io', 'Balsamiq Wireframes', 'Bộ công cụ Prompt AI']
+          }
+        ],
+        langLabel: 'Ngôn ngữ',
+        langTitle: 'Năng lực Ngôn ngữ',
+        languages: [
+          { flag: '🇻🇳', name: 'Tiếng Việt', desc: 'Tiếng mẹ đẻ — làm việc với khách hàng và giao tiếp chuyên nghiệp' },
+          { flag: '🇬🇧', name: 'Tiếng Anh', desc: 'Đọc hiểu tài liệu kỹ thuật, nghiên cứu và viết tài liệu đặc tả' }
+        ],
+        ctaTitle: 'Xem Kỹ năng qua Dự án Thực tế',
+        ctaDesc: 'Khám phá các case study thực tế nơi các kỹ năng phân tích, kỹ thuật và quy trình được áp dụng mang lại kết quả rõ ràng.',
+        btnProjects: 'Xem Case Study',
+        btnAbout: 'Xem Giới thiệu'
+      }
+    };
+
+    let currentLang = localStorage.getItem('portfolio-lang') || 'en';
+    let currentFilter = 'all';
+
+    function render() {
+      const d = DATA[currentLang];
+      document.documentElement.lang = currentLang;
+
+      // Navbar
+      document.getElementById('lang-toggle').textContent = d.nav.lang;
+      document.getElementById('mobile-lang').textContent = `Switch to ${d.nav.lang}`;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const map = { nav_home: d.nav.home, nav_about: d.nav.about, nav_skills: d.nav.skills, nav_projects: d.nav.projects, nav_experience: d.nav.experience, nav_contact: d.nav.contact };
+        if (map[key]) el.textContent = map[key];
+      });
+
+      // Header
+      document.getElementById('skills-label').textContent = d.label;
+      document.getElementById('skills-title').textContent = d.title;
+      document.getElementById('skills-subtitle').textContent = d.subtitle;
+
+      // Tech Banner
+      document.getElementById('tech-banner-label').textContent = d.techBannerLabel;
+      document.getElementById('tech-banner-title').textContent = d.techBannerTitle;
+      document.getElementById('tech-banner-desc').textContent = d.techBannerDesc;
+      document.getElementById('tech-items-grid').innerHTML = d.techItems.map(item => `
+        <div class="tech-item-card">
+          <div class="tech-item-name">✨ ${item.name}</div>
+          <div class="tech-item-detail">${item.detail}</div>
+        </div>
+      `).join('');
+
+      // Filters
+      document.getElementById('filter-wrap').innerHTML = d.filters.map(f => `
+        <button class="filter-btn${f.id === currentFilter ? ' active' : ''}" onclick="setFilter('${f.id}')">${f.label}</button>
+      `).join('');
+
+      // Skills Grid
+      const filteredCategories = currentFilter === 'all'
+        ? d.categories
+        : d.categories.filter(c => c.id === currentFilter);
+
+      document.getElementById('skills-grid').innerHTML = filteredCategories.map(cat => `
+        <div class="category-card">
+          <div class="category-header">
+            <div class="category-icon">${cat.icon}</div>
+            <div class="category-title">${cat.title}</div>
+          </div>
+          <ul class="skill-pills-list">
+            ${cat.skills.map(s => `<li class="skill-tag">${s}</li>`).join('')}
+          </ul>
+        </div>
+      `).join('');
+
+      // Languages
+      document.getElementById('lang-label').textContent = d.langLabel;
+      document.getElementById('lang-title').textContent = d.langTitle;
+      document.getElementById('lang-grid').innerHTML = d.languages.map(l => `
+        <div class="lang-card">
+          <div class="lang-flag">${l.flag}</div>
+          <div>
+            <div class="lang-name">${l.name}</div>
+            <div class="lang-desc">${l.desc}</div>
+          </div>
+        </div>
+      `).join('');
+
+      // CTA
+      document.getElementById('cta-headline').textContent = d.ctaTitle;
+      document.getElementById('cta-desc').textContent = d.ctaDesc;
+      document.getElementById('btn-projects').textContent = d.btnProjects;
+      document.getElementById('btn-about').textContent = d.btnAbout;
+
+      // Footer
+      document.getElementById('footer-text').innerHTML = `Nguyen Le Hai — Business Analyst Portfolio &copy; ${new Date().getFullYear()}`;
+    }
+
+    function setFilter(filterId) {
+      currentFilter = filterId;
+      render();
+    }
+
+    function toggleLang() {
+      currentLang = currentLang === 'en' ? 'vi' : 'en';
+      localStorage.setItem('portfolio-lang', currentLang);
+      render();
+    }
+
+    document.getElementById('lang-toggle').addEventListener('click', toggleLang);
+    document.getElementById('mobile-lang').addEventListener('click', () => { toggleLang(); closeMobileMenu(); });
+
+    // Mobile menu
+    function openMobileMenu() { document.getElementById('mobile-menu').classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeMobileMenu() { document.getElementById('mobile-menu').classList.remove('open'); document.body.style.overflow = ''; }
+    document.getElementById('hamburger').addEventListener('click', openMobileMenu);
+    document.getElementById('mobile-close').addEventListener('click', closeMobileMenu);
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    render();
+  </script>
+</body>
+</html>

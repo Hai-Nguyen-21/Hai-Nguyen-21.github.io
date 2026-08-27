@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me — Nguyen Le Hai | Business Analyst</title>
+  <meta name="description"
+    content="Learn more about Nguyen Le Hai — Business Analyst bridging technical software engineering foundation with strategic product & requirement analysis." />
+  <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,300&family=Outfit:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet" />
+  <style>
+    /* ─── Reset & Design System ────────────────────────────── */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --cream: #1A1A1A;
+      --black: #FAF8F4;
+      --gray-900: #F2EFE9;
+      --gray-800: #E8E3DA;
+      --gray-700: #D0C9BC;
+      --gray-500: #7A7060;
+      --gray-400: #9A9080;
+      --gray-300: #3D3830;
+      --accent: #8B6B3D;
+      --accent-dim: rgba(139, 107, 61, 0.12);
+      --accent-glow: rgba(139, 107, 61, 0.07);
+      --glass: rgba(0, 0, 0, 0.03);
+      --glass-border: rgba(0, 0, 0, 0.09);
+      --radius: 4px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--cream);
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: var(--accent);
+      color: #FAF8F4;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    /* ─── Typography & Utilities ────────────────────────────── */
+    .font-display {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 1.25rem;
+      }
+    }
+
+    /* ─── Navbar ─────────────────────────────────────────────── */
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1.25rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid transparent;
+      background: rgba(250, 248, 244, 0.88);
+      backdrop-filter: blur(20px);
+      border-color: var(--glass-border);
+      transition: all var(--transition);
+    }
+
+    .nav-brand {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+      color: var(--cream);
+    }
+
+    .nav-brand span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+      transition: color var(--transition);
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transition: transform var(--transition);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--cream);
+      font-weight: 600;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      transform: scaleX(1);
+    }
+
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    #lang-toggle {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+      padding: 0.3rem 0.7rem;
+      border: 1px solid var(--gray-700);
+      border-radius: var(--radius);
+      transition: all var(--transition);
+    }
+
+    #lang-toggle:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .nav-hamburger span {
+      width: 22px;
+      height: 1.5px;
+      background: var(--cream);
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .nav-hamburger {
+        display: flex;
+      }
+    }
+
+    /* Mobile Menu */
+    #mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      background: #FAF8F4;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    #mobile-menu.open {
+      display: flex;
+    }
+
+    #mobile-menu a {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #1A1A1A;
+      letter-spacing: 0.05em;
+      transition: color var(--transition);
+    }
+
+    #mobile-menu a:hover,
+    #mobile-menu a.active {
+      color: var(--accent);
+    }
+
+    #mobile-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 2rem;
+      font-size: 1.5rem;
+      color: var(--gray-500);
+    }
+
+    #mobile-lang {
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      padding: 0.4rem 1rem;
+      border: 1px solid var(--accent);
+      border-radius: var(--radius);
+    }
+
+    /* ─── Page Header ────────────────────────────────────────── */
+    .page-header {
+      padding-top: 8.5rem;
+      padding-bottom: 3.5rem;
+      border-bottom: 1px solid var(--glass-border);
+      background: linear-gradient(180deg, #FAF8F4 0%, #F5F1E8 100%);
+    }
+
+    .section-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .page-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: #1A1A1A;
+      max-width: 860px;
+      margin-bottom: 1.5rem;
+    }
+
+    .highlight-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1.5rem;
+    }
+
+    .pill {
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.4rem 0.9rem;
+      border-radius: 20px;
+      background: rgba(139, 107, 61, 0.08);
+      border: 1px solid rgba(139, 107, 61, 0.25);
+      color: var(--accent);
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* ─── Main Content ───────────────────────────────────────── */
+    .about-section {
+      padding: 4.5rem 0;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 7fr 5fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+
+    .story-card {
+      background: #FFFFFF;
+      border: 1px solid var(--glass-border);
+      padding: 2.2rem;
+      border-radius: 8px;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+      transition: border-color var(--transition), transform var(--transition);
+    }
+
+    .story-card:hover {
+      border-color: rgba(139, 107, 61, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .story-card-tag {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .story-card-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #1A1A1A;
+      margin-bottom: 0.75rem;
+    }
+
+    .story-card p {
+      font-size: 0.94rem;
+      color: #3D3830;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .story-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Right Sidebar Cards */
+    .sticky-side {
+      position: sticky;
+      top: 7rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .target-box {
+      background: #1A1A1A;
+      color: #FAF8F4;
+      padding: 2rem;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .target-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--accent);
+    }
+
+    .target-box h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #FAF8F4;
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    .target-box p {
+      font-size: 0.88rem;
+      color: #D0C9BC;
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    .info-box {
+      background: #FFFFFF;
+      border: 1px solid var(--glass-border);
+      padding: 1.75rem;
+      border-radius: 8px;
+    }
+
+    .info-box-title {
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--gray-800);
+      padding-bottom: 0.5rem;
+    }
+
+    .info-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .info-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .info-item-label {
+      font-size: 0.75rem;
+      color: var(--gray-500);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .info-item-val {
+      font-size: 0.9rem;
+      color: #1A1A1A;
+      font-weight: 600;
+    }
+
+    /* Core Strengths Section */
+    .strengths-section {
+      background: var(--gray-900);
+      padding: 4.5rem 0;
+      border-top: 1px solid var(--glass-border);
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    .strengths-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .strength-card {
+      background: #FFFFFF;
+      border: 1px solid var(--glass-border);
+      padding: 1.75rem;
+      border-radius: 6px;
+      transition: all var(--transition);
+    }
+
+    .strength-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(139, 107, 61, 0.4);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+    }
+
+    .strength-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 6px;
+      background: var(--accent-glow);
+      border: 1px solid var(--accent-dim);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .strength-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #1A1A1A;
+      margin-bottom: 0.4rem;
+    }
+
+    .strength-desc {
+      font-size: 0.85rem;
+      color: #5A5040;
+      line-height: 1.6;
+    }
+
+    /* CTA Banner */
+    .about-cta {
+      padding: 4.5rem 0;
+      text-align: center;
+      background: #FFFFFF;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      background: #1A1A1A;
+      color: #FAF8F4;
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 600;
+      border-radius: 2px;
+      transition: all var(--transition);
+      margin: 0.4rem;
+    }
+
+    .btn-primary:hover {
+      background: #2d2d2d;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      border: 1px solid rgba(26, 26, 26, 0.35);
+      color: #1A1A1A;
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 500;
+      border-radius: 2px;
+      transition: all var(--transition);
+      margin: 0.4rem;
+    }
+
+    .btn-outline:hover {
+      border-color: #1A1A1A;
+      background: rgba(26, 26, 26, 0.05);
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    footer {
+      padding: 2.5rem 0;
+      text-align: center;
+      border-top: 1px solid var(--glass-border);
+      background: var(--black);
+    }
+
+    footer p {
+      font-size: 0.75rem;
+      color: var(--gray-500);
+      letter-spacing: 0.08em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ─── Navbar ──────────────────────────────────────────────── -->
+  <nav id="navbar">
+    <a href="index.html#hero" class="nav-brand">NLH<span>.</span></a>
+    <div class="nav-links">
+      <a href="index.html#hero" data-i18n="nav_home">Home</a>
+      <a href="about.html" class="active" data-i18n="nav_about">About</a>
+      <a href="skills.html" data-i18n="nav_skills">Skills</a>
+      <a href="index.html#projects" data-i18n="nav_projects">Projects</a>
+      <a href="experience.html" data-i18n="nav_experience">Experience</a>
+      <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
+    </div>
+    <div class="nav-controls">
+      <button id="lang-toggle" aria-label="Toggle language">VI</button>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" role="dialog" aria-label="Navigation menu">
+    <button id="mobile-close" aria-label="Close menu">✕</button>
+    <a href="index.html#hero" data-i18n="nav_home">Home</a>
+    <a href="about.html" class="active" data-i18n="nav_about">About</a>
+    <a href="skills.html" data-i18n="nav_skills">Skills</a>
+    <a href="index.html#projects" data-i18n="nav_projects">Projects</a>
+    <a href="experience.html" data-i18n="nav_experience">Experience</a>
+    <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
+    <button id="mobile-lang">Switch to VI</button>
+  </div>
+
+  <!-- ─── Page Header ────────────────────────────────────────── -->
+  <header class="page-header">
+    <div class="container">
+      <p class="section-label" id="about-label">About Me</p>
+      <h1 class="page-title" id="about-headline">From Code to Requirements — A BA Who Understands Both Sides</h1>
+      <div class="highlight-pills" id="about-pills">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </header>
+
+  <!-- ─── Main Content ───────────────────────────────────────── -->
+  <section class="about-section">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Left: Story Cards -->
+        <div id="story-container">
+          <!-- Injected by JS -->
+        </div>
+
+        <!-- Right: Sidebar -->
+        <div class="sticky-side">
+          <div class="target-box">
+            <h3 id="target-title">What I'm Looking For</h3>
+            <p id="target-desc">I'm looking to join a product team — ideally in SaaS, AI-driven products, or
+              tech-enabled platforms — where I can own a product area end-to-end, work closely with engineering, and
+              help turn ambiguous business problems into products people actually use.</p>
+          </div>
+
+          <div class="info-box">
+            <div class="info-box-title" id="quick-facts-title">Quick Overview</div>
+            <div class="info-list" id="quick-facts-list">
+              <!-- Injected by JS -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Core Strengths Grid ─────────────────────────────────── -->
+  <section class="strengths-section">
+    <div class="container">
+      <p class="section-label" id="strengths-label">Value Proposition</p>
+      <h2 class="font-display" id="strengths-title" style="font-size:1.8rem;font-weight:700;color:#1A1A1A;">Why Work
+        With Me</h2>
+      <div class="strengths-grid" id="strengths-grid">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA Banner ─────────────────────────────────────────── -->
+  <section class="about-cta">
+    <div class="container">
+      <h2 class="font-display" id="cta-headline" style="font-size:1.8rem;font-weight:700;margin-bottom:0.75rem;">
+        Interested in Collaboration?</h2>
+      <p id="cta-desc" style="color:var(--gray-500);font-size:0.92rem;max-width:550px;margin:0 auto 1.5rem;">Explore my
+        case studies or feel free to reach out directly for full CV and discussions.</p>
+      <a href="index.html#projects" class="btn-primary" id="btn-projects">View Case Studies</a>
+      <a href="skills.html" class="btn-outline" id="btn-skills">Explore Skills</a>
+    </div>
+  </section>
+
+  <!-- ─── Footer ──────────────────────────────────────────────── -->
+  <footer>
+    <div class="container">
+      <p id="footer-text">Nguyen Le Hai — Business Analyst Portfolio &copy; <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script>
+    const DATA = {
+      en: {
+        nav: { home: 'Home', about: 'About', skills: 'Skills', projects: 'Projects', experience: 'Experience', contact: 'Contact', lang: 'VI' },
+        label: 'About Me',
+        headline: 'From Code to Requirements — A BA Who Understands Both Sides',
+        pills: [
+          '⚡ IT Distinction (GPA 8.6/10)',
+          '🏢 Outsourcing & Product Company Experience',
+          '🎓 Business Administration Degree',
+          '🤖 AI for Business Analyst Certified'
+        ],
+        stories: [
+          {
+            tag: '01 / Technical Foundation',
+            title: 'Grounded in Software Engineering',
+            text: 'I started my career with a solid foundation in Information Technology (FPT Polytechnic, Software Applications, Distinction — GPA 8.6/10), which gave me a genuine ability to read technical documentation, understand system architecture, and speak the same language as developers. That technical grounding is what shapes how I work as a Business Analyst today: I don\'t just translate business requirements into documents — I make sure they\'re technically feasible before they ever reach a sprint.'
+          },
+          {
+            tag: '02 / Diverse Environments',
+            title: 'Outsourcing Adaptability & Product Ownership',
+            text: 'Over the past 4+ years, I\'ve worked across two very different environments — outsourcing and product companies — and each has sharpened a different skill. In outsourcing (Wanosoft, working with a government-sector technology partner), I learned to adapt quickly across unfamiliar domains, gather requirements under tight external constraints, and lead a BA team as BA Lead on a complex AI Chatbot project. In product companies (Novaon, KiotViet), I learned what it means to own a product long-term — running market research, shaping the roadmap, and staying with a feature from discovery through UAT and rollout.'
+          },
+          {
+            tag: '03 / Continuous Upskilling',
+            title: 'Business Acumen & AI Integration',
+            text: 'I\'m currently deepening my business foundation with a degree in Business Administration (Thuong Mai University) and recently completed a course on AI for Business Analyst, applying AI-assisted techniques to requirement elicitation and information synthesis — because I believe the next generation of BAs will need to work fluently alongside AI tools, not just analyze them as a domain.'
+          }
+        ],
+        targetTitle: 'What I\'m Looking For',
+        targetDesc: 'I\'m looking to join a product team — ideally in SaaS, AI-driven products, or tech-enabled platforms — where I can own a product area end-to-end, work closely with engineering, and help turn ambiguous business problems into products people actually use.',
+        quickFactsTitle: 'Quick Overview',
+        quickFacts: [
+          { label: 'Experience', val: '4+ Years in BA & Product' },
+          { label: 'Education', val: 'B.A. Business Admin (TMU) & IT (FPT Poly)' },
+          { label: 'Domains', val: 'MarTech, Hospitality, AI Security' },
+          { label: 'Languages', val: 'Vietnamese (Native), English (Technical)' },
+          { label: 'Location', val: 'Hanoi, Vietnam' }
+        ],
+        strengthsLabel: 'Value Proposition',
+        strengthsTitle: 'Why Work With Me',
+        strengths: [
+          {
+            icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>`,
+            title: 'Technical Feasibility First',
+            desc: 'Capable of reading API docs and schema designs to validate requirements before handing over to dev squads.'
+          },
+          {
+            icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`,
+            title: 'End-to-End Ownership',
+            desc: 'From market research, competitor analysis, and BRD/PRD drafting to sprint backlog grooming and UAT.'
+          },
+          {
+            icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>`,
+            title: 'AI-Enhanced Speed',
+            desc: 'Leverages custom AI workflows to accelerate user story generation, interview synthesis, and low-fi wireframing.'
+          },
+          {
+            icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 1 0 7.75"/></svg>`,
+            title: 'Proven Leadership',
+            desc: 'Led BA squad of 6 cross-functional members on complex government AI security projects with ~7 MM/sprint throughput.'
+          }
+        ],
+        ctaTitle: 'Interested in Collaboration?',
+        ctaDesc: 'Explore my case studies or feel free to reach out directly for full CV and discussions.',
+        btnProjects: 'View Case Studies',
+        btnSkills: 'Explore Skills'
+      },
+      vi: {
+        nav: { home: 'Trang chủ', about: 'Giới thiệu', skills: 'Kỹ năng', projects: 'Dự án', experience: 'Kinh nghiệm', contact: 'Liên hệ', lang: 'EN' },
+        label: 'Giới thiệu',
+        headline: 'Từ Code đến Requirements — BA hiểu cả hai phía',
+        pills: [
+          '⚡ Bằng Tốt nghiệp Loại Giỏi IT (GPA 8.6/10)',
+          '🏢 Kinh nghiệm Outsourcing & Product Company',
+          '🎓 Đang học Cử nhân Quản trị Kinh doanh (ĐH Thương Mại)',
+          '🤖 Chứng chỉ AI for Business Analyst'
+        ],
+        stories: [
+          {
+            tag: '01 / Nền tảng Kỹ thuật',
+            title: 'Xuất phát điểm từ Công nghệ thông tin',
+            text: 'Tôi bắt đầu sự nghiệp với nền tảng vững chắc về Công nghệ thông tin (FPT Polytechnic, chuyên ngành Ứng dụng phần mềm, tốt nghiệp loại Giỏi — GPA 8.6/10), giúp tôi có khả năng đọc hiểu tài liệu kỹ thuật, hiểu kiến trúc hệ thống, và nói cùng "ngôn ngữ" với đội ngũ lập trình viên. Nền tảng kỹ thuật đó định hình cách tôi làm việc với vai trò Business Analyst hiện nay: tôi không chỉ chuyển hoá yêu cầu kinh doanh thành tài liệu — tôi đảm bảo các yêu cầu đó khả thi về mặt kỹ thuật trước khi đưa vào sprint.'
+          },
+          {
+            tag: '02 / Trải nghiệm Đa dạng',
+            title: 'Khả năng Thích ứng Outsourcing & Tư duy Sở hữu Sản phẩm',
+            text: 'Trong hơn 4 năm qua, tôi đã làm việc ở hai môi trường rất khác nhau — outsourcing và product company — và mỗi môi trường rèn cho tôi một năng lực riêng. Ở outsourcing (Wanosoft, làm việc với đối tác công nghệ trong lĩnh vực chính phủ), tôi học được cách thích nghi nhanh với các lĩnh vực chưa quen thuộc, thu thập yêu cầu trong điều kiện ràng buộc từ khách hàng bên ngoài, và dẫn dắt đội BA với vai trò BA Lead trong dự án AI Chatbot phức tạp. Ở các công ty sản phẩm (Novaon, KiotViet), tôi học được ý nghĩa của việc sở hữu sản phẩm lâu dài — từ nghiên cứu thị trường, định hình roadmap, đến đồng hành cùng một tính năng từ giai đoạn khám phá đến UAT và triển khai.'
+          },
+          {
+            tag: '03 / Học hỏi Không ngừng',
+            title: 'Nền tảng Quản trị & Ứng dụng AI',
+            text: 'Hiện tại, tôi đang bổ sung nền tảng kinh doanh qua chương trình Cử nhân Quản trị Kinh doanh (Đại học Thương Mại) và vừa hoàn thành khoá học AI for Business Analyst, áp dụng các kỹ thuật hỗ trợ bởi AI vào việc khai thác yêu cầu và tổng hợp thông tin — vì tôi tin rằng thế hệ BA tiếp theo cần làm việc thành thạo cùng các công cụ AI, chứ không chỉ phân tích chúng như một lĩnh vực riêng biệt.'
+          }
+        ],
+        targetTitle: 'Định hướng tìm kiếm',
+        targetDesc: 'Tôi đang tìm kiếm cơ hội gia nhập một đội ngũ sản phẩm — lý tưởng là trong lĩnh vực SaaS, sản phẩm ứng dụng AI, hoặc nền tảng công nghệ — nơi tôi có thể sở hữu trọn vẹn một mảng sản phẩm, làm việc chặt chẽ với đội kỹ thuật, và biến những bài toán kinh doanh mơ hồ thành sản phẩm thực sự được người dùng sử dụng.',
+        quickFactsTitle: 'Tóm tắt Nhanh',
+        quickFacts: [
+          { label: 'Kinh nghiệm', val: '4+ Năm trong mảng BA & Sản phẩm' },
+          { label: 'Học vấn', val: 'IT (FPT Polytechnic)' },
+          { label: 'Lĩnh vực', val: 'MarTech, Hospitality, AI Security' },
+          { label: 'Ngôn ngữ', val: 'Tiếng Việt (Bản ngữ), Tiếng Anh (Kỹ thuật)' },
+          { label: 'Địa điểm', val: 'Hà Nội, Việt Nam' }
+        ],
+        strengthsLabel: 'Giá trị Chuyên môn',
+        strengthsTitle: 'Thế mạnh Nổi bật',
+        strengths: [
+          {
+            icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>`,
+            title: 'Đảm bảo Khả thi Kỹ thuật',
+            desc: 'Đọc hiểu tài liệu API, schema DB để thẩm định tính khả thi của yêu cầu trước khi chuyển giao cho dev.'
+          },
+          {
+            icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`,
+            title: 'Sở hữu Sản phẩm End-to-End',
+            desc: 'Đồng hành từ nghiên cứu thị trường, viết BRD/PRD đến quản lý backlog sprint và UAT.'
+          },
+          {
+            icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>`,
+            title: 'Tăng tốc với AI Workflow',
+            desc: 'Ứng dụng các prompt AI chuyên dụng giúp rút ngắn 50% thời gian viết tài liệu & thiết kế wireframe.'
+          },
+          {
+            icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+            title: 'Năng lực Dẫn dắt BA Squad',
+            desc: 'Đảm nhận vai trò BA Lead điều phối squad 6 người trong dự án AI Security chính phủ với năng suất ~7 MM/sprint.'
+          }
+        ],
+        ctaTitle: 'Bạn muốn tìm hiểu thêm?',
+        ctaDesc: 'Xem các case study dự án tiêu biểu hoặc liên hệ trực tiếp để trao đổi công việc.',
+        btnProjects: 'Xem Case Study',
+        btnSkills: 'Khám phá Kỹ năng'
+      }
+    };
+
+    let currentLang = localStorage.getItem('portfolio-lang') || 'en';
+
+    function render() {
+      const d = DATA[currentLang];
+      document.documentElement.lang = currentLang;
+
+      // Navbar
+      document.getElementById('lang-toggle').textContent = d.nav.lang;
+      document.getElementById('mobile-lang').textContent = `Switch to ${d.nav.lang}`;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const map = { nav_home: d.nav.home, nav_about: d.nav.about, nav_skills: d.nav.skills, nav_projects: d.nav.projects, nav_experience: d.nav.experience, nav_contact: d.nav.contact };
+        if (map[key]) el.textContent = map[key];
+      });
+
+      // Header
+      document.getElementById('about-label').textContent = d.label;
+      document.getElementById('about-headline').textContent = d.headline;
+      document.getElementById('about-pills').innerHTML = d.pills.map(p => `<span class="pill">${p}</span>`).join('');
+
+      // Stories
+      document.getElementById('story-container').innerHTML = d.stories.map(s => `
+        <div class="story-card">
+          <span class="story-card-tag">${s.tag}</span>
+          <h3 class="story-card-title">${s.title}</h3>
+          <p>${s.text}</p>
+        </div>
+      `).join('');
+
+      // Target & Facts
+      document.getElementById('target-title').textContent = d.targetTitle;
+      document.getElementById('target-desc').textContent = d.targetDesc;
+      document.getElementById('quick-facts-title').textContent = d.quickFactsTitle;
+      document.getElementById('quick-facts-list').innerHTML = d.quickFacts.map(f => `
+        <div class="info-item">
+          <span class="info-item-label">${f.label}</span>
+          <span class="info-item-val">${f.val}</span>
+        </div>
+      `).join('');
+
+      // Strengths
+      document.getElementById('strengths-label').textContent = d.strengthsLabel;
+      document.getElementById('strengths-title').textContent = d.strengthsTitle;
+      document.getElementById('strengths-grid').innerHTML = d.strengths.map(st => `
+        <div class="strength-card">
+          <div class="strength-icon">${st.icon}</div>
+          <div class="strength-title">${st.title}</div>
+          <div class="strength-desc">${st.desc}</div>
+        </div>
+      `).join('');
+
+      // CTA
+      document.getElementById('cta-headline').textContent = d.ctaTitle;
+      document.getElementById('cta-desc').textContent = d.ctaDesc;
+      document.getElementById('btn-projects').textContent = d.btnProjects;
+      document.getElementById('btn-skills').textContent = d.btnSkills;
+
+      // Footer
+      document.getElementById('footer-text').innerHTML = `Nguyen Le Hai — Business Analyst Portfolio &copy; ${new Date().getFullYear()}`;
+    }
+
+    function toggleLang() {
+      currentLang = currentLang === 'en' ? 'vi' : 'en';
+      localStorage.setItem('portfolio-lang', currentLang);
+      render();
+    }
+
+    document.getElementById('lang-toggle').addEventListener('click', toggleLang);
+    document.getElementById('mobile-lang').addEventListener('click', () => { toggleLang(); closeMobileMenu(); });
+
+    // Mobile menu
+    function openMobileMenu() { document.getElementById('mobile-menu').classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeMobileMenu() { document.getElementById('mobile-menu').classList.remove('open'); document.body.style.overflow = ''; }
+    document.getElementById('hamburger').addEventListener('click', openMobileMenu);
+    document.getElementById('mobile-close').addEventListener('click', closeMobileMenu);
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    render();
+  </script>
+</body>
+
+</html>

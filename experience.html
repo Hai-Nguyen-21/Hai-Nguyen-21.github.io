@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience & Career Timeline — Nguyen Le Hai | Business Analyst</title>
+  <meta name="description"
+    content="Career timeline and work history of Nguyen Le Hai — Business Analyst with 4+ years of experience across Outsourcing and Product environments in MarTech, Hospitality, and AI Security." />
+  <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,300&family=Outfit:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet" />
+  <style>
+    /* ─── Reset & Design System ────────────────────────────── */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --cream: #1A1A1A;
+      --black: #FAF8F4;
+      --gray-900: #F2EFE9;
+      --gray-800: #E8E3DA;
+      --gray-700: #D0C9BC;
+      --gray-500: #7A7060;
+      --gray-400: #9A9080;
+      --gray-300: #3D3830;
+      --accent: #8B6B3D;
+      --accent-dim: rgba(139, 107, 61, 0.12);
+      --accent-glow: rgba(139, 107, 61, 0.07);
+      --glass: rgba(0, 0, 0, 0.03);
+      --glass-border: rgba(0, 0, 0, 0.09);
+      --radius: 4px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--cream);
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: var(--accent);
+      color: #FAF8F4;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    /* ─── Typography & Layout ───────────────────────────────── */
+    .font-display {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 1.25rem;
+      }
+    }
+
+    /* ─── Navbar ─────────────────────────────────────────────── */
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1.25rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--glass-border);
+      background: rgba(250, 248, 244, 0.92);
+      backdrop-filter: blur(20px);
+      transition: all var(--transition);
+    }
+
+    .nav-brand {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+      color: var(--cream);
+    }
+
+    .nav-brand span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+      transition: color var(--transition);
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transition: transform var(--transition);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--cream);
+      font-weight: 600;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      transform: scaleX(1);
+    }
+
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    #lang-toggle {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+      padding: 0.3rem 0.7rem;
+      border: 1px solid var(--gray-700);
+      border-radius: var(--radius);
+      transition: all var(--transition);
+    }
+
+    #lang-toggle:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .nav-hamburger span {
+      width: 22px;
+      height: 1.5px;
+      background: var(--cream);
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .nav-hamburger {
+        display: flex;
+      }
+    }
+
+    /* Mobile Menu */
+    #mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 99;
+      background: #FAF8F4;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+    }
+
+    #mobile-menu.open {
+      display: flex;
+    }
+
+    #mobile-menu a {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2rem;
+      font-weight: 600;
+      color: #1A1A1A;
+      letter-spacing: 0.05em;
+    }
+
+    #mobile-menu a.active {
+      color: var(--accent);
+    }
+
+    #mobile-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 2rem;
+      font-size: 1.5rem;
+      color: var(--gray-500);
+    }
+
+    #mobile-lang {
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      padding: 0.4rem 1rem;
+      border: 1px solid var(--accent);
+      border-radius: var(--radius);
+    }
+
+    /* ─── Page Header ────────────────────────────────────────── */
+    .page-header {
+      padding: 8rem 0 3rem;
+      background: linear-gradient(180deg, #FAF8F4 0%, #F5F0E6 100%);
+      border-bottom: 1px solid var(--gray-800);
+    }
+
+    .section-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+
+    .page-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: #1A1A1A;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .page-subtitle {
+      font-size: 1rem;
+      color: var(--gray-500);
+      max-width: 680px;
+      line-height: 1.6;
+    }
+
+    /* ─── Timeline Section ───────────────────────────────────── */
+    .exp-section {
+      padding: 4rem 0 6rem;
+    }
+
+    .exp-grid {
+      display: grid;
+      grid-template-columns: 7fr 4fr;
+      gap: 4rem;
+    }
+
+    @media (max-width: 1024px) {
+      .exp-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 16px;
+      bottom: 16px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--accent), var(--gray-700));
+    }
+
+    .timeline-card {
+      position: relative;
+      background: #FFFFFF;
+      border: 1px solid var(--gray-800);
+      border-radius: 12px;
+      padding: 1.75rem;
+      margin-bottom: 2.25rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    }
+
+    .timeline-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+      border-color: rgba(139, 107, 61, 0.35);
+    }
+
+    .timeline-card-dot {
+      position: absolute;
+      left: -2rem;
+      top: 1.8rem;
+      width: 14px;
+      height: 14px;
+      background: #FAF8F4;
+      border: 3px solid var(--accent);
+      border-radius: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 0 0 4px rgba(139, 107, 61, 0.15);
+      transition: all var(--transition);
+    }
+
+    .timeline-card:hover .timeline-card-dot {
+      background: var(--accent);
+      box-shadow: 0 0 0 6px rgba(139, 107, 61, 0.25);
+    }
+
+    .timeline-card-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .timeline-company-logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: #FAF8F4;
+      border: 1px solid var(--gray-800);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .timeline-company-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .timeline-company-info {
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .timeline-company-name {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1A1A1A;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .timeline-type-badge {
+      font-size: 0.68rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      background: var(--accent-dim);
+      color: var(--accent);
+    }
+
+    .timeline-period-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--gray-500);
+      margin-top: 0.25rem;
+    }
+
+    .timeline-period-badge.ongoing {
+      color: #16a34a;
+    }
+
+    .timeline-period-badge.ongoing .dot-live {
+      width: 6px;
+      height: 6px;
+      background: #16a34a;
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
+      animation: pulseGreen 2s infinite;
+    }
+
+    @keyframes pulseGreen {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1.4);
+        opacity: 0.6;
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .timeline-role-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .timeline-metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 0.6rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .timeline-metric-card {
+      background: #FAF8F4;
+      border: 1px solid var(--gray-800);
+      border-radius: 6px;
+      padding: 0.6rem 0.8rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .timeline-metric-val {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #1A1A1A;
+      line-height: 1.2;
+    }
+
+    .timeline-metric-lbl {
+      font-size: 0.65rem;
+      color: var(--gray-500);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 0.15rem;
+    }
+
+    .timeline-bullets {
+      list-style: none;
+      margin-bottom: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .timeline-bullets li {
+      font-size: 0.86rem;
+      color: #3D3830;
+      padding-left: 1.2rem;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .timeline-bullets li::before {
+      content: '✦';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.7rem;
+      top: 2px;
+    }
+
+    .timeline-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .timeline-tag-pill {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.65rem;
+      border-radius: 4px;
+      background: rgba(0, 0, 0, 0.04);
+      color: var(--gray-500);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .timeline-case-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #FAF8F4;
+      background: #1A1A1A;
+      padding: 0.65rem 1.25rem;
+      border-radius: 6px;
+      border: 1px solid #1A1A1A;
+      transition: all var(--transition);
+      cursor: pointer;
+    }
+
+    .timeline-case-btn:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(139, 107, 61, 0.25);
+    }
+
+    .edu-block {
+      margin-bottom: 1.75rem;
+      background: #FFFFFF;
+      padding: 1.25rem;
+      border-radius: 8px;
+      border: 1px solid var(--gray-800);
+    }
+
+    .edu-inst {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1A1A1A;
+    }
+
+    .edu-degree {
+      font-size: 0.85rem;
+      color: var(--gray-300);
+      margin: 0.25rem 0;
+    }
+
+    .edu-period {
+      font-size: 0.72rem;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      font-weight: 600;
+    }
+
+    .edu-detail {
+      font-size: 0.78rem;
+      color: var(--gray-500);
+      margin-top: 0.3rem;
+      font-style: italic;
+    }
+
+    .cert-item {
+      padding: 0.85rem 1.25rem;
+      background: #FFFFFF;
+      border: 1px solid var(--gray-800);
+      border-radius: 8px;
+      margin-bottom: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .cert-name {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #1A1A1A;
+    }
+
+    .cert-issuer {
+      font-size: 0.75rem;
+      color: var(--gray-500);
+      margin-top: 0.15rem;
+    }
+
+    .cert-period {
+      font-size: 0.7rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* ─── Modal Styles ────────────────────────────────────────── */
+    #modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(8px);
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    #modal-overlay.open {
+      display: flex;
+    }
+
+    .modal-box {
+      background: #FFFFFF;
+      border-radius: 12px;
+      max-width: 780px;
+      width: 100%;
+      max-height: 88vh;
+      overflow-y: auto;
+      padding: 2.25rem;
+      border: 1px solid var(--gray-800);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+      position: relative;
+      animation: modalFade 0.3s ease;
+    }
+
+    @keyframes modalFade {
+      from {
+        opacity: 0;
+        transform: scale(0.96);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--gray-800);
+      padding-bottom: 1.25rem;
+    }
+
+    .modal-project-meta {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .modal-close {
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+      padding: 0.35rem 0.8rem;
+      border: 1px solid var(--gray-700);
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .modal-close:hover {
+      color: #1A1A1A;
+      border-color: #1A1A1A;
+    }
+
+    .modal-section-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      font-weight: 700;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .modal-text {
+      font-size: 0.9rem;
+      color: var(--gray-300);
+      line-height: 1.75;
+    }
+
+    .modal-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .modal-list li {
+      font-size: 0.88rem;
+      color: #3D3830;
+      padding-left: 1.25rem;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .modal-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.8rem;
+    }
+
+    /* Footer */
+    footer {
+      padding: 2.5rem 0;
+      text-align: center;
+      border-top: 1px solid var(--glass-border);
+      background: var(--black);
+    }
+
+    footer p {
+      font-size: 0.75rem;
+      color: var(--gray-500);
+      letter-spacing: 0.08em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ─── Navbar ──────────────────────────────────────────────── -->
+  <nav id="navbar">
+    <a href="index.html#hero" class="nav-brand">NLH<span>.</span></a>
+    <div class="nav-links">
+      <a href="index.html#hero" data-i18n="nav_home">Home</a>
+      <a href="about.html" data-i18n="nav_about">About</a>
+      <a href="skills.html" data-i18n="nav_skills">Skills</a>
+      <a href="index.html#projects" data-i18n="nav_projects">Projects</a>
+      <a href="experience.html" class="active" data-i18n="nav_experience">Experience</a>
+      <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
+    </div>
+    <div class="nav-controls">
+      <button id="lang-toggle" aria-label="Toggle language">VI</button>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" role="dialog" aria-label="Navigation menu">
+    <button id="mobile-close" aria-label="Close menu">✕</button>
+    <a href="index.html#hero" data-i18n="nav_home">Home</a>
+    <a href="about.html" data-i18n="nav_about">About</a>
+    <a href="skills.html" data-i18n="nav_skills">Skills</a>
+    <a href="index.html#projects" data-i18n="nav_projects">Projects</a>
+    <a href="experience.html" class="active" data-i18n="nav_experience">Experience</a>
+    <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
+    <button id="mobile-lang">Switch to VI</button>
+  </div>
+
+  <!-- ─── Page Header ────────────────────────────────────────── -->
+  <header class="page-header">
+    <div class="container">
+      <p class="section-label" id="exp-label">Career Timeline</p>
+      <h1 class="page-title" id="exp-title">Work History &amp; Experience</h1>
+      <p class="page-subtitle" id="exp-subtitle">Proven track record across Outsourcing and Product environments in
+        MarTech, Hospitality, and AI Security.</p>
+    </div>
+  </header>
+
+  <!-- ─── Experience Section ──────────────────────────────────── -->
+  <section class="exp-section">
+    <div class="container">
+      <div class="exp-grid">
+        <div>
+          <div class="timeline" id="timeline"><!-- Injected by JS --></div>
+        </div>
+        <div id="edu-col"><!-- Injected by JS --></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Case Study Modal ────────────────────────────────────── -->
+  <div id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div>
+          <div class="modal-project-meta" id="modal-meta"></div>
+          <h3 class="font-display" id="modal-title"
+            style="font-size:1.3rem;font-weight:700;margin-top:0.4rem;color:#1A1A1A;"></h3>
+        </div>
+        <button class="modal-close" id="modal-close-btn" onclick="closeModal()">Close</button>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- ─── Footer ──────────────────────────────────────────────── -->
+  <footer>
+    <div class="container">
+      <p id="footer-text">Nguyen Le Hai — Business Analyst Portfolio &copy; <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script>
+    const DATA = {
+      en: {
+        nav: { home: 'Home', about: 'About', skills: 'Skills', projects: 'Projects', experience: 'Experience', contact: 'Contact', lang: 'VI' },
+        label: 'Career Timeline',
+        title: 'Work History & Experience',
+        subtitle: 'Proven track record across Outsourcing & Product environments in MarTech, Hospitality, and AI Security.',
+        viewCaseStudy: 'Explore Full Case Study →',
+        projects: {
+          modalClose: 'Close Case Study',
+          items: [
+            {
+              id: 'ai-chatbot',
+              title: 'AI Chatbot for Cybersecurity Analysis ⭐ (Flagship)',
+              company: 'Wanosoft Co., Ltd.', domain: 'AI Security / Information Security',
+              role: 'BA Lead', team: 'Cross-functional (AI/ML, Dev, QA, UI/UX)',
+              context: 'An outsourcing project for a government-sector technology partner. The goal: build an AI chatbot that helps security analysts query information-security data in natural language, auto-generate charts, and view real-time risk/incident dashboards — reducing manual report compilation time.',
+              roleApproach: 'As BA Lead, I worked directly with the client and information-security experts to gather and clarify requirements, then led a BA team — assigning tasks, reviewing documentation, and ensuring consistent quality across all deliverables (BRD, SRS, User Stories, Use Cases, Acceptance Criteria).',
+              whatIDid: [
+                'Designed core AI chatbot logic for context-aware, natural-language querying against internal security knowledge base',
+                'Defined auto-chart-generation feature (bar/line/pie) and dynamic dashboard with risk, incident, and performance widgets',
+                'Mapped data-flow and integration requirements across SIEM, Log Management, Threat Intelligence, and internal databases',
+                'Collaborated with AI/ML engineers, Tech Lead, and UI/UX to design conversation flows and query-handling scenarios',
+                'Managed requirement changes and impact assessment throughout the SDLC',
+                'Led UAT and supported rollout of AI-powered analysis features'
+              ],
+              impact: [
+                'As BA Lead, managed a 6-person delivery squad (4 Developers, 1 QA, 1 UI/UX Designer), owning backlog planning and sprint execution end-to-end',
+                'Maintained a consistent average throughput of ~7 person-months (MM) of effort per sprint under Agile/Scrum',
+                'Ongoing project since October 2024 (27 sprints completed to date, averaging 4 features delivered per sprint)',
+                'Achieved a 60% sprint-goal completion rate in a fast-evolving AI security product',
+                'Kept requirements stable with only ~20% of BRDs/PRDs needing revision after a sprint started',
+                'Fast escalation/change-request turnaround of 2–3 days, keeping client unblocked',
+                'Sustained "Good" client satisfaction rating and recognized with "Talented Young Employee" award in 2025'
+              ]
+            },
+            {
+              id: 'onhub',
+              title: 'OnHub: Social Media Account Management Platform',
+              company: 'Novaon Digital JSC', domain: 'MarTech / Digital Advertising',
+              role: 'Business Analyst', team: 'Dev, Business Development, Stakeholders',
+              context: 'OnHub connects advertiser accounts across multiple ad networks and provides supporting services for social media account management — one of Novaon\'s core MarTech suite platforms.',
+              roleApproach: 'Gathered requirements directly from clients and BD teams, defined PRD/FSD, designed wireframes & user flows, and collaborated directly with CTO, Product team, and Devs through rollout.',
+              whatIDid: [
+                'Gathered requirements directly from clients, Business Development, and stakeholders',
+                'Analyzed business needs and proposed commercial solutions for a multi-product platform',
+                'Produced PRDs, FSDs, User Stories, and Acceptance Criteria',
+                'Designed wireframes, user flows, and business process flows for customer account requests, top-up (deposit), and accounting approval',
+                'Worked directly with CTO, Product Team, Developers, and QA through development and rollout',
+                'Ran UAT, supported user training, and gathered feedback for continuous iteration'
+              ],
+              impact: [
+                'Delivered platform core MVP in 2 weeks, covering full account lifecycle: BD customer account management, TikTok Ads Agency account provisioning, deposit top-ups, and accounting approvals',
+                'Enabled BD team to consult and close deals with 12 clients, integrating 20 advertising accounts onto the platform',
+                'Supported combined monthly ad spend of ~VND 500 million (~USD 20,000) across all accounts'
+              ]
+            },
+            {
+              id: 'kvbooking',
+              title: 'KVBooking: Hotel & Homestay Management Software',
+              company: 'KiotViet Technology Corporation', domain: 'Hospitality',
+              role: 'Product Executive', team: '~10 (Devs, QA, UI/UX Designers)',
+              context: 'A management software product for hotels and homestays built from early-stage market research through to feature rollout.',
+              roleApproach: 'Conducted market & competitor research, converted customer feedback into User Stories and BPMN flows, and coordinated a ~10-person cross-functional squad.',
+              whatIDid: [
+                'Conducted market research and competitor analysis in hotel/homestay management space',
+                'Gathered requirements from customers and stakeholders into User Stories, Use Cases, and Functional Requirements',
+                'Designed business flows, BPMN diagrams, and wireframe mockups',
+                'Coordinated ~10-person cross-functional team to keep delivery on schedule',
+                'Supported UAT, product demos, and feature rollout'
+              ],
+              impact: [
+                'Supported resolution of 39 support tickets raised by real customers, ensuring clear understanding before dev handover',
+                'Shipped guest-registration compliance feature, reducing homestay owners\' manual guest declaration processing time from 2 hours to 10 minutes per case',
+                'Increased guest-declaration accuracy to 100%, eliminating manual data-entry errors and compliance risk'
+              ]
+            }
+          ]
+        },
+        timeline: [
+          {
+            logo: 'assets/images/companies/wanosoft.svg',
+            company: 'Wanosoft Co., Ltd.',
+            type: 'Outsourcing',
+            domain: 'AI Security & Government Tech',
+            period: '11/2024 – Present',
+            isOngoing: true,
+            role: 'Business Analyst (BA Lead — AI Chatbot)',
+            projectId: 'ai-chatbot',
+            metrics: [
+              { value: 'BA Lead', label: '6-Person Squad' },
+              { value: '~7 MM', label: 'Throughput / Sprint' },
+              { value: '27', label: 'Sprints Delivered' },
+              { value: '2-3 Days', label: 'Change Request SLA' }
+            ],
+            highlights: [
+              'Led a cross-functional squad of 6 (4 Devs, 1 QA, 1 UI/UX), owning sprint planning and backlog grooming end-to-end.',
+              'Designed core AI Chatbot logic for context-aware natural language querying over internal security knowledge bases.',
+              'Defined auto-chart generation (bar/line/pie) and dynamic risk & incident monitoring dashboards.',
+              'Awarded "Talented Young Employee 2025" for maintaining predictable delivery and strong client satisfaction.'
+            ],
+            tags: ['AI Security', 'BA Lead', 'SRS / BRD', 'BPMN 2.0', 'SIEM Integration', 'Agile / Scrum']
+          },
+          {
+            logo: 'assets/images/companies/kiotviet.svg',
+            company: 'KiotViet Technology Corporation',
+            type: 'Product Company',
+            domain: 'Hospitality & Property SaaS',
+            period: '08/2024 – 11/2024',
+            isOngoing: false,
+            role: 'Product Executive',
+            projectId: 'kvbooking',
+            metrics: [
+              { value: '10-Person', label: 'Squad Coordination' },
+              { value: '39', label: 'Tickets Resolved' },
+              { value: '2h → 10m', label: 'Process Cut' },
+              { value: '100%', label: 'Compliance Accuracy' }
+            ],
+            highlights: [
+              'Conducted market research & competitor analysis in hotel/homestay management software.',
+              'Gathered requirements directly from homestay owners, producing User Stories, BPMN flows, and wireframes.',
+              'Shipped an automated guest-registration compliance feature, slashing processing time from 2 hours to 10 minutes per case.'
+            ],
+            tags: ['Hospitality SaaS', 'User Stories', 'BPMN 2.0', 'Competitor Analysis', 'UAT']
+          },
+          {
+            logo: 'assets/images/companies/novaon.svg',
+            company: 'Novaon Digital JSC',
+            type: 'Product Company',
+            domain: 'MarTech & Digital Advertising',
+            period: '05/2022 – 08/2024',
+            isOngoing: false,
+            role: 'Business Analyst',
+            projectId: 'onhub',
+            metrics: [
+              { value: '2 Weeks', label: 'MVP Release' },
+              { value: '12', label: 'Client Deals Enabled' },
+              { value: '20', label: 'Ad Accounts Onboarded' },
+              { value: '~500M VND', label: 'Monthly Ad Spend' }
+            ],
+            highlights: [
+              'Analyzed business needs and produced PRDs, FSDs, and user flows for OnHub multi-product MarTech platform.',
+              'Covered full account lifecycle: BD customer account management, TikTok Ads agency provisioning, top-ups, and accounting approvals.',
+              'Delivered MVP in 2 weeks, supporting BD team to onboard 12 clients and manage ~500M VND monthly ad spend.'
+            ],
+            tags: ['MarTech', 'PRD / FSD', 'User Flows', 'Wireframing', 'Agile / Scrum']
+          }
+        ],
+        educationTitle: 'Education & Certifications',
+        education: [
+          { institution: 'Thuong Mai University', degree: 'Bachelor of Business Administration', period: '04/2024 – Present' },
+          { institution: 'FPT Polytechnic', degree: 'Information Technology — Software Applications', period: '2020 – 2023', detail: 'GPA 8.6 / 10 — Graduated with Distinction' },
+        ],
+        certifications: [
+          { name: 'AI for Business Analyst', issuer: 'Dau Ngoc Anh', period: '01/2026 – 03/2026' },
+          { name: 'PM Essentials 2023', issuer: 'The A Program', period: '11/2023 – 01/2024' },
+        ]
+      },
+      vi: {
+        nav: { home: 'Trang chủ', about: 'Giới thiệu', skills: 'Kỹ năng', projects: 'Dự án', experience: 'Kinh nghiệm', contact: 'Liên hệ', lang: 'EN' },
+        label: 'Sự nghiệp & Kinh nghiệm',
+        title: 'Quá trình làm việc',
+        subtitle: 'Kinh nghiệm thực chiến qua cả môi trường Outsourcing và Product trong các lĩnh vực MarTech, Hospitality và AI Security.',
+        viewCaseStudy: 'Khám phá Case Study Chi tiết →',
+        projects: {
+          items: [
+            {
+              id: 'ai-chatbot',
+              title: 'AI Chatbot phân tích An ninh mạng ⭐ (Dự án tiêu biểu)',
+              company: 'Wanosoft Co., Ltd.', domain: 'AI Security / An ninh thông tin',
+              role: 'BA Lead', team: 'Liên phòng ban (AI/ML, Dev, QA, UI/UX)',
+              context: 'Dự án outsourcing cho đối tác công nghệ trong lĩnh vực chính phủ. Mục tiêu: xây dựng chatbot AI giúp chuyên gia an ninh mạng truy vấn dữ liệu bằng ngôn ngữ tự nhiên, tự động tạo biểu đồ, và xem dashboard rủi ro/sự cố theo thời gian thực — giúp giảm thời gian tổng hợp báo cáo thủ công.',
+              roleApproach: 'Với vai trò BA Lead, tôi làm việc trực tiếp với khách hàng và các chuyên gia an ninh thông tin để thu thập và làm rõ yêu cầu, sau đó dẫn dắt đội BA — phân công công việc, review tài liệu, và đảm bảo chất lượng đồng nhất trên toàn bộ deliverables (BRD, SRS, User Stories, Use Cases, Acceptance Criteria).',
+              whatIDid: [
+                'Định nghĩa tính năng tự động tạo biểu đồ (bar/line/pie) và dashboard động với các widget thống kê rủi ro, sự cố, hiệu năng hệ thống',
+                'Phân tích luồng dữ liệu và định nghĩa yêu cầu tích hợp với SIEM, Log Management, Threat Intelligence, và các cơ sở dữ liệu nội bộ',
+                'Phối hợp với đội AI/ML, Tech Lead và UI/UX để thiết kế luồng hội thoại và các kịch bản xử lý truy vấn',
+                'Quản lý thay đổi yêu cầu và đánh giá tác động xuyên suốt vòng đời phát triển (SDLC)',
+                'Dẫn dắt UAT và hỗ trợ triển khai các tính năng phân tích dữ liệu bằng AI'
+              ],
+              impact: [
+                'Với vai trò BA Lead, quản lý đội delivery gồm 6 người (4 Developer, 1 QA, 1 UI/UX Designer), phụ trách backlog planning và sprint execution',
+                'Duy trì tốc độ triển khai ổn định với trung bình ~7 person-month (MM) khối lượng công việc mỗi sprint',
+                'Dự án triển khai từ tháng 10/2024 đến nay (đã hoàn thành 27 sprint, trung bình mỗi sprint release 4 tính năng)',
+                'Đạt tỷ lệ 60% sprint hoàn thành đúng mục tiêu trong môi trường sản phẩm AI an ninh mạng có tốc độ thay đổi nhanh',
+                'Giữ độ ổn định yêu cầu tốt, chỉ ~20% BRD/PRD cần chỉnh sửa lại sau khi sprint đã bắt đầu',
+                'Duy trì tốc độ xử lý escalation/thay đổi scope nhanh (trung bình 2–3 ngày)',
+                'Giữ vững đánh giá "Tốt" từ khách hàng và vinh danh giải thưởng "Nhân viên trẻ tài năng" năm 2025'
+              ]
+            },
+            {
+              id: 'onhub',
+              title: 'OnHub: Nền tảng quản lý tài khoản mạng xã hội',
+              company: 'Novaon Digital JSC', domain: 'MarTech / Quảng cáo số',
+              role: 'Business Analyst', team: 'Dev, Business Development, Stakeholders',
+              context: 'OnHub kết nối tài khoản quảng cáo trên nhiều mạng lưới quảng cáo khác nhau và cung cấp các dịch vụ hỗ trợ quản lý tài khoản mạng xã hội — một trong những nền tảng cốt lõi trong bộ sản phẩm MarTech của Novaon.',
+              roleApproach: 'Thu thập yêu cầu trực tiếp từ khách hàng, đội Business Development và stakeholders, phân tích nhu cầu kinh doanh, đề xuất giải pháp commercial, làm việc trực tiếp với CTO & Dev.',
+              whatIDid: [
+                'Thu thập yêu cầu trực tiếp từ khách hàng, đội Business Development và các stakeholders',
+                'Phân tích nhu cầu kinh doanh và đề xuất giải pháp phù hợp với mục tiêu thương mại',
+                'Xây dựng PRD, FSD, User Stories, Acceptance Criteria cho nền tảng đa sản phẩm',
+                'Thiết kế wireframe, user flow, sơ đồ quy trình nghiệp vụ nạp tiền & phê duyệt tài khoản',
+                'Làm việc trực tiếp với CTO, Product Team, Developers và QA trong suốt quá trình phát triển và triển khai',
+                'Thực hiện UAT, hỗ trợ đào tạo người dùng, thu thập phản hồi để cải tiến liên tục'
+              ],
+              impact: [
+                'Triển khai thành công các tính năng lõi (MVP) chỉ trong 2 tuần phát triển, bao phủ toàn bộ vòng đời tài khoản: quản lý tài khoản khách hàng, cấp tài khoản TikTok Ads Agency, nạp tiền và duyệt kế toán',
+                'Hỗ trợ đội BD tư vấn và chốt deal thành công với 12 khách hàng, tích hợp 20 tài khoản quảng cáo lên hệ thống',
+                'Tương ứng tổng ad spend khoảng 500 triệu VNĐ/tháng (~USD 20,000) trên toàn bộ tài khoản'
+              ]
+            },
+            {
+              id: 'kvbooking',
+              title: 'KVBooking: Phần mềm quản lý khách sạn & homestay',
+              company: 'KiotViet Technology Corporation', domain: 'Hospitality',
+              role: 'Product Executive', team: '~10 người (Dev, QA, UI/UX)',
+              context: 'Phần mềm quản lý dành cho khách sạn và homestay, được xây dựng từ giai đoạn nghiên cứu thị trường ban đầu đến khi triển khai tính năng.',
+              roleApproach: 'Nghiên cứu thị trường & đối thủ, thu thập nhu cầu khách hàng, thiết kế sơ đồ quy trình BPMN và điều phối đội ngũ liên phòng ban ~10 người.',
+              whatIDid: [
+                'Nghiên cứu thị trường và phân tích đối thủ cạnh tranh trong lĩnh vực quản lý khách sạn/homestay',
+                'Thu thập yêu cầu từ khách hàng và stakeholders, chuyển hoá thành User Stories, Use Cases, Functional Requirements',
+                'Thiết kế business flow, sơ đồ BPMN, wireframe',
+                'Điều phối đội ngũ liên phòng ban ~10 người để đảm bảo tiến độ triển khai',
+                'Hỗ trợ UAT, demo sản phẩm, triển khai tính năng'
+              ],
+              impact: [
+                'Hỗ trợ xử lý 39 ticket yêu cầu từ khách hàng thực tế, đảm bảo yêu cầu được hiểu đúng trước khi chuyển sang dev',
+                'Release tính năng khai báo lưu trú giúp giảm thời gian xử lý thủ công của chủ homestay từ 2 tiếng xuống còn 10 phút/lượt',
+                'Tăng độ chính xác trong khai báo khách lưu trú lên 100%, loại bỏ hoàn toàn sai sót nhập liệu thủ công'
+              ]
+            }
+          ]
+        },
+        timeline: [
+          {
+            logo: 'assets/images/companies/wanosoft.svg',
+            company: 'Wanosoft Co., Ltd.',
+            type: 'Outsourcing',
+            domain: 'AI Security & Công nghệ chính phủ',
+            period: '11/2024 – Hiện tại',
+            isOngoing: true,
+            role: 'Business Analyst (BA Lead dự án AI Chatbot)',
+            projectId: 'ai-chatbot',
+            metrics: [
+              { value: 'BA Lead', label: 'Squad 6 thành viên' },
+              { value: '~7 MM', label: 'Khối lượng / Sprint' },
+              { value: '27', label: 'Sprint hoàn thành' },
+              { value: '2-3 Ngày', label: 'SLA Thay đổi Scope' }
+            ],
+            highlights: [
+              'Dẫn dắt đội delivery 6 người (4 Dev, 1 QA, 1 UI/UX), phụ trách lập kế hoạch backlog & điều phối sprint.',
+              'Thiết kế logic lõi cho chatbot AI truy vấn ngôn ngữ tự nhiên theo ngữ cảnh trên knowledge base an ninh nội bộ.',
+              'Định nghĩa tính năng tự động tạo biểu đồ (bar/line/pie) và dashboard theo dõi rủi ro theo thời gian thực.',
+              'Đạt giải thưởng "Nhân viên trẻ tài năng" năm 2025 nhờ duy trì tiến độ ổn định & sự hài lòng cao từ khách hàng.'
+            ],
+            tags: ['AI Security', 'BA Lead', 'BRD / SRS', 'BPMN 2.0', 'Tích hợp SIEM', 'Agile / Scrum']
+          },
+          {
+            logo: 'assets/images/companies/kiotviet.svg',
+            company: 'KiotViet Technology Corporation',
+            type: 'Product Company',
+            domain: 'Hospitality & Phần mềm Khách sạn',
+            period: '08/2024 – 11/2024',
+            isOngoing: false,
+            role: 'Product Executive',
+            projectId: 'kvbooking',
+            metrics: [
+              { value: 'Team 10', label: 'Điều phối phòng ban' },
+              { value: '39', label: 'Ticket xử lý' },
+              { value: '2h → 10p', label: 'Rút ngắn quy trình' },
+              { value: '100%', label: 'Độ chính xác dữ liệu' }
+            ],
+            highlights: [
+              'Nghiên cứu thị trường và đối thủ cạnh tranh trong mảng phần mềm quản lý khách sạn/homestay.',
+              'Thu thập yêu cầu thực tế từ chủ homestay, chuyển hoá thành User Stories, sơ đồ BPMN và wireframe.',
+              'Release tính năng tự động hoá khai báo lưu trú, giảm thời gian xử lý từ 2 tiếng xuống 10 phút/lượt.'
+            ],
+            tags: ['Hospitality SaaS', 'User Stories', 'BPMN 2.0', 'Phân tích đối thủ', 'UAT']
+          },
+          {
+            logo: 'assets/images/companies/novaon.svg',
+            company: 'Novaon Digital JSC',
+            type: 'Product Company',
+            domain: 'MarTech & Quảng cáo số',
+            period: '05/2022 – 08/2024',
+            isOngoing: false,
+            role: 'Business Analyst',
+            projectId: 'onhub',
+            metrics: [
+              { value: '2 Tuần', label: 'Phát triển MVP' },
+              { value: '12', label: 'Khách hàng chốt deal' },
+              { value: '20', label: 'Tài khoản quảng cáo' },
+              { value: '~500 Tr', label: 'Ad Spend hàng tháng' }
+            ],
+            highlights: [
+              'Phân tích nhu cầu nghiệp vụ và xây dựng PRD, FSD, user flow cho nền tảng MarTech OnHub.',
+              'Bao phủ trọn vẹn vòng đời tài khoản: quản lý tài khoản khách hàng, nạp tiền, phân quyền Agency TikTok Ads & kế toán duyệt.',
+              'Triển khai MVP trong 2 tuần, hỗ trợ đội BD chốt deal 12 khách hàng với tổng ngân sách ~500 triệu VNĐ/tháng.'
+            ],
+            tags: ['MarTech', 'PRD / FSD', 'User Flows', 'Wireframing', 'Agile / Scrum']
+          }
+        ],
+        educationTitle: 'Học vấn & Chứng chỉ',
+        education: [
+          { institution: 'Đại học Thương Mại', degree: 'Cử nhân Quản trị Kinh doanh', period: '04/2024 – Hiện tại' },
+          { institution: 'FPT Polytechnic', degree: 'Công nghệ thông tin — Chuyên ngành Ứng dụng phần mềm', period: '2020 – 2023', detail: 'GPA 8.6 / 10 — Tốt nghiệp loại Giỏi' },
+        ],
+        certifications: [
+          { name: 'AI for Business Analyst', issuer: 'Đậu Ngọc Anh', period: '01/2026 – 03/2026' },
+          { name: 'PM Essentials 2023', issuer: 'The A Program', period: '11/2023 – 01/2024' },
+        ]
+      }
+    };
+
+    let currentLang = localStorage.getItem('portfolio-lang') || 'en';
+
+    function render() {
+      const d = DATA[currentLang];
+      document.documentElement.lang = currentLang;
+
+      // Navbar
+      document.getElementById('lang-toggle').textContent = d.nav.lang;
+      document.getElementById('mobile-lang').textContent = `Switch to ${d.nav.lang}`;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const map = { nav_home: d.nav.home, nav_about: d.nav.about, nav_skills: d.nav.skills, nav_projects: d.nav.projects, nav_experience: d.nav.experience, nav_contact: d.nav.contact };
+        if (map[key]) el.textContent = map[key];
+      });
+
+      // Header
+      document.getElementById('exp-label').textContent = d.label;
+      document.getElementById('exp-title').textContent = d.title;
+      document.getElementById('exp-subtitle').textContent = d.subtitle;
+
+      // Timeline Cards
+      document.getElementById('timeline').innerHTML = d.timeline.map(t => `
+        <div class="timeline-card">
+          <div class="timeline-card-dot"></div>
+          <div class="timeline-card-header">
+            <div class="timeline-company-logo">
+              <img src="${t.logo}" alt="${t.company} logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+              <div style="display:none; font-family:'Outfit',sans-serif; font-weight:700; color:var(--accent);">${t.company.substring(0, 2).toUpperCase()}</div>
+            </div>
+            <div class="timeline-company-info">
+              <div class="timeline-company-name">
+                ${t.company}
+                <span class="timeline-type-badge">${t.type}</span>
+              </div>
+              <div class="timeline-period-badge${t.isOngoing ? ' ongoing' : ''}">
+                ${t.isOngoing ? '<span class="dot-live"></span>' : ''} ${t.period}
+              </div>
+            </div>
+          </div>
+          <div class="timeline-role-title">💼 ${t.role}</div>
+          
+          <div class="timeline-metrics-grid">
+            ${t.metrics.map(m => `
+              <div class="timeline-metric-card">
+                <div class="timeline-metric-val">${m.value}</div>
+                <div class="timeline-metric-lbl">${m.label}</div>
+              </div>
+            `).join('')}
+          </div>
+
+          <ul class="timeline-bullets">
+            ${t.highlights.map(h => `<li>${h}</li>`).join('')}
+          </ul>
+
+          <div class="timeline-tags">
+            ${t.tags.map(tag => `<span class="timeline-tag-pill">${tag}</span>`).join('')}
+          </div>
+
+          <div>
+            <button class="timeline-case-btn" onclick="openModal('${t.projectId}')">
+              ${d.viewCaseStudy}
+            </button>
+          </div>
+        </div>
+      `).join('');
+
+      // Edu & Certs
+      document.getElementById('edu-col').innerHTML = `
+        <p class="section-label">${d.educationTitle}</p>
+        ${d.education.map(e => `
+          <div class="edu-block">
+            <div class="edu-inst">${e.institution}</div>
+            <div class="edu-degree">${e.degree}</div>
+            <div class="edu-period">${e.period}</div>
+            ${e.detail ? `<div class="edu-detail">${e.detail}</div>` : ''}
+          </div>`).join('')}
+        <div style="margin-top:2rem">
+          ${d.certifications.map(c => `
+            <div class="cert-item">
+              <div>
+                <div class="cert-name">${c.name}</div>
+                <div class="cert-issuer">${c.issuer}</div>
+              </div>
+              <div class="cert-period">${c.period}</div>
+            </div>`).join('')}
+        </div>`;
+
+      // Footer
+      document.getElementById('footer-text').innerHTML = `Nguyen Le Hai — Business Analyst Portfolio &copy; ${new Date().getFullYear()}`;
+    }
+
+    // Modal logic
+    function openModal(id) {
+      const d = DATA[currentLang];
+      const p = d.projects.items.find(item => item.id === id);
+      if (!p) return;
+
+      document.getElementById('modal-meta').textContent = `${p.company} • ${p.domain}`;
+      document.getElementById('modal-title').textContent = p.title;
+      document.getElementById('modal-close-btn').textContent = d.projects.modalClose;
+
+      document.getElementById('modal-body').innerHTML = `
+        <div class="modal-section-label">${currentLang === 'vi' ? 'Bối cảnh dự án' : 'Context & Problem Statement'}</div>
+        <p class="modal-text">${p.context}</p>
+
+        <div class="modal-section-label">${currentLang === 'vi' ? 'Vai trò & Cách tiếp cận' : 'My Role & Approach'}</div>
+        <p class="modal-text">${p.roleApproach}</p>
+
+        <div class="modal-section-label">${currentLang === 'vi' ? 'Công việc cụ thể đã thực hiện (Key Deliverables)' : 'What I Did (Key Deliverables)'}</div>
+        <ul class="modal-list">
+          ${p.whatIDid.map(item => `<li>${item}</li>`).join('')}
+        </ul>
+
+        <div class="modal-section-label">${currentLang === 'vi' ? 'Kết quả & Tác động số liệu (Impact & Metrics)' : 'Impact & Metrics'}</div>
+        <ul class="modal-list">
+          ${p.impact.map(item => `<li>${item}</li>`).join('')}
+        </ul>
+      `;
+
+      document.getElementById('modal-overlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('modal-overlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('modal-overlay').addEventListener('click', e => {
+      if (e.target === document.getElementById('modal-overlay')) closeModal();
+    });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+    function toggleLang() {
+      currentLang = currentLang === 'en' ? 'vi' : 'en';
+      localStorage.setItem('portfolio-lang', currentLang);
+      render();
+    }
+
+    document.getElementById('lang-toggle').addEventListener('click', toggleLang);
+    document.getElementById('mobile-lang').addEventListener('click', () => { toggleLang(); closeMobileMenu(); });
+
+    // Mobile menu
+    function openMobileMenu() { document.getElementById('mobile-menu').classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeMobileMenu() { document.getElementById('mobile-menu').classList.remove('open'); document.body.style.overflow = ''; }
+    document.getElementById('hamburger').addEventListener('click', openMobileMenu);
+    document.getElementById('mobile-close').addEventListener('click', closeMobileMenu);
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    render();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nguyen Le Hai — Business Analyst Portfolio</title>
+  <meta name="description" content="Business Analyst with 4+ years experience in MarTech, Hospitality, and AI Security. Specializing in turning business needs into scalable digital products." />
+  <meta property="og:title" content="Nguyen Le Hai — Business Analyst" />
+  <meta property="og:description" content="BA with a Tech Mindset — Turning Business Needs into Scalable Digital Products" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,300&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── Reset & Base ───────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #1A1A1A;
+      --black: #FAF8F4;
+      --gray-900: #F2EFE9;
+      --gray-800: #E8E3DA;
+      --gray-700: #D0C9BC;
+      --gray-500: #7A7060;
+      --gray-400: #9A9080;
+      --gray-300: #3D3830;
+      --accent: #8B6B3D;
+      --accent-dim: rgba(139,107,61,0.12);
+      --accent-glow: rgba(139,107,61,0.07);
+      --glass: rgba(0,0,0,0.03);
+      --glass-border: rgba(0,0,0,0.09);
+      --radius: 2px;
+      --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      background: var(--black);
+      color: var(--cream);
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    ::selection { background: var(--accent); color: #FAF8F4; }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+    /* ─── Scrollbar ──────────────────────────────────────────── */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--gray-800); }
+    ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
+
+    /* ─── Typography ─────────────────────────────────────────── */
+    .font-display { font-family: 'Outfit', sans-serif; }
+    .text-accent { color: var(--accent); }
+    .text-muted { color: var(--gray-400); }
+
+    /* ─── Layout ─────────────────────────────────────────────── */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+    @media (max-width: 768px) { .container { padding: 0 1.25rem; } }
+
+    /* ─── Navbar ─────────────────────────────────────────────── */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 1.25rem 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid transparent;
+      transition: background var(--transition), border-color var(--transition), backdrop-filter var(--transition);
+    }
+    #navbar.scrolled {
+      background: rgba(250,248,244,0.88);
+      backdrop-filter: blur(20px);
+      border-color: var(--glass-border);
+    }
+    .nav-brand {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700; font-size: 1.1rem; letter-spacing: 0.05em;
+    }
+    .nav-brand span { color: var(--accent); }
+    .nav-links {
+      display: flex; gap: 2rem; align-items: center;
+    }
+    .nav-links a {
+      font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--gray-500); transition: color var(--transition);
+      position: relative;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: -3px; left: 0; right: 0;
+      height: 1px; background: var(--accent);
+      transform: scaleX(0); transition: transform var(--transition);
+    }
+    .nav-links a:hover { color: var(--cream); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+    .nav-brand { color: var(--cream); }
+    .nav-controls { display: flex; align-items: center; gap: 1rem; }
+    #lang-toggle {
+      font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--gray-500); padding: 0.3rem 0.7rem;
+      border: 1px solid var(--gray-700); border-radius: var(--radius);
+      transition: all var(--transition);
+    }
+    #lang-toggle:hover { color: var(--accent); border-color: var(--accent); }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; }
+    .nav-hamburger span { width: 22px; height: 1.5px; background: var(--cream); display: block; transition: all var(--transition); }
+    /* Hamburger dark on light bg */
+    .nav-hamburger span { background: var(--cream); }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+    }
+
+    /* Mobile Menu */
+    #mobile-menu {
+      display: none; position: fixed; inset: 0; z-index: 99;
+      background: #FAF8F4; flex-direction: column;
+      align-items: center; justify-content: center; gap: 2.5rem;
+    }
+    #mobile-menu.open { display: flex; }
+    #mobile-menu a {
+      font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 600;
+      color: #1A1A1A; letter-spacing: 0.05em;
+      transition: color var(--transition);
+    }
+    #mobile-menu a:hover { color: var(--accent); }
+    #mobile-close {
+      position: absolute; top: 1.5rem; right: 2rem;
+      font-size: 1.5rem; color: var(--gray-500); transition: color var(--transition);
+    }
+    #mobile-close:hover { color: #1A1A1A; }
+    #mobile-lang {
+      font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--accent); padding: 0.4rem 1rem;
+      border: 1px solid var(--accent); border-radius: var(--radius);
+    }
+
+    /* ─── Hero ───────────────────────────────────────────────── */
+    #hero {
+      position: relative; height: 100dvh; min-height: 600px;
+      overflow: hidden; display: flex; flex-direction: column;
+      justify-content: space-between;
+      background: linear-gradient(160deg, #FAF8F4 0%, #F0EBE0 60%, #E8E0D0 100%);
+      user-select: none;
+    }
+    #hero-bg {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 70% 55% at 65% 35%, rgba(139,107,61,0.10) 0%, transparent 70%),
+                  radial-gradient(ellipse 40% 40% at 15% 85%, rgba(139,107,61,0.06) 0%, transparent 60%);
+      opacity: 0; animation: fadeIn 1.5s ease forwards;
+    }
+    #hero-grid {
+      position: absolute; inset: 0; opacity: 0.06;
+      background-image: linear-gradient(rgba(139,107,61,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(139,107,61,0.3) 1px, transparent 1px);
+      background-size: 80px 80px;
+    }
+    .hero-avatar {
+      position: absolute; bottom: -2%; right: 18%;
+      height: 96vh; width: 46%; object-fit: contain; object-position: bottom center;
+      transform: scale(1.4); transform-origin: bottom center;
+      opacity: 0; animation: riseIn 1.2s 0.3s cubic-bezier(0.2,1,0.4,1) forwards;
+      pointer-events: none; z-index: 20;
+      filter: drop-shadow(0 15px 35px rgba(0,0,0,0.12));
+    }
+    .hero-marquee-wrap {
+      position: absolute; top: 13vh; inset-x: 0; z-index: 10;
+      overflow: hidden; pointer-events: none;
+      opacity: 0; animation: fadeUp 1s 0.5s ease forwards;
+    }
+    .hero-marquee {
+      display: flex; width: max-content; white-space: nowrap;
+      animation: marquee 28s linear infinite;
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(5rem, 15vw, 14rem);
+      font-weight: 300; line-height: 1;
+      color: rgba(139,107,61,0.10); letter-spacing: -0.02em;
+    }
+    .hero-marquee span { padding-right: 4vw; }
+    .hero-line {
+      position: absolute; inset-x: 2rem; bottom: 8.5rem; z-index: 10;
+      height: 1px; background: rgba(139,107,61,0.25);
+      opacity: 0; animation: lineExpand 0.8s 1.2s ease forwards;
+    }
+    .hero-body {
+      position: relative; z-index: 30;
+      padding-top: clamp(120px, 28vh, 260px);
+      padding-left: clamp(1.25rem, 5vw, 3rem);
+      padding-right: 1.25rem;
+    }
+    .hero-tagline {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+      font-weight: 300; color: #1A1A1A; max-width: 560px;
+      line-height: 1.4; margin-bottom: 0.75rem;
+      opacity: 0; animation: fadeUp 0.8s 0.9s ease forwards;
+    }
+    .hero-subline {
+      font-size: clamp(0.78rem, 1.2vw, 0.9rem);
+      color: rgba(50,40,30,0.6); max-width: 480px;
+      line-height: 1.7;
+      opacity: 0; animation: fadeUp 0.8s 1.05s ease forwards;
+    }
+    .hero-ctas {
+      display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem;
+      opacity: 0; animation: fadeUp 0.8s 1.2s ease forwards;
+    }
+    .btn-primary {
+      padding: 0.6rem 1.5rem; background: #1A1A1A; color: #FAF8F4;
+      font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+      font-weight: 600; transition: all var(--transition);
+    }
+    .btn-primary:hover { background: #2d2d2d; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,0.18); }
+    .btn-outline {
+      padding: 0.6rem 1.5rem; border: 1px solid rgba(26,26,26,0.35);
+      color: #1A1A1A; font-size: 0.72rem; letter-spacing: 0.14em;
+      text-transform: uppercase; font-weight: 500; transition: all var(--transition);
+    }
+    .btn-outline:hover { border-color: #1A1A1A; background: rgba(26,26,26,0.05); transform: translateY(-1px); }
+    .hero-footer {
+      position: relative; z-index: 30;
+      padding: 0 clamp(1.25rem, 5vw, 3rem) 1.5rem;
+      display: flex; flex-wrap: wrap; gap: 2rem;
+      opacity: 0; animation: fadeUp 0.8s 1.4s ease forwards;
+    }
+    .hero-stat { display: flex; flex-direction: column; }
+    .hero-stat-val {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+      font-weight: 300; color: #1A1A1A; line-height: 1;
+    }
+    .hero-stat-label {
+      font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.12em;
+      color: rgba(50,40,30,0.5); margin-top: 0.25rem;
+    }
+    @media (max-width: 900px) {
+      .hero-avatar { right: 50%; transform: translateX(50%) scale(1.4); transform-origin: bottom center; width: 68%; height: auto; max-height: 80vh; opacity: 0.35; }
+      .hero-subline { display: none; }
+    }
+    @media (max-width: 480px) {
+      .hero-avatar { width: 85%; max-height: 75vh; opacity: 0.3; }
+    }
+
+    /* ─── Section Base & Tab Views ──────────────────────────── */
+    section { padding: 6rem 0; }
+    section.section-tab {
+      display: none;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      min-height: calc(100vh - 80px);
+      padding-top: 6.5rem;
+    }
+    section.section-tab.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    #hero.section-tab.active {
+      display: flex;
+      padding-top: 0;
+    }
+    .nav-links a.active {
+      color: var(--cream);
+      font-weight: 600;
+    }
+    .nav-links a.active::after {
+      transform: scaleX(1);
+    }
+    #mobile-menu a.active {
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .section-label {
+      font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 1rem; font-weight: 500;
+    }
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 600; line-height: 1.15; margin-bottom: 1.5rem;
+    }
+    .divider {
+      width: 40px; height: 1px; background: var(--accent);
+      margin-bottom: 2.5rem;
+    }
+    /* Reveal animation */
+    .reveal {
+      opacity: 0; transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ─── About Section ──────────────────────────────────────── */
+    #about { background: #FFFFFF; }
+    #about .section-title, #skills .section-title, #projects .section-title, #experience .section-title { color: #1A1A1A; }
+    .about-grid {
+      display: grid; grid-template-columns: 7fr 5fr; gap: 4rem;
+      align-items: start;
+    }
+    .about-text p {
+      color: #3D3830; line-height: 1.85; margin-bottom: 1.25rem;
+      font-size: 0.95rem;
+    }
+    .story-card {
+      background: #FFFFFF; border: 1px solid var(--glass-border);
+      padding: 1.75rem; border-radius: 6px; margin-bottom: 1.25rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.02); transition: all var(--transition);
+    }
+    .story-card:hover { border-color: rgba(139,107,61,0.3); transform: translateY(-2px); }
+    .story-card-tag {
+      font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--accent); font-weight: 600; margin-bottom: 0.4rem; display: block;
+    }
+    .story-card-title {
+      font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 600;
+      color: #1A1A1A; margin-bottom: 0.5rem;
+    }
+    .highlight-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; margin-bottom: 2rem; }
+    .pill {
+      font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 0.35rem 0.8rem; border-radius: 20px;
+      background: rgba(139,107,61,0.08); border: 1px solid rgba(139,107,61,0.25);
+      color: var(--accent); font-weight: 500;
+    }
+    .about-target {
+      padding: 1.75rem; border-radius: 6px;
+      border: 1px solid rgba(26,26,26,0.1); background: #1A1A1A; color: #FAF8F4;
+    }
+    .about-target h4 {
+      font-family: 'Outfit', sans-serif; font-size: 1rem;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 0.6rem;
+    }
+    .about-target p { color: #D0C9BC; font-size: 0.9rem; line-height: 1.7; margin: 0; }
+    .subpage-link-btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      margin-top: 1.25rem; padding: 0.55rem 1.2rem; border-radius: 4px;
+      border: 1px solid var(--accent); color: var(--accent);
+      font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600;
+      transition: all var(--transition);
+    }
+    .subpage-link-btn:hover { background: var(--accent); color: #FAF8F4; }
+    @media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+    /* ─── Skills Section ─────────────────────────────────────── */
+    #skills { background: var(--gray-900); }
+    .tech-banner {
+      background: #1A1A1A; color: #FAF8F4; padding: 2rem;
+      border-radius: 8px; margin-bottom: 2.5rem;
+    }
+    .tech-banner-label {
+      font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--accent); font-weight: 700; margin-bottom: 0.4rem; display: inline-block;
+    }
+    .tech-banner-title {
+      font-family: 'Outfit', sans-serif; font-size: 1.4rem; font-weight: 700;
+      color: #FAF8F4; margin-bottom: 0.5rem;
+    }
+    .tech-banner-desc { font-size: 0.88rem; color: #D0C9BC; line-height: 1.6; margin-bottom: 1.5rem; }
+    .tech-items-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;
+    }
+    .tech-item-card {
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+      padding: 1rem; border-radius: 4px;
+    }
+    .tech-item-name { font-family: 'Outfit', sans-serif; font-size: 0.95rem; font-weight: 600; color: #FAF8F4; margin-bottom: 0.25rem; }
+    .tech-item-detail { font-size: 0.78rem; color: #9A9080; line-height: 1.4; }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .skill-card {
+      background: #FFFFFF; border: 1px solid var(--glass-border);
+      padding: 1.5rem; border-radius: 6px;
+      transition: all var(--transition);
+    }
+    .skill-card:hover { border-color: rgba(139,107,61,0.35); transform: translateY(-2px); }
+    .skill-card-title {
+      font-family: 'Outfit', sans-serif; font-size: 1rem;
+      color: #1A1A1A; margin-bottom: 1rem; font-weight: 600;
+      border-bottom: 1px solid var(--gray-800); padding-bottom: 0.5rem;
+    }
+    .skill-pills-list { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; }
+    .skill-tag {
+      font-size: 0.8rem; color: #3D3830; background: var(--gray-900);
+      padding: 0.35rem 0.7rem; border-radius: 4px; border: 1px solid var(--glass-border);
+    }
+
+    /* ─── Projects Section ───────────────────────────────────── */
+    #projects { background: var(--gray-900); }
+    .projects-subtitle { color: var(--gray-400); font-size: 0.9rem; margin-bottom: 3rem; }
+    .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    @media (max-width: 768px) { .projects-grid { grid-template-columns: 1fr; } }
+    .project-card {
+      background: var(--gray-800); border: 1px solid var(--glass-border);
+      border-radius: var(--radius); padding: 2rem; cursor: pointer;
+      transition: all var(--transition); position: relative; overflow: hidden;
+    }
+    .project-card::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, var(--accent-glow), transparent);
+      opacity: 0; transition: opacity var(--transition);
+    }
+    .project-card:hover { border-color: rgba(200,169,126,0.4); transform: translateY(-3px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+    .project-card:hover::before { opacity: 1; }
+    .project-card.flagship { border-color: rgba(200,169,126,0.35); }
+    .project-meta {
+      display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem;
+    }
+    .tag {
+      font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 0.25rem 0.6rem; border: 1px solid var(--glass-border);
+      color: var(--gray-400); border-radius: 1px;
+    }
+    .tag.flagship-tag { border-color: rgba(200,169,126,0.5); color: var(--accent); }
+    .project-title {
+      font-family: 'Outfit', sans-serif; font-size: 1.15rem;
+      font-weight: 600; color: var(--cream); margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+    .project-company { font-size: 0.8rem; color: var(--gray-400); margin-bottom: 1rem; }
+    .project-context { font-size: 0.85rem; color: var(--gray-300); line-height: 1.7; margin-bottom: 1.25rem; }
+    .project-cta {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--accent); font-weight: 600;
+    }
+    .project-cta svg { transition: transform var(--transition); }
+    .project-card:hover .project-cta svg { transform: translateX(3px); }
+
+    /* ─── Modal ──────────────────────────────────────────────── */
+    #modal-overlay {
+      position: fixed; inset: 0; z-index: 200;
+      background: rgba(0,0,0,0.85); backdrop-filter: blur(8px);
+      display: none; align-items: center; justify-content: center;
+      padding: 1.5rem;
+    }
+    #modal-overlay.open { display: flex; }
+    .modal-box {
+      background: var(--gray-900); border: 1px solid var(--glass-border);
+      border-radius: var(--radius); max-width: 720px; width: 100%;
+      max-height: 85vh; overflow-y: auto; position: relative;
+    }
+    .modal-header {
+      position: sticky; top: 0; background: var(--gray-900);
+      border-bottom: 1px solid var(--glass-border);
+      padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: flex-start;
+    }
+    .modal-close {
+      font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--gray-400); padding: 0.4rem 0.8rem;
+      border: 1px solid var(--gray-700); border-radius: var(--radius);
+      transition: all var(--transition);
+    }
+    .modal-close:hover { color: var(--cream); border-color: var(--cream); }
+    .modal-body { padding: 2rem; }
+    .modal-section-label {
+      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 0.75rem; margin-top: 1.5rem; font-weight: 600;
+    }
+    .modal-section-label:first-of-type { margin-top: 0; }
+    .modal-text { font-size: 0.88rem; color: var(--gray-300); line-height: 1.75; }
+    .modal-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .modal-list li {
+      font-size: 0.85rem; color: var(--gray-300); padding-left: 1.2rem; position: relative; line-height: 1.6;
+    }
+    .modal-list li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-size: 0.75rem; }
+
+    /* ─── Experience Section (Enriched Timeline) ────────────── */
+    #experience { background: var(--black); }
+    .exp-grid { display: grid; grid-template-columns: 7fr 4fr; gap: 4rem; }
+    @media (max-width: 1024px) { .exp-grid { grid-template-columns: 1fr; gap: 3rem; } }
+
+    .timeline { position: relative; padding-left: 2rem; }
+    .timeline::before {
+      content: ''; position: absolute; left: 6px; top: 16px; bottom: 16px;
+      width: 2px; background: linear-gradient(to bottom, var(--accent), var(--gray-700));
+    }
+
+    .timeline-card {
+      position: relative;
+      background: #FFFFFF;
+      border: 1px solid var(--gray-800);
+      border-radius: 12px;
+      padding: 1.75rem;
+      margin-bottom: 2.25rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    }
+    .timeline-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+      border-color: rgba(139, 107, 61, 0.35);
+    }
+
+    .timeline-card-dot {
+      position: absolute; left: -2rem; top: 1.8rem;
+      width: 14px; height: 14px; background: #FAF8F4;
+      border: 3px solid var(--accent); border-radius: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 0 0 4px rgba(139, 107, 61, 0.15);
+      transition: all var(--transition);
+    }
+    .timeline-card:hover .timeline-card-dot {
+      background: var(--accent);
+      box-shadow: 0 0 0 6px rgba(139, 107, 61, 0.25);
+    }
+
+    .timeline-card-header {
+      display: flex; align-items: flex-start; gap: 1.25rem;
+      margin-bottom: 1.25rem; flex-wrap: wrap;
+    }
+
+    .timeline-company-logo {
+      width: 56px; height: 56px; border-radius: 12px;
+      overflow: hidden; flex-shrink: 0;
+      background: #FAF8F4; border: 1px solid var(--gray-800);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .timeline-company-logo img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+
+    .timeline-company-info { flex: 1; min-width: 220px; }
+
+    .timeline-company-name {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem; font-weight: 700; color: #1A1A1A;
+      display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;
+    }
+
+    .timeline-type-badge {
+      font-size: 0.68rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.08em; padding: 0.2rem 0.6rem; border-radius: 4px;
+      background: var(--accent-dim); color: var(--accent);
+    }
+
+    .timeline-period-badge {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em;
+      color: var(--gray-500); margin-top: 0.25rem;
+    }
+    .timeline-period-badge.ongoing { color: #16a34a; }
+    .timeline-period-badge.ongoing .dot-live {
+      width: 6px; height: 6px; background: #16a34a; border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
+      animation: pulseGreen 2s infinite;
+    }
+
+    @keyframes pulseGreen {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: 0.6; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .timeline-role-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem; font-weight: 600; color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .timeline-metrics-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.6rem;
+      margin-bottom: 1.25rem;
+    }
+    .timeline-metric-card {
+      background: #FAF8F4; border: 1px solid var(--gray-800);
+      border-radius: 6px; padding: 0.6rem 0.8rem;
+      display: flex; flex-direction: column;
+    }
+    .timeline-metric-val {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem; font-weight: 700; color: #1A1A1A; line-height: 1.2;
+    }
+    .timeline-metric-lbl {
+      font-size: 0.65rem; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.15rem;
+    }
+
+    .timeline-bullets {
+      list-style: none; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.45rem;
+    }
+    .timeline-bullets li {
+      font-size: 0.86rem; color: #3D3830; padding-left: 1.2rem; position: relative; line-height: 1.6;
+    }
+    .timeline-bullets li::before {
+      content: '✦'; position: absolute; left: 0; color: var(--accent); font-size: 0.7rem; top: 2px;
+    }
+
+    .timeline-tags {
+      display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.25rem;
+    }
+    .timeline-tag-pill {
+      font-size: 0.7rem; padding: 0.2rem 0.65rem; border-radius: 4px;
+      background: rgba(0,0,0,0.04); color: var(--gray-500); border: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .timeline-case-btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em;
+      color: #1A1A1A; background: var(--gray-900); padding: 0.5rem 1.1rem; border-radius: 4px;
+      border: 1px solid var(--gray-700); transition: all var(--transition); cursor: pointer;
+    }
+    .timeline-case-btn:hover {
+      background: #1A1A1A; color: #FAF8F4; border-color: #1A1A1A;
+    }
+    .edu-block { margin-bottom: 1.5rem; }
+    .edu-inst {
+      font-family: 'Outfit', sans-serif; font-size: 0.95rem; font-weight: 600; color: var(--cream);
+    }
+    .edu-degree { font-size: 0.85rem; color: var(--gray-300); margin: 0.2rem 0; }
+    .edu-period { font-size: 0.72rem; color: var(--accent); letter-spacing: 0.1em; }
+    .edu-detail { font-size: 0.75rem; color: var(--gray-500); margin-top: 0.2rem; font-style: italic; }
+    .cert-item {
+      padding: 0.75rem 0; border-bottom: 1px solid var(--glass-border);
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;
+    }
+    .cert-name { font-size: 0.88rem; color: var(--cream); }
+    .cert-issuer { font-size: 0.75rem; color: var(--gray-500); margin-top: 0.15rem; }
+    .cert-period { font-size: 0.7rem; color: var(--accent); white-space: nowrap; }
+
+    /* ─── Contact Section ────────────────────────────────────── */
+    #contact {
+      background: #FFFFFF;
+      border-top: 1px solid var(--glass-border);
+    }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; }
+    @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; gap: 3rem; } }
+    .contact-headline {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .contact-body { font-size: 0.92rem; color: #3D3830; line-height: 1.8; margin-bottom: 2rem; }
+    .contact-links { display: flex; flex-direction: column; gap: 1rem; }
+    .contact-link {
+      display: flex; align-items: center; gap: 1rem;
+      font-size: 0.9rem; color: #5A5040; transition: color var(--transition);
+    }
+    .contact-link:hover { color: #1A1A1A; }
+    .contact-link-icon {
+      width: 36px; height: 36px; border: 1px solid var(--glass-border);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; transition: border-color var(--transition);
+      border-radius: var(--radius);
+    }
+    .contact-link:hover .contact-link-icon { border-color: var(--accent); }
+    .contact-link-icon svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.5; }
+
+    /* ─── Footer ─────────────────────────────────────────────── */
+    footer {
+      padding: 2rem; text-align: center;
+      border-top: 1px solid var(--glass-border);
+    }
+    footer p { font-size: 0.75rem; color: var(--gray-500); letter-spacing: 0.08em; }
+
+    /* ─── Keyframe Animations ────────────────────────────────── */
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes riseIn { from { opacity: 0; transform: scale(1.4) translateY(40px); } to { opacity: 1; transform: scale(1.4) translateY(0); } }
+    @keyframes lineExpand { from { opacity: 0; transform: scaleX(0); } to { opacity: 1; transform: scaleX(1); } }
+    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  </style>
+</head>
+<body>
+
+  <!-- ─── Navbar ──────────────────────────────────────────────── -->
+  <nav id="navbar">
+    <div class="nav-brand" onclick="switchTab('hero')" style="cursor:pointer">NLH<span>.</span></div>
+    <div class="nav-links">
+      <a href="#hero" data-tab="hero" onclick="switchTab('hero'); return false;" data-i18n="nav_home">Home</a>
+      <a href="about.html" data-i18n="nav_about">About</a>
+      <a href="skills.html" data-i18n="nav_skills">Skills</a>
+      <a href="#projects" data-tab="projects" onclick="switchTab('projects'); return false;" data-i18n="nav_projects">Projects</a>
+      <a href="experience.html" data-tab="experience" data-i18n="nav_experience">Experience</a>
+      <a href="#contact" data-tab="contact" onclick="switchTab('contact'); return false;" data-i18n="nav_contact">Contact</a>
+    </div>
+    <div class="nav-controls">
+      <button id="lang-toggle" aria-label="Toggle language">EN</button>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" role="dialog" aria-label="Navigation menu">
+    <button id="mobile-close" aria-label="Close menu">✕</button>
+    <a href="#hero" data-tab="hero" onclick="switchTab('hero'); closeMobileMenu(); return false;" data-i18n="nav_home" class="mobile-nav-link">Home</a>
+    <a href="about.html" data-i18n="nav_about" class="mobile-nav-link">About</a>
+    <a href="skills.html" data-i18n="nav_skills" class="mobile-nav-link">Skills</a>
+    <a href="#projects" data-tab="projects" onclick="switchTab('projects'); closeMobileMenu(); return false;" data-i18n="nav_projects" class="mobile-nav-link">Projects</a>
+    <a href="experience.html" data-tab="experience" class="mobile-nav-link" data-i18n="nav_experience">Experience</a>
+    <a href="#contact" data-tab="contact" onclick="switchTab('contact'); closeMobileMenu(); return false;" data-i18n="nav_contact" class="mobile-nav-link">Contact</a>
+    <button id="mobile-lang" data-i18n="lang_switch">Switch to VI</button>
+  </div>
+
+  <!-- ─── Hero ────────────────────────────────────────────────── -->
+  <section id="hero" class="section-tab active">
+    <div id="hero-bg"></div>
+    <div id="hero-grid"></div>
+    <img src="public/avatar.png" alt="Nguyen Le Hai Portrait" class="hero-avatar" id="hero-avatar" />
+    <div class="hero-marquee-wrap">
+      <div class="hero-marquee" id="hero-marquee">
+        <span>Nguyen Le Hai — Business Analyst&nbsp;</span>
+        <span>Nguyen Le Hai — Business Analyst&nbsp;</span>
+        <span>Nguyen Le Hai — Business Analyst&nbsp;</span>
+        <span>Nguyen Le Hai — Business Analyst&nbsp;</span>
+      </div>
+    </div>
+    <div class="hero-line"></div>
+    <div class="hero-body">
+      <p class="hero-tagline" id="hero-tagline">BA with a Tech Mindset — Turning Business Needs into Scalable Digital Products</p>
+      <p class="hero-subline" id="hero-subline">4+ years translating business problems into clear requirements, well-structured documentation, and products that ship on time — across MarTech, Hospitality, and AI Security.</p>
+      <div class="hero-ctas">
+        <button class="btn-primary" id="cta-projects" onclick="switchTab('projects')">View Projects</button>
+        <button class="btn-outline" id="cta-contact" onclick="switchTab('contact')">Get in Touch</button>
+      </div>
+    </div>
+    <div class="hero-footer" id="hero-stats">
+      <!-- Stats injected by JS -->
+    </div>
+  </section>
+
+  <!-- ─── About ───────────────────────────────────────────────── -->
+  <section id="about" class="section-tab">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label" id="about-label">About Me</p>
+        <h2 class="section-title" id="about-headline">From Code to Requirements — A BA Who Understands Both Sides</h2>
+        <div class="highlight-pills" id="about-pills"></div>
+        <div class="divider"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal" id="about-paragraphs">
+          <!-- Injected by JS -->
+        </div>
+        <div class="reveal" id="about-right">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Skills ──────────────────────────────────────────────── -->
+  <section id="skills" class="section-tab">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label" id="skills-label">Skills &amp; Expertise</p>
+        <h2 class="section-title" id="skills-title">What I Bring to the Table</h2>
+        <div class="divider"></div>
+      </div>
+      <div id="tech-banner-container" class="reveal"></div>
+      <div class="skills-grid reveal" id="skills-grid">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Projects ────────────────────────────────────────────── -->
+  <section id="projects" class="section-tab">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label" id="projects-label">Case Studies</p>
+        <h2 class="section-title" id="projects-title">Featured Case Studies</h2>
+        <p class="projects-subtitle reveal" id="projects-subtitle">Detailed breakdown of major products and initiatives delivered</p>
+        <div class="divider"></div>
+      </div>
+      <div class="projects-grid" id="projects-grid">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Modal ───────────────────────────────────────────────── -->
+  <div id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div>
+          <div class="modal-project-meta" id="modal-meta"></div>
+          <h3 class="section-title" id="modal-title" style="font-size:1.3rem;margin-bottom:0;margin-top:0.4rem;"></h3>
+        </div>
+        <button class="modal-close" id="modal-close-btn">Close</button>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- ─── Experience ──────────────────────────────────────────── -->
+  <section id="experience" class="section-tab">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label" id="exp-label">Career</p>
+        <h2 class="section-title" id="exp-title">Work History</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="exp-grid">
+        <div class="reveal">
+          <p class="section-label" id="exp-subtitle">Outsourcing &amp; Product environments</p>
+          <div class="timeline" id="timeline"><!-- Injected --></div>
+        </div>
+        <div class="reveal" id="edu-col"><!-- Injected --></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Contact ─────────────────────────────────────────────── -->
+  <section id="contact" class="section-tab">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="reveal">
+          <p class="section-label" id="contact-label">Contact</p>
+          <h2 class="contact-headline" id="contact-headline">Open for New Opportunities</h2>
+          <p class="contact-body" id="contact-body">I'm looking for Business Analyst / Product Analyst roles in SaaS, AI-driven products, or tech platforms. Feel free to reach out — I'd love to learn about what you're building.</p>
+          <a href="#" class="btn-primary" id="cv-btn" style="display:inline-block">Download CV (PDF)</a>
+        </div>
+        <div class="contact-links reveal" id="contact-links"><!-- Injected --></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Footer ──────────────────────────────────────────────── -->
+  <footer>
+    <p id="footer-tag">Nguyen Le Hai — Business Analyst Portfolio &copy; <span id="year"></span></p>
+  </footer>
+
+  <script>
+  // ─── DATA ────────────────────────────────────────────────────────
+  const DATA = {
+    en: {
+      nav: { home:'Home', about:'About', skills:'Skills', projects:'Projects', experience:'Experience', contact:'Contact', lang:'VI' },
+      hero: {
+        marquee: 'Nguyen Le Hai — Business Analyst',
+        tagline: 'BA with a Tech Mindset — Turning Business Needs into Scalable Digital Products',
+        subline: '4+ years translating business problems into clear requirements, well-structured documentation, and products that ship on time — across MarTech, Hospitality, and AI Security.',
+        ctaProjects: 'View Projects', ctaContact: 'Get in Touch',
+        stats: [
+          { value: '4+', label: 'Years Experience' },
+          { value: '4',  label: 'Major Projects' },
+          { value: '7',  label: 'Products / Services' },
+          { value: '3',  label: 'Domains (MarTech · Hospitality · AI)' },
+        ]
+      },
+      about: {
+        label: 'About Me',
+        headline: 'From Code to Requirements — A BA Who Understands Both Sides',
+        pills: [
+          '⚡ IT Distinction (GPA 8.6/10)',
+          '🏢 Outsourcing & Product Experience',
+          '🎓 Business Administration Degree',
+          '🤖 AI for Business Analyst Certified'
+        ],
+        stories: [
+          {
+            tag: '01 / Technical Foundation',
+            title: 'Grounded in Software Engineering',
+            text: 'I started my career with a solid foundation in Information Technology (FPT Polytechnic, Software Applications, Distinction — GPA 8.6/10), which gave me a genuine ability to read technical documentation, understand system architecture, and speak the same language as developers. That technical grounding is what shapes how I work as a Business Analyst today: I don\'t just translate business requirements into documents — I make sure they\'re technically feasible before they ever reach a sprint.'
+          },
+          {
+            tag: '02 / Diverse Environments',
+            title: 'Outsourcing Adaptability & Product Ownership',
+            text: 'Over the past 4+ years, I\'ve worked across two very different environments — outsourcing and product companies. In outsourcing (Wanosoft as BA Lead on an AI Chatbot project for a government partner), I learned to adapt quickly across unfamiliar domains. In product companies (Novaon, KiotViet), I learned what it means to own a product long-term — running market research, shaping the roadmap, and staying with a feature through UAT and rollout.'
+          },
+          {
+            tag: '03 / Continuous Upskilling',
+            title: 'Business Acumen & AI Integration',
+            text: 'I\'m currently deepening my business foundation with a degree in Business Administration (Thuong Mai University) and recently completed a course on AI for Business Analyst, applying AI-assisted techniques to requirement elicitation and information synthesis.'
+          }
+        ],
+        targetHeader: 'What I\'m Looking For',
+        targetText: 'I\'m looking to join a product team — ideally in SaaS, AI-driven products, or tech-enabled platforms — where I can own a product area end-to-end, work closely with engineering, and help turn ambiguous business problems into products people actually use.',
+      },
+      skills: {
+        label: 'Skills & Expertise',
+        title: 'What I Bring to the Table',
+        techBanner: {
+          label: 'Key Differentiator',
+          title: 'Technical Fluency & AI Capability',
+          desc: 'Having a background in software development allows me to bridge business intent with technical architecture seamlessly, verifying API specs, DB queries, and system constraints early.',
+          items: [
+            { name: 'SQL Querying', detail: 'Data extraction, analysis, and DB schema understanding' },
+            { name: 'REST API & JSON', detail: 'Interface specs mapping and payload structure definition' },
+            { name: 'AI-assisted BA', detail: 'Custom prompts for fast BRD, wireframe, & scenario generation' },
+            { name: 'System Architecture', detail: 'Reading technical docs & speaking dev language natively' }
+          ]
+        },
+        categories: [
+          { title: 'Business Analysis Core', skills: ['Requirement Elicitation', 'Requirement Management', 'Stakeholder Management', 'Business Process Analysis', 'Gap Analysis', 'Impact Analysis'] },
+          { title: 'Documentation', skills: ['BRD (Business Requirement Doc)', 'PRD (Product Requirement Doc)', 'Functional Spec (FSD)', 'User Stories & Acceptance Criteria', 'Use Case Specifications'] },
+          { title: 'Process Modeling & Agile', skills: ['BPMN 2.0 Diagrams', 'UML (Use Case, Activity, Sequence)', 'Business Flow Mapping', 'Scrum / Backlog Grooming', 'Sprint Planning & Retrospectives'] },
+          { title: 'Tools & Platforms', skills: ['Jira & Confluence', 'Figma (UI/UX)', 'Draw.io', 'Balsamiq Wireframes', 'AI Prompt Toolkits'] },
+        ]
+      },
+      projects: {
+        label: 'Case Studies', title: 'Featured Case Studies',
+        subtitle: 'Detailed breakdown of major products and initiatives delivered',
+        viewDetails: 'Explore Case Study', modalClose: 'Close Case Study',
+        items: [
+          {
+            id: 'ai-chatbot', isFlagship: true,
+            title: 'AI Chatbot for Cybersecurity Analysis',
+            company: 'Wanosoft Co., Ltd.', domain: 'AI Security / Information Security',
+            role: 'BA Lead', team: 'Cross-functional (AI/ML, Dev, QA, UI/UX)',
+            context: 'An outsourcing project for a government-sector technology partner. The goal: build an AI chatbot that helps security analysts query information-security data in natural language, auto-generate charts, and view real-time risk/incident dashboards — reducing manual reporting time.',
+            roleApproach: 'As BA Lead, I worked directly with the client and info-security experts to clarify requirements, led a BA squad, assigned tasks, reviewed documentation, and ensured quality across BRD, SRS, User Stories, and Use Cases.',
+            whatIDid: ['Designed core AI chatbot logic for context-aware, natural-language querying against internal security knowledge base','Defined auto-chart-generation (bar/line/pie) and dynamic risk/incident/performance dashboard widgets','Mapped data-flow and integration requirements across SIEM, Log Management, Threat Intelligence, and internal DBs','Collaborated with AI/ML engineers, Tech Lead, and UI/UX to design conversation flows and query-handling scenarios','Managed requirement changes and led UAT for AI-powered features'],
+            impact: ['Managed a 6-person delivery squad (4 Devs, 1 QA, 1 UI/UX), owning backlog planning and sprint execution end-to-end','Maintained stable throughput of ~7 person-months (MM) per sprint under Agile/Scrum','Ongoing project since Oct 2024 (27+ sprints completed, averaging 4 features delivered per sprint)','Kept requirement changes stable with only ~20% of BRDs/PRDs needing revision post-sprint start','Fast escalation turnaround of 2–3 days and sustained \'Good\' client satisfaction rating (Recognized with \'Talented Young Employee\' award in 2025)'],
+          },
+          {
+            id: 'onhub',
+            title: 'OnHub: Social Media Account Management Platform',
+            company: 'Novaon Digital JSC', domain: 'MarTech / Digital Advertising',
+            role: 'Business Analyst', team: 'Dev, BD, Stakeholders',
+            context: 'OnHub connects advertiser accounts across multiple ad networks and provides supporting services for social media account management — one of Novaon\'s core MarTech products.',
+            roleApproach: 'Gathered requirements directly from clients and BD teams, defined PRD/FSD, designed wireframes & user flows, and collaborated with CTO & Dev teams through rollout.',
+            whatIDid: ['Gathered requirements directly from clients, BD, and internal stakeholders','Produced PRDs, FSDs, User Stories, and Acceptance Criteria for a multi-product platform','Designed wireframes, user flows, and business process flows for account request, top-up, and approval','Ran UAT, user training, and gathered feedback for iterative enhancements'],
+            impact: ['Delivered platform core MVP in just 2 weeks, covering the full account lifecycle (provisioning, ad-account requests, top-up, accounting approvals)','Enabled BD team to consult and close deals with 12 clients, integrating 20 advertising accounts','Supported combined monthly ad spend of ~VND 500 million (~USD 20,000) across all onboarded accounts'],
+          },
+          {
+            id: 'kvbooking',
+            title: 'KVBooking: Hotel & Homestay Management Software',
+            company: 'KiotViet Technology Corporation', domain: 'Hospitality',
+            role: 'Product Executive', team: '~10 (Devs, QA, UI/UX)',
+            context: 'A management software product for hotels and homestays built from early-stage market research through to feature rollout.',
+            roleApproach: 'Conducted market & competitor research, gathered requirements from customers, designed BPMN flows, and led cross-functional team of ~10 members.',
+            whatIDid: ['Conducted market research and competitor analysis in hotel/homestay software','Gathered customer feedback and transformed into User Stories & BPMN process flows','Designed guest-declaration compliance workflow to solve critical client pain point','Coordinated ~10-person delivery team to keep milestones on schedule'],
+            impact: ['Supported resolution of 39 support tickets raised by real customers','Shipped guest-declaration feature reducing processing time from 2 hours to 10 minutes per guest case','Increased guest-declaration accuracy to 100%, eliminating compliance risk'],
+          },
+          {
+            id: 'ai-workflow',
+            title: 'Upskilling: Applying AI to the BA Workflow',
+            company: 'Self-Directed Capability Building', domain: 'AI Methodology / BA Upskilling',
+            role: 'Initiative Owner', team: 'Individual / Applied to real projects',
+            context: 'Systematically integrating AI techniques into daily BA workflows — from requirement elicitation and documentation to wireframing and interview prep.',
+            roleApproach: 'Completed \'AI for Business Analyst\' course and built a personal toolkit of 20+ specialized prompts and templates tested under real project pressures.',
+            whatIDid: ['Created 20+ specialized AI-assisted prompts for documentation, wireframing, and interview prep','Applied AI to cross-check user interview questions and eliminate edge-case gaps','Utilized AI wireframing tools to accelerate low-fi prototype generation'],
+            impact: ['Cut documentation drafting time from 2 days to 1 day','Reduced wireframe production time from 2 days to ~15 min (complex) and ~5 min (basic)','Reduced client scoping meetings from 2-3 sessions down to a single focused meeting'],
+          },
+        ]
+      },
+      experience: {
+        label: 'Career', title: 'Work History',
+        subtitle: 'Proven track record across Outsourcing & Product environments',
+        viewCaseStudy: 'View Case Study →',
+        timeline: [
+          {
+            logo: 'assets/images/companies/wanosoft.svg',
+            company: 'Wanosoft Co., Ltd.',
+            type: 'Outsourcing',
+            domain: 'AI Security & Government Tech',
+            period: '11/2024 – Present',
+            isOngoing: true,
+            role: 'Business Analyst (BA Lead — AI Chatbot)',
+            projectId: 'ai-chatbot',
+            metrics: [
+              { value: 'BA Lead', label: '6-Person Squad' },
+              { value: '~7 MM', label: 'Throughput / Sprint' },
+              { value: '27', label: 'Sprints Delivered' },
+              { value: '2-3 Days', label: 'Change Request SLA' }
+            ],
+            highlights: [
+              'Led a cross-functional squad of 6 (4 Devs, 1 QA, 1 UI/UX), owning sprint planning and backlog grooming end-to-end.',
+              'Designed core AI Chatbot logic for context-aware natural language querying over internal security knowledge bases.',
+              'Defined auto-chart generation (bar/line/pie) and dynamic risk & incident monitoring dashboards.',
+              'Awarded "Talented Young Employee 2025" for maintaining predictable delivery and strong client satisfaction.'
+            ],
+            tags: ['AI Security', 'BA Lead', 'SRS / BRD', 'BPMN 2.0', 'SIEM Integration', 'Agile / Scrum']
+          },
+          {
+            logo: 'assets/images/companies/kiotviet.svg',
+            company: 'KiotViet Technology Corporation',
+            type: 'Product Company',
+            domain: 'Hospitality & Property SaaS',
+            period: '08/2024 – 11/2024',
+            isOngoing: false,
+            role: 'Product Executive',
+            projectId: 'kvbooking',
+            metrics: [
+              { value: '10-Person', label: 'Squad Coordination' },
+              { value: '39', label: 'Tickets Resolved' },
+              { value: '2h → 10m', label: 'Process Cut' },
+              { value: '100%', label: 'Compliance Accuracy' }
+            ],
+            highlights: [
+              'Conducted market research & competitor analysis in hotel/homestay management software.',
+              'Gathered requirements directly from homestay owners, producing User Stories, BPMN flows, and wireframes.',
+              'Shipped an automated guest-registration compliance feature, slashing processing time from 2 hours to 10 minutes per case.'
+            ],
+            tags: ['Hospitality SaaS', 'User Stories', 'BPMN 2.0', 'Competitor Analysis', 'UAT']
+          },
+          {
+            logo: 'assets/images/companies/novaon.svg',
+            company: 'Novaon Digital JSC',
+            type: 'Product Company',
+            domain: 'MarTech & Digital Advertising',
+            period: '05/2022 – 08/2024',
+            isOngoing: false,
+            role: 'Business Analyst',
+            projectId: 'onhub',
+            metrics: [
+              { value: '2 Weeks', label: 'MVP Release' },
+              { value: '12', label: 'Client Deals Enabled' },
+              { value: '20', label: 'Ad Accounts Onboarded' },
+              { value: '~500M VND', label: 'Monthly Ad Spend' }
+            ],
+            highlights: [
+              'Analyzed business needs and produced PRDs, FSDs, and user flows for OnHub multi-product MarTech platform.',
+              'Covered full account lifecycle: BD customer account management, TikTok Ads agency provisioning, top-ups, and accounting approvals.',
+              'Delivered MVP in 2 weeks, supporting BD team to onboard 12 clients and manage ~500M VND monthly ad spend.'
+            ],
+            tags: ['MarTech', 'PRD / FSD', 'User Flows', 'Wireframing', 'Agile / Scrum']
+          }
+        ],
+        educationTitle: 'Education & Certifications',
+        education: [
+          { institution: 'Thuong Mai University', degree: 'Bachelor of Business Administration', period: '04/2024 – Present' },
+          { institution: 'FPT Polytechnic', degree: 'Information Technology — Software Applications', period: '2020 – 2023', detail: 'GPA 8.6 / 10 — Graduated with Distinction' },
+        ],
+        certifications: [
+          { name: 'AI for Business Analyst', issuer: 'Dau Ngoc Anh', period: '01/2026 – 03/2026' },
+          { name: 'PM Essentials 2023', issuer: 'The A Program', period: '11/2023 – 01/2024' },
+        ]
+      },
+      contact: {
+        label: 'Contact', headline: 'Open for New Opportunities',
+        body: 'I\'m looking for Business Analyst / Product Analyst roles in SaaS, AI-driven products, or tech platforms. Feel free to reach out — I\'d love to learn about what you\'re building.',
+        email: 'hainlph17388@gmail.com', phone: '0862 606 580',
+        location: 'My Dinh, Nam Tu Liem, Hanoi',
+        linkedin: 'https://www.linkedin.com/in/hainguyen-hyper/',
+        downloadCv: 'Download CV (PDF)',
+        footerTag: 'Nguyen Le Hai — Business Analyst Portfolio',
+      }
+    },
+    vi: {
+      nav: { home:'Trang chủ', about:'Giới thiệu', skills:'Kỹ năng', projects:'Dự án', experience:'Kinh nghiệm', contact:'Liên hệ', lang:'EN' },
+      hero: {
+        marquee: 'Nguyễn Lê Hải — Business Analyst',
+        tagline: 'BA với tư duy công nghệ — Chuyển hoá nhu cầu kinh doanh thành sản phẩm số',
+        subline: '4+ năm kinh nghiệm chuyển hoá bài toán kinh doanh thành yêu cầu rõ ràng, tài liệu chuẩn hoá, và sản phẩm release đúng tiến độ — MarTech, Hospitality và AI Security.',
+        ctaProjects: 'Xem dự án', ctaContact: 'Liên hệ ngay',
+        stats: [
+          { value: '4+', label: 'Năm kinh nghiệm' },
+          { value: '4',  label: 'Dự án lớn đã làm' },
+          { value: '7',  label: 'Sản phẩm & dịch vụ' },
+          { value: '3',  label: 'Lĩnh vực (MarTech · Hospitality · AI)' },
+        ]
+      },
+      about: {
+        label: 'Giới thiệu',
+        headline: 'Từ Code đến Requirements — BA hiểu cả hai phía',
+        pills: [
+          '⚡ Bằng Tốt nghiệp Loại Giỏi IT (GPA 8.6/10)',
+          '🏢 Kinh nghiệm Outsourcing & Product Company',
+          '🎓 Cử nhân Quản trị Kinh doanh (ĐH Thương Mại)',
+          '🤖 Chứng chỉ AI for Business Analyst'
+        ],
+        stories: [
+          {
+            tag: '01 / Nền tảng Kỹ thuật',
+            title: 'Xuất phát điểm từ Công nghệ thông tin',
+            text: 'Tôi bắt đầu sự nghiệp với nền tảng vững chắc về Công nghệ thông tin (FPT Polytechnic, chuyên ngành Ứng dụng phần mềm, tốt nghiệp loại Giỏi — GPA 8.6/10), giúp tôi có khả năng đọc hiểu tài liệu kỹ thuật, hiểu kiến trúc hệ thống, và nói cùng "ngôn ngữ" với đội ngũ lập trình viên. Nền tảng kỹ thuật đó định hình cách tôi làm việc với vai trò Business Analyst hiện nay: tôi không chỉ chuyển hoá yêu cầu kinh doanh thành tài liệu — tôi đảm bảo các yêu cầu đó khả thi về mặt kỹ thuật trước khi đưa vào sprint.'
+          },
+          {
+            tag: '02 / Trải nghiệm Đa dạng',
+            title: 'Khả năng Thích ứng Outsourcing & Tư duy Sở hữu Sản phẩm',
+            text: 'Trong hơn 4 năm qua, tôi đã làm việc ở hai môi trường rất khác nhau — outsourcing và product company. Ở outsourcing (Wanosoft, vai trò BA Lead dự án AI Chatbot chính phủ), tôi học được cách thích nghi nhanh với lĩnh vực mới. Ở các công ty sản phẩm (Novaon, KiotViet), tôi học được ý nghĩa của việc sở hữu sản phẩm lâu dài — từ nghiên cứu thị trường, định hình roadmap, đến UAT và rollout.'
+          },
+          {
+            tag: '03 / Học hỏi Không ngừng',
+            title: 'Nền tảng Quản trị & Ứng dụng AI',
+            text: 'Hiện tại, tôi đang bổ sung nền tảng kinh doanh qua chương trình Cử nhân Quản trị Kinh doanh (Đại học Thương Mại) và vừa hoàn thành khoá học AI for Business Analyst, áp dụng các kỹ thuật hỗ trợ bởi AI vào việc khai thác yêu cầu và tổng hợp thông tin.'
+          }
+        ],
+        targetHeader: 'Định hướng tìm kiếm',
+        targetText: 'Tôi đang tìm kiếm cơ hội gia nhập một đội ngũ sản phẩm — lý tưởng là trong lĩnh vực SaaS, sản phẩm ứng dụng AI, hoặc nền tảng công nghệ — nơi tôi có thể sở hữu trọn vẹn một mảng sản phẩm, làm việc chặt chẽ với đội kỹ thuật, và biến những bài toán kinh doanh mơ hồ thành sản phẩm thực sự được người dùng sử dụng.',
+      },
+      skills: {
+        label: 'Kỹ năng chuyên môn',
+        title: 'Năng lực chuyên môn của tôi',
+        techBanner: {
+          label: 'Điểm Khác biệt Nổi bật',
+          title: 'Năng lực Kỹ thuật & Ứng dụng AI',
+          desc: 'Xuất phát điểm từ IT giúp tôi tự tin kết nối bài toán kinh doanh với kiến trúc kỹ thuật, thẩm định API specs, truy vấn dữ liệu SQL và cấu trúc hệ thống ngay từ bước thẩm định yêu cầu.',
+          items: [
+            { name: 'Truy vấn SQL', detail: 'Trích xuất, phân tích dữ liệu và hiểu schema DB' },
+            { name: 'REST API & JSON', detail: 'Đặc tả interface, cấu trúc JSON payload' },
+            { name: 'Phân tích Nghiệp vụ với AI', detail: 'Prompt AI chuyên dụng tăng tốc viết BRD & wireframe' },
+            { name: 'Khả năng Hiểu Kiến trúc', detail: 'Đọc hiểu tài liệu kỹ thuật & giao tiếp tốt với dev' }
+          ]
+        },
+        categories: [
+          { title: 'Nghiệp vụ Phân tích Lõi', skills: ['Khai thác yêu cầu (Elicitation)', 'Quản lý yêu cầu', 'Quản lý Stakeholder', 'Phân tích quy trình nghiệp vụ', 'Phân tích khoảng cách (Gap)', 'Đánh giá tác động (Impact)'] },
+          { title: 'Tài liệu hoá Chuẩn hoá', skills: ['BRD (Yêu cầu Nghiệp vụ)', 'PRD (Yêu cầu Sản phẩm)', 'FSD (Đặc tả Chức năng)', 'User Stories & Acceptance Criteria', 'Use Case Specifications'] },
+          { title: 'Mô hình hoá & Agile', skills: ['Sơ đồ BPMN 2.0', 'Sơ đồ UML (Use Case, Activity, Sequence)', 'Sơ đồ Luồng Nghiệp vụ', 'Scrum / Backlog Grooming', 'Sprint Planning & Retrospectives'] },
+          { title: 'Công cụ làm việc', skills: ['Jira & Confluence', 'Figma (UI/UX)', 'Draw.io', 'Balsamiq Wireframes', 'Bộ công cụ Prompt AI'] },
+        ]
+      },
+      projects: {
+        label: 'Dự án tiêu biểu', title: 'Dự án tiêu biểu',
+        subtitle: 'Các case study sản phẩm nổi bật đã trực tiếp tham gia và triển khai',
+        viewDetails: 'Xem Case Study', modalClose: 'Đóng chi tiết',
+        items: [
+          {
+            id: 'ai-chatbot', isFlagship: true,
+            title: 'AI Chatbot phân tích An ninh mạng ⭐',
+            company: 'Wanosoft Co., Ltd.', domain: 'AI Security / An ninh thông tin',
+            role: 'BA Lead', team: 'Liên phòng ban (AI/ML, Dev, QA, UI/UX)',
+            context: 'Dự án outsourcing cho đối tác công nghệ chính phủ. Mục tiêu: xây dựng chatbot AI giúp chuyên gia an ninh mạng truy vấn dữ liệu bằng ngôn ngữ tự nhiên, tự động tạo biểu đồ và xem dashboard rủi ro theo thời gian thực.',
+            roleApproach: 'Với vai trò BA Lead, tôi làm việc trực tiếp với khách hàng & chuyên gia an ninh, phân công đội BA, review tài liệu và đảm bảo chất lượng BRD, SRS, User Stories, Use Cases.',
+            whatIDid: ['Thiết kế logic lõi chatbot AI truy vấn ngôn ngữ tự nhiên theo ngữ cảnh trên knowledge base nội bộ','Định nghĩa tính năng tự động tạo biểu đồ (bar/line/pie) và dashboard rủi ro/hiệu năng hệ thống','Phân tích luồng dữ liệu & tích hợp với SIEM, Log Management, Threat Intelligence','Phối hợp với AI/ML engineers & Tech Lead thiết kế luồng hội thoại','Dẫn dắt UAT và quản lý thay đổi yêu cầu xuyên suốt SDLC'],
+            impact: ['Quản lý đội delivery 6 người (4 Dev, 1 QA, 1 UI/UX), phụ trách backlog & sprint execution','Duy trì khối lượng công việc ~7 MM/sprint ổn định theo Scrum','Dự án triển khai từ 10/2024 đến nay (27+ sprint hoàn thành, trung bình release 4 tính năng/sprint)','Yêu cầu ổn định, chỉ ~20% BRD/PRD cần điều chỉnh sau khi bắt đầu sprint','Giải quyết yêu cầu thay đổi trong 2–3 ngày; Đạt giải thưởng "Nhân viên trẻ tài năng" năm 2025'],
+          },
+          {
+            id: 'onhub',
+            title: 'OnHub: Nền tảng quản lý tài khoản mạng xã hội',
+            company: 'Novaon Digital JSC', domain: 'MarTech / Quảng cáo số',
+            role: 'Business Analyst', team: 'Dev, Business Development, Stakeholders',
+            context: 'OnHub kết nối tài khoản quảng cáo trên nhiều ad network và cung cấp dịch vụ quản lý tài khoản mạng xã hội trong bộ sản phẩm MarTech của Novaon.',
+            roleApproach: 'Thu thập yêu cầu trực tiếp từ khách hàng & đội BD, xây dựng PRD/FSD, thiết kế wireframe và phối hợp chặt chẽ với CTO & Dev.',
+            whatIDid: ['Thu thập yêu cầu từ khách hàng, Business Development và các stakeholder','Xây dựng PRD, FSD, User Stories & Acceptance Criteria cho nền tảng đa sản phẩm','Thiết kế wireframe, user flow và sơ đồ quy trình nghiệp vụ nạp tiền / cấp tài khoản','Thực hiện UAT, hỗ trợ đào tạo người dùng và thu thập phản hồi cải tiến'],
+            impact: ['Triển khai thành công MVP chỉ trong 2 tuần phát triển','Hỗ trợ đội BD chốt deal thành công với 12 khách hàng, tích hợp 20 tài khoản quảng cáo','Tương ứng tổng ad spend khoảng 500 triệu VNĐ/tháng (~USD 20,000)'],
+          },
+          {
+            id: 'kvbooking',
+            title: 'KVBooking: Phần mềm quản lý khách sạn & homestay',
+            company: 'KiotViet Technology Corporation', domain: 'Hospitality',
+            role: 'Product Executive', team: '~10 người (Dev, QA, UI/UX)',
+            context: 'Phần mềm quản lý dành cho khách sạn & homestay từ giai đoạn nghiên cứu thị trường đến triển khai tính năng.',
+            roleApproach: 'Nghiên cứu thị trường & đối thủ, thu thập nhu cầu khách hàng, vẽ sơ đồ BPMN và phối hợp đội ngũ 10 người.',
+            whatIDid: ['Nghiên cứu thị trường và đối thủ trong lĩnh vực quản lý khách sạn/homestay','Chuyển hoá feedback khách hàng thành User Stories và sơ đồ quy trình BPMN','Thiết kế quy trình khai báo tạm vắng tạm trú tự động cho homestay','Điều phối đội ngũ liên phòng ban ~10 người đảm bảo tiến độ'],
+            impact: ['Hỗ trợ xử lý 39 ticket yêu cầu thực tế từ khách hàng','Release tính năng khai báo lưu trú giúp giảm thời gian xử lý thủ công từ 2 tiếng xuống 10 phút/lượt','Tăng độ chính xác khai báo lên 100%, loại bỏ hoàn toàn rủi ro tuân thủ'],
+          },
+          {
+            id: 'ai-workflow',
+            title: 'Sáng kiến: Ứng dụng AI vào quy trình làm việc BA',
+            company: 'Thực hành phát triển năng lực cá nhân', domain: 'AI Methodology / BA Upskilling',
+            role: 'Chủ trì sáng kiến', team: 'Cá nhân / Áp dụng vào dự án thực tế',
+            context: 'Tích hợp chủ động AI vào quy trình BA hàng ngày từ soạn thảo tài liệu, thiết kế wireframe đến chuẩn bị phỏng vấn.',
+            roleApproach: 'Hoàn thành khóa học "AI for BA" và xây dựng bộ toolkit với 20+ prompt chuyên dụng thử nghiệm thực tế.',
+            whatIDid: ['Tạo bộ 20+ prompt AI chuyên dụng hỗ trợ soạn tài liệu, vẽ wireframe & câu hỏi phỏng vấn','Dùng AI rà soát câu hỏi phỏng vấn loại bỏ tình trạng sót edge-case','Ứng dụng công cụ AI tăng tốc vẽ wireframe low-fi'],
+            impact: ['Rút ngắn thời gian soạn tài liệu từ 2 ngày xuống còn 1 ngày','Giảm thời gian vẽ wireframe từ 2 ngày xuống ~15 phút (tính năng phức tạp) và ~5 phút (tính năng cơ bản)','Giảm số buổi họp chốt scope với khách hàng từ 2-3 buổi xuống 1 buổi duy nhất'],
+          },
+        ]
+      },
+      experience: {
+        label: 'Sự nghiệp', title: 'Quá trình làm việc',
+        subtitle: 'Kinh nghiệm thực chiến qua cả môi trường Outsourcing và Product',
+        viewCaseStudy: 'Xem Case Study →',
+        timeline: [
+          {
+            logo: 'assets/images/companies/wanosoft.svg',
+            company: 'Wanosoft Co., Ltd.',
+            type: 'Outsourcing',
+            domain: 'AI Security & Công nghệ chính phủ',
+            period: '11/2024 – Hiện tại',
+            isOngoing: true,
+            role: 'Business Analyst (BA Lead dự án AI Chatbot)',
+            projectId: 'ai-chatbot',
+            metrics: [
+              { value: 'BA Lead', label: 'Squad 6 thành viên' },
+              { value: '~7 MM', label: 'Khối lượng / Sprint' },
+              { value: '27', label: 'Sprint hoàn thành' },
+              { value: '2-3 Ngày', label: 'SLA Thay đổi Scope' }
+            ],
+            highlights: [
+              'Dẫn dắt đội delivery 6 người (4 Dev, 1 QA, 1 UI/UX), phụ trách lập kế hoạch backlog & điều phối sprint.',
+              'Thiết kế logic lõi cho chatbot AI truy vấn ngôn ngữ tự nhiên theo ngữ cảnh trên knowledge base an ninh nội bộ.',
+              'Định nghĩa tính năng tự động tạo biểu đồ (bar/line/pie) và dashboard theo dõi rủi ro theo thời gian thực.',
+              'Đạt giải thưởng "Nhân viên trẻ tài năng" năm 2025 nhờ duy trì tiến độ ổn định & sự hài lòng cao từ khách hàng.'
+            ],
+            tags: ['AI Security', 'BA Lead', 'BRD / SRS', 'BPMN 2.0', 'Tích hợp SIEM', 'Agile / Scrum']
+          },
+          {
+            logo: 'assets/images/companies/kiotviet.svg',
+            company: 'KiotViet Technology Corporation',
+            type: 'Product Company',
+            domain: 'Hospitality & Phần mềm Khách sạn',
+            period: '08/2024 – 11/2024',
+            isOngoing: false,
+            role: 'Product Executive',
+            projectId: 'kvbooking',
+            metrics: [
+              { value: 'Team 10', label: 'Điều phối phòng ban' },
+              { value: '39', label: 'Ticket xử lý' },
+              { value: '2h → 10p', label: 'Rút ngắn quy trình' },
+              { value: '100%', label: 'Độ chính xác dữ liệu' }
+            ],
+            highlights: [
+              'Nghiên cứu thị trường và đối thủ cạnh tranh trong mảng phần mềm quản lý khách sạn/homestay.',
+              'Thu thập yêu cầu thực tế từ chủ homestay, chuyển hoá thành User Stories, sơ đồ BPMN và wireframe.',
+              'Release tính năng tự động hoá khai báo lưu trú, giảm thời gian xử lý từ 2 tiếng xuống 10 phút/lượt.'
+            ],
+            tags: ['Hospitality SaaS', 'User Stories', 'BPMN 2.0', 'Phân tích đối thủ', 'UAT']
+          },
+          {
+            logo: 'assets/images/companies/novaon.svg',
+            company: 'Novaon Digital JSC',
+            type: 'Product Company',
+            domain: 'MarTech & Quảng cáo số',
+            period: '05/2022 – 08/2024',
+            isOngoing: false,
+            role: 'Business Analyst',
+            projectId: 'onhub',
+            metrics: [
+              { value: '2 Tuần', label: 'Phát triển MVP' },
+              { value: '12', label: 'Khách hàng chốt deal' },
+              { value: '20', label: 'Tài khoản quảng cáo' },
+              { value: '~500 Tr', label: 'Ad Spend hàng tháng' }
+            ],
+            highlights: [
+              'Phân tích nhu cầu nghiệp vụ và xây dựng PRD, FSD, user flow cho nền tảng MarTech OnHub.',
+              'Bao phủ trọn vẹn vòng đời tài khoản: quản lý tài khoản khách hàng, nạp tiền, phân quyền Agency TikTok Ads & kế toán duyệt.',
+              'Triển khai MVP trong 2 tuần, hỗ trợ đội BD chốt deal 12 khách hàng với tổng ngân sách ~500 triệu VNĐ/tháng.'
+            ],
+            tags: ['MarTech', 'PRD / FSD', 'User Flows', 'Wireframing', 'Agile / Scrum']
+          }
+        ],
+        educationTitle: 'Học vấn & Chứng chỉ',
+        education: [
+          { institution: 'Đại học Thương Mại', degree: 'Cử nhân Quản trị Kinh doanh', period: '04/2024 – Hiện tại' },
+          { institution: 'FPT Polytechnic', degree: 'Công nghệ thông tin — Chuyên ngành Ứng dụng phần mềm', period: '2020 – 2023', detail: 'GPA 8.6 / 10 — Tốt nghiệp loại Giỏi' },
+        ],
+        certifications: [
+          { name: 'AI for Business Analyst', issuer: 'Đậu Ngọc Anh', period: '01/2026 – 03/2026' },
+          { name: 'PM Essentials 2023', issuer: 'The A Program', period: '11/2023 – 01/2024' },
+        ]
+      },
+      contact: {
+        label: 'Liên hệ', headline: 'Sẵn sàng cho cơ hội mới',
+        body: 'Tôi đang tìm kiếm cơ hội vị trí Business Analyst / Product Analyst trong mảng SaaS, AI Products, hoặc Tech Platforms. Đừng ngần ngại liên hệ để cùng trao đổi về sản phẩm bạn đang phát triển.',
+        email: 'hainlph17388@gmail.com', phone: '0862 606 580',
+        location: 'Mỹ Đình, Nam Từ Liêm, Hà Nội',
+        linkedin: 'https://www.linkedin.com/in/hainguyen-hyper/',
+        downloadCv: 'Tải CV (PDF)',
+        footerTag: 'Nguyễn Lê Hải — Business Analyst Portfolio',
+      }
+    }
+  };
+
+  // ─── STATE ───────────────────────────────────────────────────────
+  let lang = localStorage.getItem('portfolio-lang') || 'en';
+  let currentProjectId = null;
+
+  // ─── TAB SWITCHING & HELPERS ─────────────────────────────────────
+  function switchTab(tabId, updateHash = true) {
+    const validTabs = ['hero', 'about', 'skills', 'projects', 'experience', 'contact'];
+    if (!validTabs.includes(tabId)) tabId = 'hero';
+
+    // Toggle active section
+    document.querySelectorAll('section.section-tab').forEach(sec => {
+      if (sec.id === tabId) {
+        sec.classList.add('active');
+        sec.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+      } else {
+        sec.classList.remove('active');
+      }
+    });
+
+    // Toggle nav links active highlight
+    document.querySelectorAll('.nav-links a, .mobile-nav-link').forEach(a => {
+      const target = a.getAttribute('data-tab') || a.getAttribute('href')?.replace('#', '');
+      if (target === tabId) {
+        a.classList.add('active');
+      } else {
+        a.classList.remove('active');
+      }
+    });
+
+    window.scrollTo({ top: 0, behavior: 'instant' });
+
+    if (updateHash && window.location.hash !== '#' + tabId) {
+      history.pushState(null, '', '#' + tabId);
+    }
+  }
+
+  function scrollTo(id) {
+    switchTab(id);
+  }
+
+  window.addEventListener('hashchange', () => {
+    const hash = window.location.hash.replace('#', '');
+    if (hash) switchTab(hash, false);
+  });
+
+  // ─── RENDER ──────────────────────────────────────────────────────
+  function render() {
+    const d = DATA[lang];
+    document.documentElement.lang = lang;
+    document.title = lang === 'vi' ? 'Nguyễn Lê Hải — Portfolio Business Analyst' : 'Nguyen Le Hai — Business Analyst Portfolio';
+
+    // Nav
+    document.getElementById('lang-toggle').textContent = d.nav.lang;
+    document.getElementById('mobile-lang').textContent = `Switch to ${d.nav.lang}`;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const map = { nav_home: d.nav.home, nav_about: d.nav.about, nav_skills: d.nav.skills, nav_projects: d.nav.projects, nav_experience: d.nav.experience, nav_contact: d.nav.contact };
+      if (map[key]) el.textContent = map[key];
+    });
+
+    // Hero
+    const h = d.hero;
+    const marqueeEl = document.getElementById('hero-marquee');
+    const marqueeTxt = `${h.marquee}\u00A0`;
+    marqueeEl.innerHTML = [marqueeTxt, marqueeTxt, marqueeTxt, marqueeTxt].map(t => `<span>${t}</span>`).join('');
+    document.getElementById('hero-tagline').textContent = h.tagline;
+    document.getElementById('hero-subline').textContent = h.subline;
+    document.getElementById('cta-projects').textContent = h.ctaProjects;
+    document.getElementById('cta-contact').textContent = h.ctaContact;
+    document.getElementById('hero-stats').innerHTML = h.stats.map(s =>
+      `<div class="hero-stat"><span class="hero-stat-val">${s.value}</span><span class="hero-stat-label">${s.label}</span></div>`
+    ).join('');
+
+    // About
+    const a = d.about;
+    document.getElementById('about-label').textContent = a.label;
+    document.getElementById('about-headline').textContent = a.headline;
+    document.getElementById('about-pills').innerHTML = a.pills ? a.pills.map(p => `<span class="pill">${p}</span>`).join('') : '';
+    document.getElementById('about-paragraphs').innerHTML = a.stories
+      ? a.stories.map(s => `
+        <div class="story-card">
+          <span class="story-card-tag">${s.tag}</span>
+          <h3 class="story-card-title">${s.title}</h3>
+          <p>${s.text}</p>
+        </div>`).join('')
+      : a.paragraphs.map(p => `<p>${p}</p>`).join('');
+    document.getElementById('about-right').innerHTML = `
+      <div class="about-target">
+        <h4>${a.targetHeader}</h4>
+        <p>${a.targetText}</p>
+      </div>
+      <a href="about.html" class="subpage-link-btn">${lang === 'vi' ? 'Xem trang Giới thiệu đầy đủ →' : 'View Dedicated About Page →'}</a>`;
+
+    // Skills
+    const sk = d.skills;
+    document.getElementById('skills-label').textContent = sk.label;
+    document.getElementById('skills-title').textContent = sk.title;
+    document.getElementById('tech-banner-container').innerHTML = sk.techBanner ? `
+      <div class="tech-banner">
+        <span class="tech-banner-label">${sk.techBanner.label}</span>
+        <h3 class="tech-banner-title">${sk.techBanner.title}</h3>
+        <p class="tech-banner-desc">${sk.techBanner.desc}</p>
+        <div class="tech-items-grid">
+          ${sk.techBanner.items.map(item => `
+            <div class="tech-item-card">
+              <div class="tech-item-name">✨ ${item.name}</div>
+              <div class="tech-item-detail">${item.detail}</div>
+            </div>`).join('')}
+        </div>
+      </div>` : '';
+
+    document.getElementById('skills-grid').innerHTML = sk.categories.map(cat => `
+      <div class="skill-card">
+        <div class="skill-card-title">${cat.title}</div>
+        <ul class="skill-pills-list">${cat.skills.map(s => `<li class="skill-tag">${s}</li>`).join('')}</ul>
+      </div>`
+    ).join('') + `
+      <div style="grid-column: 1 / -1; text-align: center; margin-top: 1rem;">
+        <a href="skills.html" class="subpage-link-btn">${lang === 'vi' ? 'Khám phá tất cả Kỹ năng & Ngôn ngữ →' : 'Explore All Skills & Languages →'}</a>
+      </div>`;
+
+    // Projects
+    const pr = d.projects;
+    document.getElementById('projects-label').textContent = pr.label;
+    document.getElementById('projects-title').textContent = pr.title;
+    document.getElementById('projects-subtitle').textContent = pr.subtitle;
+    document.getElementById('projects-grid').innerHTML = pr.items.map(item => `
+      <div class="project-card${item.isFlagship ? ' flagship' : ''} reveal" data-project-id="${item.id}" onclick="openModal('${item.id}')">
+        <div class="project-meta">
+          ${item.isFlagship ? '<span class="tag flagship-tag">★ Flagship</span>' : ''}
+          <span class="tag">${item.domain}</span>
+          <span class="tag">${item.role}</span>
+        </div>
+        <div class="project-title">${item.title}</div>
+        <div class="project-company">${item.company}</div>
+        <div class="project-context">${item.context.substring(0, 160)}…</div>
+        <div class="project-cta">${pr.viewDetails} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>`
+    ).join('');
+    // Re-observe new cards
+    document.querySelectorAll('.projects-grid .reveal').forEach(el => observer.observe(el));
+
+    // Experience
+    const ex = d.experience;
+    document.getElementById('exp-label').textContent = ex.label;
+    document.getElementById('exp-title').textContent = ex.title;
+    document.getElementById('exp-subtitle').textContent = ex.subtitle;
+    document.getElementById('timeline').innerHTML = ex.timeline.map(t => `
+      <div class="timeline-card reveal">
+        <div class="timeline-card-dot"></div>
+        <div class="timeline-card-header">
+          <div class="timeline-company-logo">
+            <img src="${t.logo}" alt="${t.company} logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div style="display:none; font-family:'Outfit',sans-serif; font-weight:700; color:var(--accent);">${t.company.substring(0,2).toUpperCase()}</div>
+          </div>
+          <div class="timeline-company-info">
+            <div class="timeline-company-name">
+              ${t.company}
+              <span class="timeline-type-badge">${t.type}</span>
+            </div>
+            <div class="timeline-period-badge${t.isOngoing ? ' ongoing' : ''}">
+              ${t.isOngoing ? '<span class="dot-live"></span>' : ''} ${t.period}
+            </div>
+          </div>
+        </div>
+        <div class="timeline-role-title">💼 ${t.role}</div>
+        
+        <div class="timeline-metrics-grid">
+          ${t.metrics.map(m => `
+            <div class="timeline-metric-card">
+              <div class="timeline-metric-val">${m.value}</div>
+              <div class="timeline-metric-lbl">${m.label}</div>
+            </div>
+          `).join('')}
+        </div>
+
+        <ul class="timeline-bullets">
+          ${t.highlights.map(h => `<li>${h}</li>`).join('')}
+        </ul>
+
+        <div class="timeline-tags">
+          ${t.tags.map(tag => `<span class="timeline-tag-pill">${tag}</span>`).join('')}
+        </div>
+
+        <div>
+          <button class="timeline-case-btn" onclick="openModal('${t.projectId}')">
+            ${ex.viewCaseStudy}
+          </button>
+        </div>
+      </div>
+    `).join('');
+    document.getElementById('edu-col').innerHTML = `
+      <p class="section-label">${ex.educationTitle}</p>
+      ${ex.education.map(e => `
+        <div class="edu-block">
+          <div class="edu-inst">${e.institution}</div>
+          <div class="edu-degree">${e.degree}</div>
+          <div class="edu-period">${e.period}</div>
+          ${e.detail ? `<div class="edu-detail">${e.detail}</div>` : ''}
+        </div>`).join('')}
+      <div style="margin-top:2rem">
+        ${ex.certifications.map(c => `
+          <div class="cert-item">
+            <div>
+              <div class="cert-name">${c.name}</div>
+              <div class="cert-issuer">${c.issuer}</div>
+            </div>
+            <div class="cert-period">${c.period}</div>
+          </div>`).join('')}
+      </div>`;
+
+    // Contact
+    const co = d.contact;
+    document.getElementById('contact-label').textContent = co.label;
+    document.getElementById('contact-headline').textContent = co.headline;
+    document.getElementById('contact-body').textContent = co.body;
+    document.getElementById('cv-btn').textContent = co.downloadCv;
+    document.getElementById('contact-links').innerHTML = [
+      { icon: emailIcon(), label: co.email, href: `mailto:${co.email}` },
+      { icon: phoneIcon(), label: co.phone, href: `tel:${co.phone.replace(/\s/g,'')}` },
+      { icon: locationIcon(), label: co.location, href: '#' },
+      { icon: linkedinIcon(), label: 'LinkedIn', href: co.linkedin, target: '_blank' },
+    ].map(l => `
+      <a href="${l.href}" class="contact-link" ${l.target ? `target="${l.target}" rel="noopener"` : ''}>
+        <div class="contact-link-icon">${l.icon}</div>
+        <span>${l.label}</span>
+      </a>`).join('');
+
+    // Footer
+    document.getElementById('footer-tag').innerHTML = `${co.footerTag} &copy; <span id="year"></span>`;
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Modal close button text
+    document.getElementById('modal-close-btn').textContent = pr.modalClose;
+  }
+
+  function emailIcon() { return `<svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>`; }
+  function phoneIcon() { return `<svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 5.68 5.68l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>`; }
+  function locationIcon() { return `<svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 13-8 13s-8-7-8-13a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>`; }
+  function linkedinIcon() { return `<svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>`; }
+
+  // ─── MODAL ───────────────────────────────────────────────────────
+  function openModal(projectId) {
+    const pr = DATA[lang].projects;
+    const item = pr.items.find(p => p.id === projectId);
+    if (!item) return;
+    currentProjectId = projectId;
+    document.getElementById('modal-title').textContent = item.title;
+    document.getElementById('modal-meta').innerHTML = `
+      <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:0.5rem">
+        <span class="tag">${item.company}</span>
+        <span class="tag">${item.domain}</span>
+        <span class="tag">${item.role}</span>
+        <span class="tag">${item.team}</span>
+      </div>`;
+    document.getElementById('modal-body').innerHTML = `
+      <p class="modal-section-label">Context</p>
+      <p class="modal-text">${item.context}</p>
+      <p class="modal-section-label">My Role & Approach</p>
+      <p class="modal-text">${item.roleApproach}</p>
+      <p class="modal-section-label">What I Did</p>
+      <ul class="modal-list">${item.whatIDid.map(s => `<li>${s}</li>`).join('')}</ul>
+      <p class="modal-section-label">Impact & Results</p>
+      <ul class="modal-list">${item.impact.map(s => `<li>${s}</li>`).join('')}</ul>
+    `;
+    document.getElementById('modal-overlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    document.getElementById('modal-overlay').classList.remove('open');
+    document.body.style.overflow = '';
+    currentProjectId = null;
+  }
+
+  document.getElementById('modal-close-btn').addEventListener('click', closeModal);
+  document.getElementById('modal-overlay').addEventListener('click', e => {
+    if (e.target === document.getElementById('modal-overlay')) closeModal();
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  // ─── LANGUAGE TOGGLE ─────────────────────────────────────────────
+  function toggleLang() {
+    lang = lang === 'en' ? 'vi' : 'en';
+    localStorage.setItem('portfolio-lang', lang);
+    render();
+  }
+  document.getElementById('lang-toggle').addEventListener('click', toggleLang);
+  document.getElementById('mobile-lang').addEventListener('click', () => { toggleLang(); closeMobileMenu(); });
+
+  // ─── MOBILE MENU ──────────────────────────────────────────────────
+  function openMobileMenu() { document.getElementById('mobile-menu').classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeMobileMenu() { document.getElementById('mobile-menu').classList.remove('open'); document.body.style.overflow = ''; }
+  document.getElementById('hamburger').addEventListener('click', openMobileMenu);
+  document.getElementById('mobile-close').addEventListener('click', closeMobileMenu);
+  document.querySelectorAll('.mobile-nav-link').forEach(a => a.addEventListener('click', closeMobileMenu));
+
+  // ─── NAVBAR SCROLL ────────────────────────────────────────────────
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  // ─── SCROLL REVEAL ───────────────────────────────────────────────
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // ─── INIT ────────────────────────────────────────────────────────
+  document.getElementById('year').textContent = new Date().getFullYear();
+  render();
+  const initialHash = window.location.hash.replace('#', '');
+  if (initialHash && ['hero', 'about', 'skills', 'projects', 'experience', 'contact'].includes(initialHash)) {
+    switchTab(initialHash, false);
+  } else {
+    switchTab('hero', false);
+  }
+  </script>
+</body>
+</html>
