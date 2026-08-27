@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Nguyen Le Hai | Senior Business Analyst & Product Owner</title>
+  <meta name="description"
+    content="Get in touch with Nguyen Le Hai — Senior Business Analyst & Product Owner. Open for opportunities in Hanoi, Ho Chi Minh City, and global remote collaborations." />
+  <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,300&family=Outfit:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet" />
+  <style>
+    /* ─── Reset & Design System ────────────────────────────── */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --cream: #1A1A1A;
+      --black: #FAF8F4;
+      --gray-900: #F2EFE9;
+      --gray-800: #E8E3DA;
+      --gray-700: #D0C9BC;
+      --gray-500: #7A7060;
+      --gray-400: #9A9080;
+      --gray-300: #3D3830;
+      --accent: #8B6B3D;
+      --accent-dim: rgba(139, 107, 61, 0.12);
+      --accent-glow: rgba(139, 107, 61, 0.07);
+      --glass: rgba(0, 0, 0, 0.03);
+      --glass-border: rgba(0, 0, 0, 0.09);
+      --radius: 8px;
+      --radius-sm: 4px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--cream);
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: var(--accent);
+      color: #FAF8F4;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    /* ─── Typography & Utilities ────────────────────────────── */
+    .font-display {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 1.25rem;
+      }
+    }
+
+    /* ─── Navbar ─────────────────────────────────────────────── */
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1.25rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--glass-border);
+      background: rgba(250, 248, 244, 0.92);
+      backdrop-filter: blur(20px);
+      transition: all var(--transition);
+    }
+
+    .nav-brand {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+      color: var(--cream);
+    }
+
+    .nav-brand span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+      transition: color var(--transition);
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--accent);
+      transition: width var(--transition);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--cream);
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    #lang-toggle {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      padding: 0.35rem 0.75rem;
+      border: 1px solid var(--accent);
+      border-radius: var(--radius-sm);
+      transition: all var(--transition);
+    }
+
+    #lang-toggle:hover {
+      background: var(--accent);
+      color: #FAF8F4;
+    }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 4px;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--cream);
+      transition: all var(--transition);
+    }
+
+    @media (max-width: 860px) {
+      .nav-links {
+        display: none;
+      }
+
+      .nav-hamburger {
+        display: flex;
+      }
+    }
+
+    /* Mobile Menu Drawer */
+    #mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: #FAF8F4;
+      z-index: 150;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    #mobile-menu.open {
+      display: flex;
+    }
+
+    #mobile-menu a {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2rem;
+      font-weight: 600;
+      color: #1A1A1A;
+      letter-spacing: 0.05em;
+    }
+
+    #mobile-menu a.active {
+      color: var(--accent);
+    }
+
+    #mobile-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 2rem;
+      font-size: 1.5rem;
+      color: var(--gray-500);
+    }
+
+    #mobile-lang {
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      padding: 0.4rem 1rem;
+      border: 1px solid var(--accent);
+      border-radius: var(--radius-sm);
+    }
+
+    /* ─── Page Header / Hero ─────────────────────────────────── */
+    .page-header {
+      padding: 8.5rem 0 3.5rem;
+      background: linear-gradient(180deg, #FAF8F4 0%, #F5F0E6 100%);
+      border-bottom: 1px solid var(--gray-800);
+      position: relative;
+    }
+
+    .header-badge-row {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(22, 163, 74, 0.1);
+      border: 1px solid rgba(22, 163, 74, 0.3);
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #15803d;
+      letter-spacing: 0.04em;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: #16a34a;
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
+      animation: pulseDot 2s infinite;
+    }
+
+    @keyframes pulseDot {
+      0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.5);
+      }
+      70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 6px rgba(22, 163, 74, 0);
+      }
+      100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(22, 163, 74, 0);
+      }
+    }
+
+    .page-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+      font-weight: 700;
+      color: #1A1A1A;
+      line-height: 1.18;
+      margin-bottom: 1.25rem;
+      max-width: 850px;
+    }
+
+    .page-subtitle {
+      font-size: 1.05rem;
+      color: #3D3830;
+      max-width: 780px;
+      line-height: 1.75;
+    }
+
+    .target-roles-banner {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1.75rem;
+      padding: 1rem 1.25rem;
+      background: #FFFFFF;
+      border: 1px solid var(--gray-800);
+      border-radius: var(--radius);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    .target-role-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #1A1A1A;
+    }
+
+    .target-role-tag svg {
+      width: 15px;
+      height: 15px;
+      color: var(--accent);
+    }
+
+    .target-divider {
+      width: 1px;
+      height: 16px;
+      background: var(--gray-700);
+    }
+
+    @media (max-width: 640px) {
+      .target-divider {
+        display: none;
+      }
+    }
+
+    /* ─── Main Content Layout ────────────────────────────────── */
+    .contact-main {
+      padding: 4rem 0 6rem;
+    }
+
+    .contact-layout-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+
+    @media (max-width: 960px) {
+      .contact-layout-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
+
+    /* ─── Left Column Cards ──────────────────────────────────── */
+    .contact-left-col {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .panel-card {
+      background: #FFFFFF;
+      border: 1px solid var(--gray-800);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    }
+
+    .panel-card:hover {
+      border-color: rgba(139, 107, 61, 0.35);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    }
+
+    .panel-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.85rem;
+      border-bottom: 1px solid var(--gray-900);
+    }
+
+    .panel-header-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--accent-dim);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .panel-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1A1A1A;
+    }
+
+    /* Contact Method Items */
+    .contact-methods-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.15rem;
+    }
+
+    .method-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.85rem 1rem;
+      background: #FAF8F4;
+      border: 1px solid var(--gray-800);
+      border-radius: 8px;
+      transition: all var(--transition);
+    }
+
+    .method-item:hover {
+      background: #FFFFFF;
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(139, 107, 61, 0.08);
+    }
+
+    .method-info {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      min-width: 0;
+    }
+
+    .method-icon {
+      width: 38px;
+      height: 38px;
+      background: #FFFFFF;
+      border: 1px solid var(--gray-700);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1A1A1A;
+      flex-shrink: 0;
+      transition: all var(--transition);
+    }
+
+    .method-item:hover .method-icon {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #FFFFFF;
+    }
+
+    .method-details {
+      min-width: 0;
+    }
+
+    .method-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gray-500);
+      font-weight: 600;
+      display: block;
+    }
+
+    .method-value {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #1A1A1A;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+    }
+
+    .method-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-shrink: 0;
+    }
+
+    .btn-action-icon {
+      padding: 0.4rem 0.65rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent);
+      background: #FFFFFF;
+      border: 1px solid var(--gray-700);
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all var(--transition);
+    }
+
+    .btn-action-icon:hover {
+      background: var(--accent);
+      color: #FAF8F4;
+      border-color: var(--accent);
+    }
+
+    /* Download Assets Section */
+    .downloads-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .download-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 1.15rem;
+      background: linear-gradient(135deg, #FAF8F4 0%, #FFFFFF 100%);
+      border: 1px solid var(--gray-800);
+      border-radius: 8px;
+      transition: all var(--transition);
+    }
+
+    .download-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 14px rgba(139, 107, 61, 0.12);
+    }
+
+    .download-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .doc-type-badge {
+      padding: 0.35rem 0.6rem;
+      background: #dc2626;
+      color: #FFFFFF;
+      font-size: 0.68rem;
+      font-weight: 700;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
+
+    .doc-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #1A1A1A;
+      line-height: 1.3;
+    }
+
+    .doc-sub {
+      font-size: 0.75rem;
+      color: var(--gray-500);
+    }
+
+    .btn-download-main {
+      padding: 0.55rem 1rem;
+      background: var(--accent);
+      color: #FAF8F4;
+      font-size: 0.78rem;
+      font-weight: 600;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn-download-main:hover {
+      background: #73542a;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(139, 107, 61, 0.3);
+    }
+
+    /* Working SLA Card */
+    .sla-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    @media (max-width: 480px) {
+      .sla-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .sla-item {
+      padding: 0.85rem;
+      background: #FAF8F4;
+      border-radius: 6px;
+      border: 1px solid var(--gray-800);
+    }
+
+    .sla-key {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gray-500);
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+
+    .sla-val {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #1A1A1A;
+    }
+
+    /* ─── Right Column: Interactive Contact Form ─────────────── */
+    .form-panel {
+      background: #FFFFFF;
+      border: 1px solid var(--gray-800);
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+      position: sticky;
+      top: 6rem;
+    }
+
+    @media (max-width: 768px) {
+      .form-panel {
+        padding: 1.75rem 1.25rem;
+      }
+    }
+
+    .form-intro {
+      margin-bottom: 2rem;
+    }
+
+    .form-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #1A1A1A;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-desc {
+      font-size: 0.88rem;
+      color: var(--gray-500);
+      line-height: 1.6;
+    }
+
+    /* Purpose Selector Pills */
+    .purpose-group {
+      margin-bottom: 1.75rem;
+    }
+
+    .field-label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #1A1A1A;
+      margin-bottom: 0.6rem;
+    }
+
+    .field-label span {
+      color: #dc2626;
+    }
+
+    .purpose-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .purpose-pill-btn {
+      padding: 0.45rem 0.85rem;
+      background: #FAF8F4;
+      border: 1px solid var(--gray-800);
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #3D3830;
+      transition: all var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .purpose-pill-btn:hover {
+      border-color: var(--accent);
+      color: #1A1A1A;
+      background: #FFFFFF;
+    }
+
+    .purpose-pill-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #FAF8F4;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(139, 107, 61, 0.25);
+    }
+
+    /* Form Inputs */
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    @media (max-width: 600px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .form-input,
+    .form-textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      background: #FAF8F4;
+      border: 1px solid var(--gray-800);
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      color: #1A1A1A;
+      transition: all var(--transition);
+      outline: none;
+    }
+
+    .form-input:focus,
+    .form-textarea:focus {
+      background: #FFFFFF;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(139, 107, 61, 0.12);
+    }
+
+    .form-textarea {
+      min-height: 125px;
+      resize: vertical;
+      line-height: 1.5;
+    }
+
+    .form-submit-btn {
+      width: 100%;
+      padding: 0.95rem 1.5rem;
+      background: var(--accent);
+      color: #FAF8F4;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      transition: all var(--transition);
+      box-shadow: 0 4px 15px rgba(139, 107, 61, 0.25);
+    }
+
+    .form-submit-btn:hover {
+      background: #73542a;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(139, 107, 61, 0.35);
+    }
+
+    .form-footer-note {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.76rem;
+      color: var(--gray-500);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    /* ─── Toast Notification ─────────────────────────────────── */
+    #toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 999;
+      background: #1A1A1A;
+      color: #FAF8F4;
+      padding: 0.85rem 1.4rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    #toast.show {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    #toast svg {
+      width: 18px;
+      height: 18px;
+      color: #22c55e;
+      flex-shrink: 0;
+    }
+
+    /* ─── Footer ─────────────────────────────────────────────── */
+    footer {
+      padding: 2.5rem 0;
+      text-align: center;
+      border-top: 1px solid var(--glass-border);
+      background: var(--black);
+    }
+
+    footer p {
+      font-size: 0.75rem;
+      color: var(--gray-500);
+      letter-spacing: 0.08em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ─── Navbar ──────────────────────────────────────────────── -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-brand">NLH<span>.</span></a>
+    <div class="nav-links">
+      <a href="index.html" data-i18n="nav_home">Home</a>
+      <a href="about.html" data-i18n="nav_about">About</a>
+      <a href="skills.html" data-i18n="nav_skills">Skills</a>
+      <a href="projects.html" data-i18n="nav_projects">Projects</a>
+      <a href="experience.html" data-i18n="nav_experience">Experience</a>
+      <a href="contact.html" class="active" data-i18n="nav_contact">Contact</a>
+    </div>
+    <div class="nav-controls">
+      <button id="lang-toggle" aria-label="Toggle language">VI</button>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" role="dialog" aria-label="Navigation menu">
+    <button id="mobile-close" aria-label="Close menu">✕</button>
+    <a href="index.html" data-i18n="nav_home">Home</a>
+    <a href="about.html" data-i18n="nav_about">About</a>
+    <a href="skills.html" data-i18n="nav_skills">Skills</a>
+    <a href="projects.html" data-i18n="nav_projects">Projects</a>
+    <a href="experience.html" data-i18n="nav_experience">Experience</a>
+    <a href="contact.html" class="active" data-i18n="nav_contact">Contact</a>
+    <button id="mobile-lang">Switch to VI</button>
+  </div>
+
+  <!-- ─── Page Header / Hero ─────────────────────────────────── -->
+  <header class="page-header">
+    <div class="container">
+      <div class="header-badge-row">
+        <span class="section-label" id="contact-label">Get in Touch</span>
+        <div class="status-pill" id="status-pill">
+          <span class="status-dot"></span>
+          <span id="status-text">Open to Opportunities</span>
+        </div>
+      </div>
+      <h1 class="page-title" id="contact-headline">Let's Build Something Impactful Together</h1>
+      <p class="page-subtitle" id="contact-subtitle">
+        Senior Business Analyst &amp; aspiring Product Owner with 4+ years of hands-on experience bridging technical feasibility and strategic product delivery. Proven track record across AI Security, MarTech, Hospitality SaaS, and Enterprise HR platforms — delivering 8+ products, 27+ predictable sprints, and leading BA squads end-to-end.
+      </p>
+
+      <!-- Target Roles & Locations Banner -->
+      <div class="target-roles-banner">
+        <div class="target-role-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span id="target-role-label">Target Roles: <strong>Senior Business Analyst / Product Owner</strong></span>
+        </div>
+        <div class="target-divider"></div>
+        <div class="target-role-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span id="target-location-label">Mobility: <strong>On-site &amp; Hybrid in Hanoi &amp; Ho Chi Minh City</strong></span>
+        </div>
+        <div class="target-divider"></div>
+        <div class="target-role-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+          <span id="target-domain-label">Domains: <strong>Flexible (AI, SaaS, Enterprise, MarTech, FinTech)</strong></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ─── Main Content Layout ────────────────────────────────── -->
+  <main class="contact-main">
+    <div class="container">
+      <div class="contact-layout-grid">
+
+        <!-- LEFT COLUMN: Direct Channels, Downloads & SLA -->
+        <div class="contact-left-col">
+
+          <!-- 1. Direct Contact Channels Card -->
+          <div class="panel-card">
+            <div class="panel-header">
+              <div class="panel-header-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <h2 class="panel-title" id="panel-direct-title">Direct Contact Channels</h2>
+            </div>
+
+            <div class="contact-methods-list">
+              <!-- Email -->
+              <div class="method-item">
+                <div class="method-info">
+                  <div class="method-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                  </div>
+                  <div class="method-details">
+                    <span class="method-label">Official Email</span>
+                    <span class="method-value" id="val-email">hainlph17388@gmail.com</span>
+                  </div>
+                </div>
+                <div class="method-actions">
+                  <button class="btn-action-icon" onclick="copyText('hainlph17388@gmail.com', 'Email copied to clipboard!')" title="Copy Email">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <span>Copy</span>
+                  </button>
+                  <a href="mailto:hainlph17388@gmail.com" class="btn-action-icon" title="Send Email">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <line x1="22" y1="2" x2="11" y2="13"></line>
+                      <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Phone / Zalo -->
+              <div class="method-item">
+                <div class="method-info">
+                  <div class="method-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                  </div>
+                  <div class="method-details">
+                    <span class="method-label">Phone &amp; Zalo</span>
+                    <span class="method-value" id="val-phone">0862 606 580</span>
+                  </div>
+                </div>
+                <div class="method-actions">
+                  <button class="btn-action-icon" onclick="copyText('0862606580', 'Phone number copied to clipboard!')" title="Copy Phone">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <span>Copy</span>
+                  </button>
+                  <a href="tel:0862606580" class="btn-action-icon" title="Call Now">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Location & Mobility -->
+              <div class="method-item">
+                <div class="method-info">
+                  <div class="method-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div class="method-details">
+                    <span class="method-label">Current Base &amp; Mobility</span>
+                    <span class="method-value" id="val-location">Hanoi &amp; Ho Chi Minh City (On-site / Hybrid)</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- LinkedIn -->
+              <div class="method-item">
+                <div class="method-info">
+                  <div class="method-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.64 1.64 0 0 0-1.64 1.64c0 .91.73 1.64 1.64 1.64.91 0 1.64-.73 1.64-1.64A1.64 1.64 0 0 0 7.83 6.2Z"></path>
+                    </svg>
+                  </div>
+                  <div class="method-details">
+                    <span class="method-label">Professional Network</span>
+                    <span class="method-value">linkedin.com/in/hainguyen-hyper</span>
+                  </div>
+                </div>
+                <div class="method-actions">
+                  <a href="https://www.linkedin.com/in/hainguyen-hyper/" target="_blank" rel="noopener" class="btn-action-icon">
+                    <span>Visit Profile</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Downloadable Assets & Case Studies -->
+          <div class="panel-card">
+            <div class="panel-header">
+              <div class="panel-header-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </div>
+              <h2 class="panel-title" id="panel-docs-title">Official Documents &amp; Portfolios</h2>
+            </div>
+
+            <div class="downloads-list">
+              <!-- Official CV -->
+              <div class="download-card">
+                <div class="download-meta">
+                  <span class="doc-type-badge">PDF</span>
+                  <div>
+                    <div class="doc-title" id="doc-cv-title">Senior BA / Product Owner Resume (ENG)</div>
+                    <div class="doc-sub">Updated 2026 · [HAINL] BUSINESS ANALYST ENG.pdf</div>
+                  </div>
+                </div>
+                <a href="[HAINL] BUSINESS ANALYST ENG.pdf" download="[HAINL] BUSINESS ANALYST ENG.pdf" class="btn-download-main" id="btn-dl-cv">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span>Download CV</span>
+                </a>
+              </div>
+
+              <!-- Case Study 1: OnLead Management -->
+              <div class="download-card">
+                <div class="download-meta">
+                  <span class="doc-type-badge">DECK</span>
+                  <div>
+                    <div class="doc-title">OnLead Management Case Study</div>
+                    <div class="doc-sub">Full Product &amp; BA Presentation Deck · PDF</div>
+                  </div>
+                </div>
+                <a href="OnLead Management.pdf" target="_blank" class="btn-action-icon">
+                  <span>View Deck</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+
+              <!-- Case Study 2: Tech Service / Tech OCOS -->
+              <div class="download-card">
+                <div class="download-meta">
+                  <span class="doc-type-badge">DECK</span>
+                  <div>
+                    <div class="doc-title">Tech Service &amp; Tech OCOS Architecture</div>
+                    <div class="doc-sub">System Architecture &amp; Delivery Deck · PDF</div>
+                  </div>
+                </div>
+                <a href="Tech Service - Tech OCOS.pdf" target="_blank" class="btn-action-icon">
+                  <span>View Deck</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Collaboration SLA & Working Principles -->
+          <div class="panel-card">
+            <div class="panel-header">
+              <div class="panel-header-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <h2 class="panel-title" id="panel-sla-title">Working Principles &amp; Response SLA</h2>
+            </div>
+
+            <div class="sla-grid">
+              <div class="sla-item">
+                <div class="sla-key" id="sla-key-res">Response SLA</div>
+                <div class="sla-val" id="sla-val-res">Within 12–24 Hours</div>
+              </div>
+              <div class="sla-item">
+                <div class="sla-key" id="sla-key-tz">Timezone &amp; Hours</div>
+                <div class="sla-val">GMT+7 (Hanoi / VN)</div>
+              </div>
+              <div class="sla-item">
+                <div class="sla-key" id="sla-key-mode">Engagement Modes</div>
+                <div class="sla-val" id="sla-val-mode">Full-time, Hybrid, Contract</div>
+              </div>
+              <div class="sla-item">
+                <div class="sla-key" id="sla-key-dom">Domain Agnostic</div>
+                <div class="sla-val" id="sla-val-dom">SaaS, AI, GovTech, FinTech</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN: Interactive Contact / Inquiry Form -->
+        <div class="form-panel">
+          <div class="form-intro">
+            <h2 class="form-title" id="form-title">Send a Direct Inquiry</h2>
+            <p class="form-desc" id="form-desc">
+              Have an open role, a consulting request, or want to discuss product ideas? Leave your message below and I'll get back to you promptly.
+            </p>
+          </div>
+
+          <form id="contact-form" onsubmit="handleFormSubmit(event)">
+            <!-- Topic / Purpose Selector Pills -->
+            <div class="purpose-group">
+              <label class="field-label" id="lbl-purpose">Inquiry Purpose <span>*</span></label>
+              <div class="purpose-pills" id="purpose-pills">
+                <button type="button" class="purpose-pill-btn active" data-value="Hiring: Senior BA / Product Owner">
+                  🏢 <span class="pill-text">Senior BA / PO Hiring</span>
+                </button>
+                <button type="button" class="purpose-pill-btn" data-value="Project Consulting / Solution Design">
+                  💼 <span class="pill-text">Project Consulting</span>
+                </button>
+                <button type="button" class="purpose-pill-btn" data-value="Professional Networking">
+                  🤝 <span class="pill-text">Professional Networking</span>
+                </button>
+                <button type="button" class="purpose-pill-btn" data-value="Other Discussion">
+                  💬 <span class="pill-text">Other Inquiry</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="field-label" for="sender-name" id="lbl-name">Your Name <span>*</span></label>
+                <input type="text" id="sender-name" class="form-input" placeholder="e.g. Sarah Nguyen" required />
+              </div>
+              <div class="form-group">
+                <label class="field-label" for="sender-org" id="lbl-org">Company / Organization</label>
+                <input type="text" id="sender-org" class="form-input" placeholder="e.g. Acme Tech Corp" />
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="field-label" for="sender-email" id="lbl-email">Your Email / Contact <span>*</span></label>
+                <input type="email" id="sender-email" class="form-input" placeholder="e.g. sarah@company.com" required />
+              </div>
+              <div class="form-group">
+                <label class="field-label" for="sender-subject" id="lbl-subject">Subject</label>
+                <input type="text" id="sender-subject" class="form-input" placeholder="Brief subject line" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="field-label" for="sender-message" id="lbl-message">Message Details <span>*</span></label>
+              <textarea id="sender-message" class="form-textarea" placeholder="Tell me about your team, the role requirements, or the project scope..." required></textarea>
+            </div>
+
+            <button type="submit" class="form-submit-btn" id="btn-submit">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+              <span id="btn-submit-text">Send Message Directly</span>
+            </button>
+
+            <p class="form-footer-note" id="form-footer-note">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              <span>Submissions open your email client pre-populated with all details.</span>
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ─── Toast Notification ─────────────────────────────────── -->
+  <div id="toast">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+    <span id="toast-msg">Text copied to clipboard!</span>
+  </div>
+
+  <!-- ─── Footer ──────────────────────────────────────────────── -->
+  <footer>
+    <div class="container">
+      <p id="footer-tag">Nguyen Le Hai — Senior Business Analyst &amp; Product Owner Portfolio &copy; <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script>
+    // ─── DATA & BILINGUAL CONTENT ─────────────────────────────────────
+    const DATA = {
+      en: {
+        nav: { home: 'Home', about: 'About', skills: 'Skills', projects: 'Projects', experience: 'Experience', contact: 'Contact', lang: 'VI' },
+        header: {
+          label: 'Get in Touch',
+          status: 'Open to Opportunities',
+          headline: "Let's Build Something Impactful Together",
+          subtitle: "Senior Business Analyst & aspiring Product Owner with 4+ years of hands-on experience bridging technical feasibility and strategic product delivery. Proven track record across AI Security, MarTech, Hospitality SaaS, and Enterprise HR platforms — delivering 8+ products, 27+ predictable sprints, and leading BA squads end-to-end.",
+          targetRole: "Target Roles: <strong>Senior Business Analyst / Product Owner</strong>",
+          targetLocation: "Mobility: <strong>On-site & Hybrid in Hanoi & Ho Chi Minh City</strong>",
+          targetDomain: "Domains: <strong>Flexible (AI, SaaS, Enterprise, MarTech, FinTech)</strong>"
+        },
+        leftCol: {
+          directTitle: 'Direct Contact Channels',
+          locationVal: 'Hanoi & Ho Chi Minh City (On-site / Hybrid)',
+          docsTitle: 'Official Documents & Portfolios',
+          cvTitle: 'Senior BA / Product Owner Resume (ENG)',
+          dlCv: 'Download CV',
+          slaTitle: 'Working Principles & Response SLA',
+          slaKeyRes: 'Response SLA',
+          slaValRes: 'Within 12–24 Hours',
+          slaKeyTz: 'Timezone & Hours',
+          slaKeyMode: 'Engagement Modes',
+          slaValMode: 'Full-time, Hybrid, Contract',
+          slaKeyDom: 'Domain Agnostic',
+          slaValDom: 'SaaS, AI, GovTech, FinTech'
+        },
+        form: {
+          title: 'Send a Direct Inquiry',
+          desc: "Have an open role, a consulting request, or want to discuss product ideas? Leave your message below and I'll get back to you promptly.",
+          lblPurpose: 'Inquiry Purpose',
+          pills: ['Senior BA / PO Hiring', 'Project Consulting', 'Professional Networking', 'Other Inquiry'],
+          lblName: 'Your Name',
+          lblOrg: 'Company / Organization',
+          lblEmail: 'Your Email / Contact',
+          lblSubject: 'Subject',
+          lblMessage: 'Message Details',
+          btnSubmit: 'Send Message Directly',
+          footerNote: 'Submissions open your email client pre-populated with all details.',
+          toastSuccess: 'Inquiry prepared! Opening your mail client...',
+          copyEmail: 'Email copied to clipboard!',
+          copyPhone: 'Phone number copied to clipboard!'
+        },
+        footerTag: 'Nguyen Le Hai — Senior Business Analyst & Product Owner Portfolio'
+      },
+      vi: {
+        nav: { home: 'Trang chủ', about: 'Giới thiệu', skills: 'Kỹ năng', projects: 'Dự án', experience: 'Kinh nghiệm', contact: 'Liên hệ', lang: 'EN' },
+        header: {
+          label: 'Liên hệ trực tiếp',
+          status: 'Sẵn sàng nhận việc (Open to Opportunities)',
+          headline: 'Sẵn sàng cho những thử thách & cơ hội mới',
+          subtitle: 'Senior Business Analyst & định hướng Product Owner với hơn 4 năm kinh nghiệm thực chiến kết nối giữa năng lực kỹ thuật và bài toán kinh doanh. Đã trực tiếp phân tích, quản lý yêu cầu và phát hành 8+ sản phẩm/dịch vụ công nghệ (AI Security, MarTech, SaaS, Quản trị nhân sự doanh nghiệp) với hơn 27 sprint ổn định. Sẵn sàng cho các cơ hội Full-time (On-site / Hybrid tại Hà Nội & TP. Hồ Chí Minh) và hợp tác tư vấn giải pháp trên đa dạng lĩnh vực.',
+          targetRole: "Vị trí hướng tới: <strong>Senior Business Analyst / Product Owner</strong>",
+          targetLocation: "Địa điểm: <strong>Sẵn sàng On-site & Hybrid tại Hà Nội & TP. Hồ Chí Minh</strong>",
+          targetDomain: "Lĩnh vực: <strong>Linh hoạt (AI, SaaS, Enterprise, MarTech, FinTech)</strong>"
+        },
+        leftCol: {
+          directTitle: 'Kênh liên hệ trực tiếp',
+          locationVal: 'Hà Nội & TP. Hồ Chí Minh (Sẵn sàng On-site / Hybrid)',
+          docsTitle: 'Tài liệu & Hồ sơ năng lực',
+          cvTitle: 'CV Senior BA / Product Owner (Bản Tiếng Anh)',
+          dlCv: 'Tải CV (PDF)',
+          slaTitle: 'Nguyên tắc làm việc & Cam kết phản hồi',
+          slaKeyRes: 'Thời gian phản hồi',
+          slaValRes: 'Trong vòng 12–24 giờ làm việc',
+          slaKeyTz: 'Múi giờ & Khu vực',
+          slaKeyMode: 'Hình thức làm việc',
+          slaValMode: 'Full-time, Hybrid, Tư vấn dự án',
+          slaKeyDom: 'Độ thích ứng Domain',
+          slaValDom: 'SaaS, AI, GovTech, FinTech'
+        },
+        form: {
+          title: 'Gửi thông tin trao đổi',
+          desc: 'Bạn đang tìm kiếm Senior BA / Product Owner cho dự án, cần tư vấn giải pháp hay kết nối chuyên môn? Vui lòng để lại tin nhắn bên dưới, tôi sẽ phản hồi sớm nhất.',
+          lblPurpose: 'Mục đích trao đổi',
+          pills: ['Tuyển dụng Senior BA / PO', 'Tư vấn dự án / Giải pháp', 'Kết nối chuyên môn', 'Nội dung khác'],
+          lblName: 'Họ và tên của bạn',
+          lblOrg: 'Công ty / Tổ chức',
+          lblEmail: 'Email / Thông tin liên hệ',
+          lblSubject: 'Tiêu đề trao đổi',
+          lblMessage: 'Nội dung tin nhắn',
+          btnSubmit: 'Gửi tin nhắn ngay',
+          footerNote: 'Hệ thống sẽ tự động tổng hợp thông tin và mở ứng dụng gửi thư của bạn.',
+          toastSuccess: 'Đã chuẩn bị thông tin! Đang mở ứng dụng email...',
+          copyEmail: 'Đã sao chép địa chỉ email vào bộ nhớ tạm!',
+          copyPhone: 'Đã sao chép số điện thoại vào bộ nhớ tạm!'
+        },
+        footerTag: 'Nguyễn Lê Hải — Senior Business Analyst & Product Owner Portfolio'
+      }
+    };
+
+    // ─── STATE & INIT ─────────────────────────────────────────────────
+    let currentLang = localStorage.getItem('portfolio-lang') || 'en';
+    let selectedPurpose = 'Hiring: Senior BA / Product Owner';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('portfolio-lang', lang);
+      document.documentElement.lang = lang;
+
+      const d = DATA[lang];
+
+      // Update Nav
+      const navMap = {
+        nav_home: d.nav.home,
+        nav_about: d.nav.about,
+        nav_skills: d.nav.skills,
+        nav_projects: d.nav.projects,
+        nav_experience: d.nav.experience,
+        nav_contact: d.nav.contact
+      };
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (navMap[key]) el.textContent = navMap[key];
+      });
+
+      document.getElementById('lang-toggle').textContent = d.nav.lang;
+      document.getElementById('mobile-lang').textContent = lang === 'en' ? 'Chuyển sang Tiếng Việt' : 'Switch to English';
+
+      // Header
+      document.getElementById('contact-label').textContent = d.header.label;
+      document.getElementById('status-text').textContent = d.header.status;
+      document.getElementById('contact-headline').textContent = d.header.headline;
+      document.getElementById('contact-subtitle').textContent = d.header.subtitle;
+      document.getElementById('target-role-label').innerHTML = d.header.targetRole;
+      document.getElementById('target-location-label').innerHTML = d.header.targetLocation;
+      document.getElementById('target-domain-label').innerHTML = d.header.targetDomain;
+
+      // Left Column
+      document.getElementById('panel-direct-title').textContent = d.leftCol.directTitle;
+      document.getElementById('val-location').textContent = d.leftCol.locationVal;
+      document.getElementById('panel-docs-title').textContent = d.leftCol.docsTitle;
+      document.getElementById('doc-cv-title').textContent = d.leftCol.cvTitle;
+      document.querySelector('#btn-dl-cv span').textContent = d.leftCol.dlCv;
+      document.getElementById('panel-sla-title').textContent = d.leftCol.slaTitle;
+      document.getElementById('sla-key-res').textContent = d.leftCol.slaKeyRes;
+      document.getElementById('sla-val-res').textContent = d.leftCol.slaValRes;
+      document.getElementById('sla-key-tz').textContent = d.leftCol.slaKeyTz;
+      document.getElementById('sla-key-mode').textContent = d.leftCol.slaKeyMode;
+      document.getElementById('sla-val-mode').textContent = d.leftCol.slaValMode;
+      document.getElementById('sla-key-dom').textContent = d.leftCol.slaKeyDom;
+      document.getElementById('sla-val-dom').textContent = d.leftCol.slaValDom;
+
+      // Form
+      document.getElementById('form-title').textContent = d.form.title;
+      document.getElementById('form-desc').textContent = d.form.desc;
+      document.getElementById('lbl-purpose').innerHTML = `${d.form.lblPurpose} <span>*</span>`;
+      document.getElementById('lbl-name').innerHTML = `${d.form.lblName} <span>*</span>`;
+      document.getElementById('lbl-org').textContent = d.form.lblOrg;
+      document.getElementById('lbl-email').innerHTML = `${d.form.lblEmail} <span>*</span>`;
+      document.getElementById('lbl-subject').textContent = d.form.lblSubject;
+      document.getElementById('lbl-message').innerHTML = `${d.form.lblMessage} <span>*</span>`;
+      document.getElementById('btn-submit-text').textContent = d.form.btnSubmit;
+      document.querySelector('#form-footer-note span').textContent = d.form.footerNote;
+
+      // Update Pill texts
+      const pillSpans = document.querySelectorAll('.purpose-pill-btn .pill-text');
+      d.form.pills.forEach((pText, idx) => {
+        if (pillSpans[idx]) pillSpans[idx].textContent = pText;
+      });
+
+      // Footer
+      document.getElementById('footer-tag').innerHTML = `${d.footerTag} &copy; <span id="year">${new Date().getFullYear()}</span>`;
+    }
+
+    // Toggle Language
+    document.getElementById('lang-toggle').addEventListener('click', () => {
+      setLanguage(currentLang === 'en' ? 'vi' : 'en');
+    });
+    document.getElementById('mobile-lang').addEventListener('click', () => {
+      setLanguage(currentLang === 'en' ? 'vi' : 'en');
+      closeMobileMenu();
+    });
+
+    // Mobile Menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileClose = document.getElementById('mobile-close');
+
+    function openMobileMenu() { mobileMenu.classList.add('open'); }
+    function closeMobileMenu() { mobileMenu.classList.remove('open'); }
+
+    hamburger.addEventListener('click', openMobileMenu);
+    mobileClose.addEventListener('click', closeMobileMenu);
+
+    // Purpose Pills Selection
+    document.querySelectorAll('.purpose-pill-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.purpose-pill-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        selectedPurpose = btn.getAttribute('data-value');
+      });
+    });
+
+    // Toast Notification Helper
+    let toastTimer;
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-msg');
+      toastMsg.textContent = msg;
+      toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3200);
+    }
+
+    // Copy to Clipboard Helper
+    function copyText(text, successMsg) {
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast(successMsg || (currentLang === 'vi' ? 'Đã sao chép!' : 'Copied to clipboard!'));
+        }).catch(() => {
+          fallbackCopy(text, successMsg);
+        });
+      } else {
+        fallbackCopy(text, successMsg);
+      }
+    }
+
+    function fallbackCopy(text, successMsg) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        document.execCommand('copy');
+        showToast(successMsg || (currentLang === 'vi' ? 'Đã sao chép!' : 'Copied to clipboard!'));
+      } catch (err) {
+        prompt('Copy manually:', text);
+      }
+      document.body.removeChild(textarea);
+    }
+
+    // Form Submission Handler
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('sender-name').value.trim();
+      const org = document.getElementById('sender-org').value.trim();
+      const email = document.getElementById('sender-email').value.trim();
+      const userSubject = document.getElementById('sender-subject').value.trim();
+      const message = document.getElementById('sender-message').value.trim();
+
+      const subject = `[Portfolio Inquiry] ${selectedPurpose} - ${name}${org ? ` (${org})` : ''}${userSubject ? `: ${userSubject}` : ''}`;
+      
+      const body = `Dear Nguyen Le Hai,
+
+I am reaching out via your portfolio website regarding:
+• Purpose: ${selectedPurpose}
+• Sender: ${name}
+• Organization: ${org || 'N/A'}
+• Contact Email/Phone: ${email}
+
+---------------- MESSAGE DETAILS ----------------
+${message}
+------------------------------------------------
+Looking forward to your response.
+
+Best regards,
+${name}`;
+
+      showToast(DATA[currentLang].form.toastSuccess);
+
+      // Open mailto link
+      const mailtoUrl = `mailto:hainlph17388@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      setTimeout(() => {
+        window.location.href = mailtoUrl;
+      }, 500);
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      setLanguage(currentLang);
+    });
+  </script>
+</body>
+
+</html>

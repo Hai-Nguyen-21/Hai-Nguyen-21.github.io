@@ -1,0 +1,1966 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects & Case Studies — Nguyen Le Hai | Business Analyst</title>
+  <meta name="description"
+    content="Explore detailed case studies and digital products delivered by Nguyen Le Hai — BA Lead in AI Security, MarTech platforms, Tech Services, Hospitality SaaS, and Enterprise HR." />
+  <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,300&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <style>
+    /* ─── Reset & Design System ────────────────────────────── */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --cream: #1A1A1A;
+      --black: #FAF8F4;
+      --gray-900: #F2EFE9;
+      --gray-800: #E8E3DA;
+      --gray-700: #D0C9BC;
+      --gray-500: #7A7060;
+      --gray-400: #9A9080;
+      --gray-300: #3D3830;
+      --accent: #8B6B3D;
+      --accent-dim: rgba(139, 107, 61, 0.12);
+      --accent-glow: rgba(139, 107, 61, 0.07);
+      --glass: rgba(0, 0, 0, 0.03);
+      --glass-border: rgba(0, 0, 0, 0.09);
+      --radius: 6px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--cream);
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: var(--accent);
+      color: #FAF8F4;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    /* ─── Typography & Layout ───────────────────────────────── */
+    .font-display {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 1.25rem;
+      }
+    }
+
+    /* ─── Navbar ─────────────────────────────────────────────── */
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1.25rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--glass-border);
+      background: rgba(250, 248, 244, 0.94);
+      backdrop-filter: blur(20px);
+      transition: all var(--transition);
+    }
+
+    .nav-brand {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+      color: var(--cream);
+    }
+
+    .nav-brand span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+      transition: color var(--transition);
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transition: transform var(--transition);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--cream);
+      font-weight: 600;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      transform: scaleX(1);
+    }
+
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    #lang-toggle {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+      padding: 0.3rem 0.7rem;
+      border: 1px solid var(--gray-700);
+      border-radius: var(--radius);
+      transition: all var(--transition);
+    }
+
+    #lang-toggle:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .nav-hamburger span {
+      width: 22px;
+      height: 1.5px;
+      background: var(--cream);
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .nav-hamburger {
+        display: flex;
+      }
+    }
+
+    /* Mobile Menu */
+    #mobile-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #FAF8F4;
+      z-index: 99;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      transform: translateY(-100%);
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    #mobile-menu.open {
+      transform: translateY(0);
+    }
+
+    #mobile-menu a {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--cream);
+      letter-spacing: 0.05em;
+    }
+
+    #mobile-menu a.active {
+      color: var(--accent);
+    }
+
+    #mobile-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 2rem;
+      font-size: 1.5rem;
+      color: var(--cream);
+    }
+
+    #mobile-lang {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      padding: 0.4rem 1.2rem;
+      border: 1px solid var(--accent);
+      border-radius: var(--radius);
+    }
+
+    /* ─── Header ──────────────────────────────────────────────── */
+    .page-header {
+      padding: 8rem 0 3rem;
+      background: var(--gray-900);
+      border-bottom: 1px solid var(--glass-border);
+      position: relative;
+    }
+
+    .section-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+
+    .page-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      color: #1A1A1A;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .page-subtitle {
+      font-size: 1rem;
+      color: var(--gray-500);
+      max-width: 780px;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+
+    .header-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+    }
+
+    .h-stat {
+      background: #FFFFFF;
+      border: 1px solid var(--glass-border);
+      border-radius: 8px;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    }
+
+    .h-stat-val {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: #1A1A1A;
+      line-height: 1;
+    }
+
+    .h-stat-lbl {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gray-500);
+      margin-top: 0.35rem;
+    }
+
+    /* ─── Projects Section ────────────────────────────────────── */
+    .projects-section {
+      padding: 3.5rem 0 6rem;
+    }
+
+    /* ─── Filter Controls ────────────────────────────────────── */
+    .filter-wrapper {
+      margin-bottom: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .company-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      border-bottom: 1px solid var(--gray-800);
+      padding-bottom: 0.75rem;
+    }
+
+    .tab-btn {
+      padding: 0.55rem 1.1rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--gray-500);
+      border-radius: 20px;
+      background: transparent;
+      border: 1px solid transparent;
+      transition: all var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .tab-btn:hover {
+      color: var(--cream);
+      background: var(--gray-900);
+    }
+
+    .tab-btn.active {
+      color: #FAF8F4;
+      background: #1A1A1A;
+      border-color: #1A1A1A;
+    }
+
+    .tab-btn .badge-count {
+      font-size: 0.68rem;
+      padding: 0.1rem 0.45rem;
+      border-radius: 10px;
+      background: rgba(139, 107, 61, 0.15);
+      color: var(--accent);
+    }
+
+    .tab-btn.active .badge-count {
+      background: rgba(255, 255, 255, 0.2);
+      color: #FAF8F4;
+    }
+
+    .type-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      align-items: center;
+    }
+
+    .type-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gray-400);
+      margin-right: 0.5rem;
+      font-weight: 600;
+    }
+
+    .pill-btn {
+      padding: 0.35rem 0.8rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--gray-500);
+      border-radius: 4px;
+      background: #FFFFFF;
+      border: 1px solid var(--gray-700);
+      transition: all var(--transition);
+    }
+
+    .pill-btn:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .pill-btn.active {
+      color: var(--accent);
+      background: var(--accent-dim);
+      border-color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* ─── Projects Bento / Grid ───────────────────────────────── */
+    .projects-grid-layout {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1.5rem;
+    }
+
+    /* Base Project Tile */
+    .p-card {
+      border-radius: 14px;
+      padding: 2rem;
+      cursor: pointer;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      background: #FFFFFF;
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    }
+
+    .p-card:hover {
+      transform: translateY(-4px);
+    }
+
+    /* Grid Span Configurations */
+    .span-12 { grid-column: span 12; }
+    .span-8 { grid-column: span 8; }
+    .span-6 { grid-column: span 6; }
+    .span-4 { grid-column: span 4; }
+
+    @media (max-width: 1024px) {
+      .span-8, .span-6, .span-4 {
+        grid-column: span 12;
+      }
+    }
+
+    /* Flagship Card (AI Chatbot) */
+    .p-card-flagship {
+      background: linear-gradient(145deg, #1C1A16 0%, #242013 55%, #181613 100%);
+      border: 1px solid rgba(139, 107, 61, 0.4);
+      color: #FAF8F4;
+    }
+
+    .p-card-flagship::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(ellipse 85% 55% at 10% 90%, rgba(139, 107, 61, 0.25) 0%, transparent 60%),
+        radial-gradient(ellipse 55% 40% at 90% 10%, rgba(139, 107, 61, 0.15) 0%, transparent 55%);
+    }
+
+    .p-card-flagship:hover {
+      border-color: rgba(139, 107, 61, 0.7);
+      box-shadow: 0 32px 64px rgba(0, 0, 0, 0.38), 0 0 0 1px rgba(139, 107, 61, 0.2);
+    }
+
+    .flagship-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--accent);
+      background: rgba(139, 107, 61, 0.15);
+      border: 1px solid rgba(139, 107, 61, 0.35);
+      padding: 0.3rem 0.75rem;
+      border-radius: 20px;
+      margin-bottom: 1.2rem;
+      align-self: flex-start;
+    }
+
+    .card-meta-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .category-badge {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.65rem;
+      border-radius: 4px;
+    }
+
+    .badge-product {
+      background: rgba(37, 99, 235, 0.08);
+      color: #2563eb;
+      border: 1px solid rgba(37, 99, 235, 0.2);
+    }
+
+    .badge-service {
+      background: rgba(217, 119, 6, 0.09);
+      color: #b45309;
+      border: 1px solid rgba(217, 119, 6, 0.25);
+    }
+
+    .badge-new {
+      background: rgba(16, 185, 129, 0.1);
+      color: #059669;
+      border: 1px solid rgba(16, 185, 129, 0.25);
+    }
+
+    .badge-methodology {
+      background: rgba(139, 107, 61, 0.12);
+      color: var(--accent);
+      border: 1px solid rgba(139, 107, 61, 0.25);
+    }
+
+    .card-company-pill {
+      font-size: 0.72rem;
+      color: var(--gray-500);
+      font-weight: 500;
+    }
+
+    .p-card-flagship .card-company-pill {
+      color: rgba(250, 248, 244, 0.5);
+    }
+
+    .card-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #1A1A1A;
+      line-height: 1.25;
+      margin-bottom: 0.4rem;
+    }
+
+    .p-card-flagship .card-title {
+      color: #FAF8F4;
+      font-size: 1.65rem;
+    }
+
+    .card-domain {
+      font-size: 0.8rem;
+      color: var(--accent);
+      margin-bottom: 0.9rem;
+      font-weight: 500;
+    }
+
+    .card-desc {
+      font-size: 0.88rem;
+      color: #3D3830;
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+      flex: 1;
+    }
+
+    .p-card-flagship .card-desc {
+      color: rgba(250, 248, 244, 0.7);
+    }
+
+    /* Metric Grid */
+    .bento-metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+      gap: 0.75rem;
+      margin-bottom: 1.4rem;
+      padding: 0.9rem 1.1rem;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .bento-metric-val {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1.1;
+    }
+
+    .bento-metric-lbl {
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(250, 248, 244, 0.45);
+      margin-top: 0.25rem;
+    }
+
+    /* Impact Chips */
+    .impact-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .chip {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.25rem 0.65rem;
+      border-radius: 20px;
+    }
+
+    .chip-gold {
+      background: rgba(139, 107, 61, 0.1);
+      color: var(--accent);
+      border: 1px solid rgba(139, 107, 61, 0.25);
+    }
+
+    .chip-blue {
+      background: rgba(37, 99, 235, 0.08);
+      color: #1d4ed8;
+      border: 1px solid rgba(37, 99, 235, 0.2);
+    }
+
+    .chip-green {
+      background: rgba(22, 163, 74, 0.08);
+      color: #15803d;
+      border: 1px solid rgba(22, 163, 74, 0.2);
+    }
+
+    .chip-orange {
+      background: rgba(234, 88, 12, 0.08);
+      color: #c2410c;
+      border: 1px solid rgba(234, 88, 12, 0.2);
+    }
+
+    .chip-purple {
+      background: rgba(124, 58, 237, 0.08);
+      color: #6d28d9;
+      border: 1px solid rgba(124, 58, 237, 0.2);
+    }
+
+    /* Deliverables list on cards */
+    .card-deliverables {
+      list-style: none;
+      margin-bottom: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .card-deliverables li {
+      font-size: 0.82rem;
+      color: #5A5245;
+      padding-left: 1.1rem;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .card-deliverables li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.75rem;
+    }
+
+    /* Service Specific - Clients & PDF Bar */
+    .service-clients-box {
+      margin-top: auto;
+      margin-bottom: 1.2rem;
+      padding: 0.85rem 1rem;
+      background: var(--gray-900);
+      border-radius: 8px;
+      border: 1px solid var(--gray-800);
+    }
+
+    .service-clients-title {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gray-500);
+      font-weight: 700;
+      margin-bottom: 0.45rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .client-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .client-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #1A1A1A;
+      background: #FFFFFF;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      border: 1px solid var(--gray-700);
+    }
+
+    /* PDF Action Button on Card */
+    .pdf-deck-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #b45309;
+      background: rgba(217, 119, 6, 0.08);
+      border: 1px solid rgba(217, 119, 6, 0.25);
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      width: fit-content;
+      transition: all var(--transition);
+    }
+
+    .pdf-deck-btn:hover {
+      background: rgba(217, 119, 6, 0.16);
+      color: #92400e;
+    }
+
+    /* Card Footer CTA */
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: auto;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--gray-800);
+    }
+
+    .p-card-flagship .card-footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .card-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--accent);
+      transition: color var(--transition);
+    }
+
+    .card-cta svg {
+      transition: transform var(--transition);
+    }
+
+    .p-card:hover .card-cta svg {
+      transform: translateX(4px);
+    }
+
+    /* ─── Modal ──────────────────────────────────────────────── */
+    #modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    #modal-overlay.open {
+      display: flex;
+    }
+
+    .modal-box {
+      background: #FAF8F4;
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      max-width: 820px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    .modal-header {
+      position: sticky;
+      top: 0;
+      background: #FAF8F4;
+      border-bottom: 1px solid var(--glass-border);
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      z-index: 10;
+    }
+
+    .modal-close {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+      padding: 0.4rem 0.9rem;
+      border: 1px solid var(--gray-700);
+      border-radius: 4px;
+      transition: all var(--transition);
+    }
+
+    .modal-close:hover {
+      color: #1A1A1A;
+      border-color: #1A1A1A;
+    }
+
+    .modal-body {
+      padding: 2rem;
+    }
+
+    .modal-section-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+      margin-top: 1.75rem;
+      font-weight: 700;
+    }
+
+    .modal-section-label:first-of-type {
+      margin-top: 0;
+    }
+
+    .modal-text {
+      font-size: 0.92rem;
+      color: #3D3830;
+      line-height: 1.8;
+    }
+
+    .modal-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .modal-list li {
+      font-size: 0.9rem;
+      color: #3D3830;
+      padding-left: 1.4rem;
+      position: relative;
+      line-height: 1.7;
+    }
+
+    .modal-list li::before {
+      content: '✦';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.75rem;
+      top: 2px;
+    }
+
+    /* Modal Architecture Block for HROS */
+    .arch-modules-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.75rem;
+      margin-top: 0.75rem;
+    }
+
+    .arch-module-card {
+      background: #FFFFFF;
+      border: 1px solid var(--gray-800);
+      border-radius: 8px;
+      padding: 1rem;
+    }
+
+    .arch-module-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #1A1A1A;
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .arch-module-desc {
+      font-size: 0.78rem;
+      color: var(--gray-500);
+      line-height: 1.5;
+    }
+
+    /* Modal PDF Banner */
+    .modal-pdf-banner {
+      background: #FFFBEB;
+      border: 1px solid #FDE68A;
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .modal-pdf-info {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .modal-pdf-icon {
+      font-size: 1.75rem;
+    }
+
+    .modal-pdf-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #92400E;
+    }
+
+    .modal-pdf-desc {
+      font-size: 0.75rem;
+      color: #B45309;
+    }
+
+    .modal-pdf-action {
+      padding: 0.5rem 1rem;
+      background: #B45309;
+      color: #FFFFFF;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: background var(--transition);
+    }
+
+    .modal-pdf-action:hover {
+      background: #78350F;
+    }
+
+    /* ─── Footer ─────────────────────────────────────────────── */
+    footer {
+      padding: 2.5rem 2rem;
+      text-align: center;
+      border-top: 1px solid var(--glass-border);
+      background: #FAF8F4;
+    }
+
+    footer p {
+      font-size: 0.78rem;
+      color: var(--gray-500);
+      letter-spacing: 0.08em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ─── Navbar ──────────────────────────────────────────────── -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-brand">NLH<span>.</span></a>
+    <div class="nav-links">
+      <a href="index.html" data-i18n="nav_home">Home</a>
+      <a href="about.html" data-i18n="nav_about">About</a>
+      <a href="skills.html" data-i18n="nav_skills">Skills</a>
+      <a href="projects.html" class="active" data-i18n="nav_projects">Projects</a>
+      <a href="experience.html" data-i18n="nav_experience">Experience</a>
+      <a href="contact.html" data-i18n="nav_contact">Contact</a>
+    </div>
+    <div class="nav-controls">
+      <button id="lang-toggle" aria-label="Toggle language">EN</button>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" role="dialog" aria-label="Navigation menu">
+    <button id="mobile-close" aria-label="Close menu">✕</button>
+    <a href="index.html" data-i18n="nav_home">Home</a>
+    <a href="about.html" data-i18n="nav_about">About</a>
+    <a href="skills.html" data-i18n="nav_skills">Skills</a>
+    <a href="projects.html" class="active" data-i18n="nav_projects">Projects</a>
+    <a href="experience.html" data-i18n="nav_experience">Experience</a>
+    <a href="contact.html" data-i18n="nav_contact">Contact</a>
+    <button id="mobile-lang" data-i18n="lang_switch">Switch to VI</button>
+  </div>
+
+  <!-- ─── Header ──────────────────────────────────────────────── -->
+  <header class="page-header">
+    <div class="container">
+      <p class="section-label" id="page-label">Featured Case Studies &amp; Products</p>
+      <h1 class="page-title" id="page-title">Digital Products &amp; Solutions Delivered</h1>
+      <p class="page-subtitle" id="page-subtitle">A comprehensive breakdown of major SaaS products, consulting tech services, and AI initiatives delivered across Wanosoft, Novaon Digital, and KiotViet.</p>
+      
+      <div class="header-stats" id="header-stats">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </header>
+
+  <!-- ─── Projects Section ────────────────────────────────────── -->
+  <main class="projects-section">
+    <div class="container">
+      
+      <!-- Filter Controls -->
+      <div class="filter-wrapper">
+        <!-- Company Filter Tabs -->
+        <div class="company-tabs" id="company-tabs">
+          <!-- Injected by JS -->
+        </div>
+
+        <!-- Type Pills -->
+        <div class="type-pills" id="type-pills">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+
+      <!-- Projects Grid Layout -->
+      <div class="projects-grid-layout" id="projects-grid">
+        <!-- Injected by JS -->
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ─── Modal ───────────────────────────────────────────────── -->
+  <div id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div>
+          <div id="modal-meta" style="font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); font-weight:600; margin-bottom:0.25rem;"></div>
+          <h3 class="font-display" id="modal-title" style="font-size:1.35rem; color:#1A1A1A; margin:0; line-height:1.3;"></h3>
+        </div>
+        <button class="modal-close" id="modal-close-btn">Close</button>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- ─── Footer ──────────────────────────────────────────────── -->
+  <footer>
+    <p id="footer-text">Nguyen Le Hai — Business Analyst Portfolio &copy; <span id="year"></span></p>
+  </footer>
+
+  <script>
+    const DATA = {
+      en: {
+        nav: { home: 'Home', about: 'About', skills: 'Skills', projects: 'Projects', experience: 'Experience', contact: 'Contact', lang: 'VI' },
+        header: {
+          label: 'Featured Case Studies & Products',
+          title: 'Digital Products & Solutions Delivered',
+          subtitle: 'A comprehensive breakdown of major SaaS products, consulting tech services, and AI initiatives delivered across Wanosoft, Novaon Digital, and KiotViet.',
+          stats: [
+            { val: '8+', lbl: 'Products & Services' },
+            { val: '27+', lbl: 'Sprints Delivered' },
+            { val: '4', lbl: 'Core Domains' },
+            { val: '100%', lbl: 'Feasibility & Quality Track' }
+          ]
+        },
+        filters: {
+          allCompany: 'All Organizations',
+          wanosoft: 'Wanosoft (2)',
+          novaon: 'Novaon Digital (5)',
+          kiotviet: 'KiotViet (1)',
+          personal: 'Self-Directed (1)',
+          typeLabel: 'Category:',
+          allType: 'All Types',
+          saas: 'SaaS Products (5)',
+          service: 'Tech Services (2)',
+          methodology: 'AI Methodology (1)'
+        },
+        viewDetails: 'Explore Full Case Study',
+        modalClose: 'Close Case Study',
+        viewPdf: 'View Solution Deck (PDF)',
+        deployedClientsLabel: 'Deployed Clients & Brands:',
+        items: [
+          {
+            id: 'ai-chatbot',
+            companyId: 'wanosoft',
+            type: 'saas',
+            isFlagship: true,
+            title: 'AI Chatbot for Cybersecurity Analysis',
+            company: 'Wanosoft Co., Ltd.',
+            domain: 'AI Security / Information Security / GovTech',
+            role: 'BA Lead',
+            team: '6 members (4 Devs, 1 QA, 1 UI/UX)',
+            context: 'An outsourcing project for a government-sector technology partner. The goal: build an AI chatbot that helps security analysts query information-security data in natural language, auto-generate charts, and view real-time risk/incident dashboards — reducing manual reporting time.',
+            roleApproach: 'As BA Lead, worked directly with the client and info-security experts to clarify requirements, led the BA squad, assigned tasks, reviewed documentation, and ensured quality across BRD, SRS, User Stories, and Use Cases.',
+            whatIDid: [
+              'Defined auto-chart-generation (bar/line/pie) and dynamic risk/incident/performance dashboard widgets',
+              'Mapped data-flow and integration requirements across SIEM, Log Management, Threat Intelligence, and internal DBs',
+              'Collaborated with AI/ML engineers, Tech Lead, and UI/UX to design conversation flows and query-handling scenarios',
+              'Managed requirement changes and led UAT for AI-powered features'
+            ],
+            impact: [
+              'Managed a 6-person delivery squad end-to-end, maintaining stable throughput of ~7 MM/sprint',
+              '27+ sprints delivered since Oct 2024, averaging 4 features released per sprint',
+              'Stable scope control with only ~20% of PRDs needing post-sprint revision',
+              'Turnaround time for change escalations maintained at 2–3 days',
+              'Sustained "Good" client satisfaction rating; awarded "Talented Young Employee 2025"'
+            ],
+            chips: ['27+ Sprints', '~7 MM/Sprint', '6-Person Squad', '~20% Change Rate'],
+            tags: ['AI Security', 'BA Lead', 'SIEM Integration', 'NLP Chatbot', 'Agile / Scrum']
+          },
+          {
+            id: 'hros',
+            companyId: 'wanosoft',
+            type: 'saas',
+            isNew: true,
+            title: 'HROS: Outsource Human Resource Management System',
+            company: 'Wanosoft Co., Ltd.',
+            domain: 'Enterprise HR / Workforce Management / GovTech',
+            role: 'Business Analyst',
+            team: '10 members (2 BAs, 2 Testers, 6 Devs)',
+            context: 'Enterprise management platform designed to centralize, standardize, and digitize all outsourced HR data on a unified system, replacing fragmented Excel workflows.',
+            roleApproach: 'Joined as BA to analyze business architecture, elicit requirements from domain experts, and formulate execution roadmaps aligned with business objectives using AI-accelerated frameworks.',
+            whatIDid: [
+              'Centralized HR Data & Digitization: Mapped profile lifecycle, contracts, training records, and discipline data with audit-ready records',
+              'Automated Recruitment & Training: Modeled candidate state machine from partner CV intake, auto-screening to class management and line-readiness',
+              'Auto Shift Scheduling & Timekeeping: Designed shift engine matching hourly demand (target 96% service rate) and biometric timekeeping reconciliation',
+              'Payroll & Multi-Tier Reconciliation: Built rules for shift aggregation, labor productivity, SLA, KPI, and 2-tier approval locks (period 26/M-1 → 25/M)',
+              'Ecosystem Integration & Security: Defined integrations for IAM (auto user provisioning), BeFace, PowerBI, and 4-tier RBAC security (Admin, Internal, Partner, Agent)'
+            ],
+            impact: [
+              'Applied AI to generate and execute a 50-question deep-dive elicitation framework, identifying critical edge cases early',
+              'Developed end-to-end implementation roadmap structured around enterprise business milestones',
+              'Standardized HR operating procedures across 4 distinct user tiers with complete audit logging'
+            ],
+            modules: [
+              { title: 'Centralized OS HR Data', desc: 'Full digital profile lifecycle, training & contracts replacing Excel' },
+              { title: 'Recruitment State Machine', desc: 'Partner CV auto-screening, class tracking & line-onboarding' },
+              { title: 'Auto Shift & Timekeeping', desc: 'Hourly demand engine (96% SLA) & biometric reconciliation' },
+              { title: 'Payroll & 2-Tier Lock', desc: 'Shift aggregation, KPI, SLA & period 26/M-1 → 25/M reconciliation' },
+              { title: 'IAM & Ecosystem Sync', desc: 'Auto account provisioning, BeFace, PowerBI & 4-tier RBAC' }
+            ],
+            chips: ['50 AI Interview Qs', '4-Tier RBAC', 'Auto Shift (96% SLA)', '2-Tier Payroll Lock'],
+            tags: ['Enterprise HR', 'BPMN 2.0', 'State Machine', 'Biometric Integration', 'RBAC']
+          },
+          {
+            id: 'onhub',
+            companyId: 'novaon',
+            type: 'saas',
+            title: 'OnHub: Social Media & Ad Account Platform',
+            company: 'Novaon Digital JSC',
+            domain: 'MarTech / Digital Advertising',
+            role: 'Business Analyst',
+            team: 'Dev, BD, Stakeholders',
+            context: 'Core MarTech product connecting advertiser accounts across multiple ad networks with automated provisioning and financial approvals.',
+            roleApproach: 'Gathered requirements from clients, BD, and internal stakeholders; wrote PRDs, FSDs, and User Stories; designed wireframes and guided team through rollout.',
+            whatIDid: [
+              'Gathered requirements directly from clients, BD, and internal stakeholders',
+              'Produced PRDs, FSDs, User Stories, and Acceptance Criteria for a multi-product platform',
+              'Designed wireframes, user flows, and business process flows for TikTok Ads Agency account provisioning, deposit requests, and accounting approval',
+              'Ran UAT, user training, and refined backlog based on operational feedback'
+            ],
+            impact: [
+              'Delivered platform core MVP in just 2 weeks, covering the full account lifecycle',
+              'Enabled BD team to consult and close deals with 12 clients, integrating 20 advertising accounts',
+              'Supported combined monthly ad spend of ~VND 500 million (~USD 20,000) across all onboarded accounts'
+            ],
+            chips: ['2-Week MVP', '12 Clients', '20 Ad Accounts', '~500M VND/mo'],
+            tags: ['MarTech', 'PRD / FSD', 'TikTok Ads Agency', 'User Flows', 'Agile / Scrum']
+          },
+          {
+            id: 'novanet',
+            companyId: 'novaon',
+            type: 'saas',
+            title: 'Novanet: Ad Network & Display Platform',
+            company: 'Novaon Digital JSC',
+            domain: 'AdTech / Display Advertising / DSP & SSP',
+            role: 'Business Analyst',
+            team: '4 members (1 BA, 2 Devs, 1 Tester)',
+            context: 'High-throughput advertising platform bridging advertisers and publisher websites across Mobile and PC environments.',
+            roleApproach: 'Conducted market demand research, authored specifications for new advertising formats, and coordinated rollout with engineering and media teams.',
+            whatIDid: [
+              'Researched market demand and specified 11 new advertising formats and advanced targeting features',
+              'Authored comprehensive documentation (PRD/SRS) and led kick-off sessions across Dev, QA, and UI/UX teams',
+              'Handled UAT, validated tracking scripts, and conducted live product demos with the CTO',
+              'Delivered product training for Media and Business Development teams, resolving operational client issues'
+            ],
+            impact: [
+              'Expanded platform to support 32 diverse advertising formats',
+              'Successfully onboarded 50+ Publisher networks and media sites',
+              'Deployed campaigns for 40+ Enterprise Clients smoothly'
+            ],
+            chips: ['50+ Publishers', '40+ Clients', '32 Ad Formats', '11 New Formats'],
+            tags: ['AdTech', 'Ad Network', 'PRD / SRS', 'Tracking Script', 'DSP & SSP']
+          },
+          {
+            id: 'onreport',
+            companyId: 'novaon',
+            type: 'saas',
+            title: 'OnReport: Centralized BI & Data Visualization',
+            company: 'Novaon Digital JSC',
+            domain: 'MarTech / BI & Data Visualization',
+            role: 'Business Analyst',
+            team: '2 members (1 BA, 1 Dev)',
+            context: 'Cross-platform reporting engine aggregating advertising metrics across channels into unified, real-time dashboards.',
+            roleApproach: 'Researched client reporting bottlenecks, analyzed multi-source API structures, and designed standardized BI dashboards.',
+            whatIDid: [
+              'Researched reporting pain points and specified connectors linking diverse marketing data sources',
+              'Designed visualization dashboards, standardized performance KPIs (CTR, CPC, CPA, ROAS)',
+              'Managed version documentation and monitored product quality, reporting discrepancies to engineering',
+              'Supported Sales team with technical feature presentations and client demos'
+            ],
+            impact: [
+              'Replaced manual multi-channel Excel report compilation with automated real-time dashboards',
+              'Accelerated reporting turnaround for client service teams from days to real-time',
+              'Standardized unified performance analytics across cross-channel ad campaigns'
+            ],
+            chips: ['Cross-Platform', 'Real-Time KPIs', 'Automated BI', 'Zero-Excel'],
+            tags: ['Data Visualization', 'BI Dashboard', 'MarTech Analytics', 'API Mapping']
+          },
+          {
+            id: 'onlead',
+            companyId: 'novaon',
+            type: 'service',
+            title: 'OnLead Management: Lead Lifecycle Optimization',
+            company: 'Novaon Digital JSC',
+            domain: 'Tech Service / Lead Management / MarTech',
+            role: 'Business Analyst & Solution Architect',
+            team: '4 members (1 BA, 2 Devs, 1 Tester)',
+            context: 'Comprehensive consulting and technology service package optimizing the full lead-capturing, verification, and data usage lifecycle for high-ticket enterprise sales.',
+            roleApproach: 'Surveyed enterprise lead collection workflows, identified lead leakages, formulated architecture blueprints, and pitched solution directly to leadership.',
+            whatIDid: [
+              'Surveyed enterprise lead collection workflows, identified lead leakages, and researched qualified data integration sources',
+              'Designed wireframes, process architectures, and formulated the solution framework connecting capture channels to CRM systems',
+              'Developed a set of solutions to optimize the data usage lifecycle for customers',
+              'Prepared professional presentation deck and delivered solution pitch directly to C-Level and Department Heads'
+            ],
+            impact: [
+              'Successfully deployed and pitched the full solution within 1 week before Department Heads and C-level executives',
+              'Implemented for 10+ major Automotive Brands with high conversion uplift',
+              'Standardized lead qualification flow, minimizing response lead times'
+            ],
+            clients: ['BMW', 'KIA', 'Honda', '10+ Automotive Brands'],
+            pdfFile: 'OnLead Management.pdf',
+            pdfName: 'OnLead Management Solution Deck.pdf',
+            chips: ['1-Week C-Level Pitch', '10+ Auto Brands', 'Solution Deck (PDF)', 'CRM Integration'],
+            tags: ['Tech Service', 'Lead Optimization', 'Solution Deck', 'Automotive B2B', 'Pre-Sales']
+          },
+          {
+            id: 'tech-ocos',
+            companyId: 'novaon',
+            type: 'service',
+            title: 'Tech OCOS: Website Audit & Conversion Rate Optimization',
+            company: 'Novaon Digital JSC',
+            domain: 'Tech Service / UX Audit & Conversion Optimization (CRO)',
+            role: 'Solution Owner & Business Analyst',
+            team: '1 member (Solo Solution Lead)',
+            context: 'Strategic consulting and technical service helping brands audit website usability bottlenecks, restructure UX/UI, and maximize advertising traffic conversion rates.',
+            roleApproach: 'Identified market pain points in website performance, designed diagnostic audit methodology, built comprehensive service model, and delivered direct C-level pitches.',
+            whatIDid: [
+              'Analyzed enterprise hurdles in website performance and formulated the comprehensive "Tech OCOS" service model',
+              'Conducted in-depth UX audits to identify user drop-offs, navigation barriers, and page speed issues',
+              'Developed customized website upgrade roadmaps to improve mobile-friendliness and ad conversion efficiency',
+              'Produced solution proposal decks and presented technical recommendations directly to enterprise leadership'
+            ],
+            impact: [
+              'Solution packaged and successfully pitched in 1 week to C-Level leadership',
+              'Successfully deployed for 3 major enterprises: Vietcombank, May Sông Hồng, and Play Nutrition',
+              'Significantly improved user navigation pathways and ad campaign traffic conversion efficiency'
+            ],
+            clients: ['Vietcombank', 'May Sông Hồng', 'Play Nutrition'],
+            pdfFile: 'Tech Service - Tech OCOS.pdf',
+            pdfName: 'Tech Service - Tech OCOS.pdf',
+            chips: ['1-Week Pitch', 'CRO Optimization', 'Vietcombank', 'Sông Hồng', 'Play Nutrition'],
+            tags: ['Tech Service', 'UX / UI Audit', 'Conversion Optimization', 'Consulting Deck', 'Enterprise B2B']
+          },
+          {
+            id: 'kvhotel',
+            companyId: 'kiotviet',
+            type: 'saas',
+            title: 'KVHotel: Hotel & Homestay Management SaaS',
+            company: 'KiotViet Technology Corporation',
+            domain: 'Hospitality SaaS / Property Management',
+            role: 'Product Executive',
+            team: '~10 members (Devs, QA, UI/UX)',
+            context: 'Property management software for hotels, motels, and homestays built from early-stage market research through to feature rollout.',
+            roleApproach: 'Conducted market & competitor research, gathered requirements from customers, designed BPMN flows, and led cross-functional team of ~10 members.',
+            whatIDid: [
+              'Conducted market research and competitor analysis in hotel/homestay software',
+              'Gathered customer feedback and transformed into User Stories & BPMN process flows',
+              'Designed guest-declaration compliance workflow to solve critical client pain point',
+              'Coordinated ~10-person delivery team to keep milestones on schedule'
+            ],
+            impact: [
+              'Supported resolution of 39 support tickets raised by real customers',
+              'Shipped guest-declaration feature reducing processing time from 2 hours to 10 minutes per guest case',
+              'Increased guest-declaration accuracy to 100%, eliminating compliance risk'
+            ],
+            chips: ['2h → 10min Process', '100% Accuracy', '39 Tickets Resolved', '~10-Person Team'],
+            tags: ['Hospitality SaaS', 'BPMN 2.0', 'Guest Declaration', 'User Stories', 'UAT']
+          },
+          {
+            id: 'ai-workflow',
+            companyId: 'personal',
+            type: 'methodology',
+            title: 'AI-Assisted BA Workflow Optimization',
+            company: 'Self-Directed Capability Building',
+            domain: 'AI Methodology / BA Upskilling',
+            role: 'Initiative Owner',
+            team: 'Individual / Applied to real projects',
+            context: 'Systematically integrating AI techniques into daily BA workflows — from requirement elicitation and documentation to wireframing and interview prep.',
+            roleApproach: 'Completed "AI for Business Analyst" course and built a personal toolkit of 20+ specialized prompts and templates tested under real project pressures.',
+            whatIDid: [
+              'Created 20+ specialized AI-assisted prompts for documentation, wireframing, and interview prep',
+              'Applied AI to cross-check user interview questions and eliminate edge-case gaps',
+              'Utilized AI wireframing tools to accelerate low-fi prototype generation'
+            ],
+            impact: [
+              'Cut documentation drafting time from 2 days to 1 day',
+              'Reduced wireframe production time from 2 days to ~15 min (complex) and ~5 min (basic)',
+              'Reduced client scoping meetings from 2-3 sessions down to a single focused meeting'
+            ],
+            chips: ['2d → 1d Docs', '15min Wireframes', '20+ AI Prompts', '50% Faster'],
+            tags: ['AI Prompt Engineering', 'BA Productivity', 'Generative AI', 'Agile Elicitation']
+          }
+        ]
+      },
+      vi: {
+        nav: { home: 'Trang chủ', about: 'Giới thiệu', skills: 'Kỹ năng', projects: 'Dự án', experience: 'Kinh nghiệm', contact: 'Liên hệ', lang: 'EN' },
+        header: {
+          label: 'Dự án & Sản phẩm Tiêu biểu',
+          title: 'Sản phẩm Số & Giải pháp Đã Triển khai',
+          subtitle: 'Tổng hợp chi tiết các sản phẩm SaaS, dịch vụ giải pháp công nghệ tư vấn B2B và sáng kiến ứng dụng AI đã triển khai tại Wanosoft, Novaon Digital và KiotViet.',
+          stats: [
+            { val: '8+', lbl: 'Sản phẩm & Dịch vụ' },
+            { val: '27+', lbl: 'Sprint hoàn thành' },
+            { val: '4', lbl: 'Lĩnh vực chuyên môn' },
+            { val: '100%', lbl: 'Đảm bảo tính khả thi' }
+          ]
+        },
+        filters: {
+          allCompany: 'Tất cả Đơn vị',
+          wanosoft: 'Wanosoft (2)',
+          novaon: 'Novaon Digital (5)',
+          kiotviet: 'KiotViet (1)',
+          personal: 'Sáng kiến Cá nhân (1)',
+          typeLabel: 'Phân loại:',
+          allType: 'Tất cả Loại hình',
+          saas: 'Sản phẩm SaaS (5)',
+          service: 'Dịch vụ Giải pháp (2)',
+          methodology: 'Phương pháp AI (1)'
+        },
+        viewDetails: 'Xem Chi tiết Case Study',
+        modalClose: 'Đóng chi tiết',
+        viewPdf: 'Xem Bản Thuyết trình (PDF)',
+        deployedClientsLabel: 'Khách hàng tiêu biểu đã triển khai:',
+        items: [
+          {
+            id: 'ai-chatbot',
+            companyId: 'wanosoft',
+            type: 'saas',
+            isFlagship: true,
+            title: 'AI Chatbot Phân tích An ninh Mạng',
+            company: 'Wanosoft Co., Ltd.',
+            domain: 'AI Security / An ninh Thông tin / GovTech',
+            role: 'BA Lead',
+            team: '6 người (4 Devs, 1 QA, 1 UI/UX)',
+            context: 'Dự án outsourcing cho đối tác công nghệ chính phủ. Mục tiêu: xây dựng chatbot AI giúp chuyên gia an ninh mạng truy vấn dữ liệu bằng ngôn ngữ tự nhiên, tự động tạo biểu đồ và xem dashboard rủi ro theo thời gian thực — giảm tối đa thời gian lập báo cáo thủ công.',
+            roleApproach: 'Với vai trò BA Lead, tôi làm việc trực tiếp với khách hàng & chuyên gia an ninh, phân công đội BA, review tài liệu và đảm bảo chất lượng BRD, SRS, User Stories, Use Cases.',
+            whatIDid: [
+              'Định nghĩa tính năng tự động tạo biểu đồ (bar/line/pie) và dashboard rủi ro/hiệu năng hệ thống',
+              'Phân tích luồng dữ liệu & tích hợp với SIEM, Log Management, Threat Intelligence, DB nội bộ',
+              'Phối hợp với AI/ML engineers & Tech Lead thiết kế luồng hội thoại và kịch bản truy vấn NLP',
+              'Dẫn dắt UAT và quản lý thay đổi yêu cầu xuyên suốt SDLC'
+            ],
+            impact: [
+              'Quản lý đội delivery 6 người (4 Dev, 1 QA, 1 UI/UX), phụ trách backlog & sprint execution',
+              'Duy trì khối lượng công việc ~7 MM/sprint ổn định theo Scrum',
+              'Dự án triển khai từ 10/2024 đến nay (27+ sprint hoàn thành, trung bình release 4 tính năng/sprint)',
+              'Yêu cầu ổn định, chỉ ~20% BRD/PRD cần điều chỉnh sau khi bắt đầu sprint',
+              'Giải quyết yêu cầu thay đổi trong 2–3 ngày; Đạt giải thưởng "Nhân viên trẻ tài năng" năm 2025'
+            ],
+            chips: ['27+ Sprint', '~7 MM/Sprint', 'Squad 6 Người', '~20% Tỉ lệ thay đổi'],
+            tags: ['AI Security', 'BA Lead', 'SIEM Integration', 'NLP Chatbot', 'Agile / Scrum']
+          },
+          {
+            id: 'hros',
+            companyId: 'wanosoft',
+            type: 'saas',
+            isNew: true,
+            title: 'HROS: Hệ thống Quản trị Nhân sự Thuê ngoài',
+            company: 'Wanosoft Co., Ltd.',
+            domain: 'Quản trị Nhân sự / Enterprise HR / GovTech',
+            role: 'Business Analyst',
+            team: '10 người (2 BAs, 2 Testers, 6 Devs)',
+            context: 'Hệ thống quản lý tập trung, chuẩn hóa và số hóa toàn bộ dữ liệu nhân sự OS (hồ sơ, giấy tờ, quá trình đào tạo, khen thưởng/kỷ luật) trên một nền tảng duy nhất, thay thế hoàn toàn file Excel rời rạc.',
+            roleApproach: 'Tham gia với vai trò BA để phân tích kiến trúc nghiệp vụ, khai thác yêu cầu chuyên sâu và lập lộ trình triển khai bám sát mục tiêu kinh doanh bằng công cụ AI.',
+            whatIDid: [
+              'Số hóa & Quản lý tập trung: Xây dựng mô hình dữ liệu hồ sơ nhân sự, hợp đồng, lịch sử công tác có lưu vết audit',
+              'Tự động hóa Tuyển dụng – Đào tạo: Thiết kế quy trình state machine từ tiếp nhận CV đối tác, sơ loại tự động, quản lý lớp học đến khi nhân sự lên line',
+              'Tự động hóa Phân ca – Chấm công: Thiết kế engine phân ca tự động theo nhu cầu khung giờ (mục tiêu tỷ lệ phục vụ 96%) và đối soát tuân thủ từ máy chấm công sinh trắc học',
+              'Tự động hóa Tính lương – Đối soát: Tổng hợp công, NSLĐ, KPI theo kỳ 26/T-1 → 25/T; tính lương dự kiến, khóa sổ 2 cấp phê duyệt và xuất bảng đối soát',
+              'Tích hợp Hệ sinh thái & Bảo mật: Tích hợp IAM (cấp/hủy tài khoản tự động), BeFace, PowerBI; thiết lập RBAC 4 tầng (Admin, Nội bộ, Đối tác, Agent)'
+            ],
+            impact: [
+              'Ứng dụng AI xây dựng bộ 50 câu hỏi phỏng vấn chuyên sâu khai thác triệt để yêu cầu và edge-case nghiệp vụ',
+              'Hoàn thiện lộ trình triển khai (roadmap) bám sát mục tiêu kinh doanh của tổ chức',
+              'Chuẩn hóa quy trình vận hành nhân sự qua 4 tầng phân quyền có đầy đủ nhật ký kiểm toán (audit log)'
+            ],
+            modules: [
+              { title: 'Quản lý Dữ liệu OS Tập trung', desc: 'Số hóa trọn bộ hồ sơ, hợp đồng, kỷ luật thay thế hoàn toàn Excel' },
+              { title: 'State Machine Tuyển dụng', desc: 'Sơ loại CV đối tác tự động, theo dõi lớp đào tạo đến khi lên line' },
+              { title: 'Engine Phân ca & Chấm công', desc: 'Phân ca tự động theo nhu cầu khung giờ (96% SLA) & đối soát vân tay' },
+              { title: 'Tính lương & Khóa sổ 2 Cấp', desc: 'Tổng hợp KPI/CLDV theo kỳ 26/T-1 → 25/T, xuất đối soát đối tác/kế toán' },
+              { title: 'IAM & Hệ sinh thái Nội bộ', desc: 'Cấp/hủy user tự động, tích hợp BeFace, PowerBI & RBAC 4 tầng' }
+            ],
+            chips: ['50 Câu hỏi AI', 'RBAC 4 Tầng', 'Phân ca (96% SLA)', 'Khóa sổ 2 Cấp'],
+            tags: ['Enterprise HR', 'BPMN 2.0', 'State Machine', 'Biometric Integration', 'RBAC']
+          },
+          {
+            id: 'onhub',
+            companyId: 'novaon',
+            type: 'saas',
+            title: 'OnHub: Nền tảng Quản lý Tài khoản Quảng cáo',
+            company: 'Novaon Digital JSC',
+            domain: 'MarTech / Quảng cáo số',
+            role: 'Business Analyst',
+            team: 'Dev, Business Development, Stakeholders',
+            context: 'OnHub kết nối tài khoản quảng cáo trên nhiều ad network và cung cấp dịch vụ quản lý tài khoản mạng xã hội trong bộ sản phẩm MarTech của Novaon.',
+            roleApproach: 'Thu thập yêu cầu trực tiếp từ khách hàng & đội BD, xây dựng PRD/FSD, thiết kế wireframe và phối hợp chặt chẽ với CTO & Dev.',
+            whatIDid: [
+              'Thu thập yêu cầu từ khách hàng, Business Development và các stakeholder',
+              'Xây dựng PRD, FSD, User Stories & Acceptance Criteria cho nền tảng đa sản phẩm',
+              'Thiết kế wireframe, user flow và sơ đồ quy trình nghiệp vụ cấp tài khoản TikTok Ads Agency, nạp tiền và xét duyệt kế toán',
+              'Thực hiện UAT, hỗ trợ đào tạo người dùng và thu thập phản hồi cải tiến'
+            ],
+            impact: [
+              'Triển khai thành công MVP chỉ trong 2 tuần phát triển',
+              'Hỗ trợ đội BD chốt deal thành công với 12 khách hàng, tích hợp 20 tài khoản quảng cáo',
+              'Tương ứng tổng ad spend khoảng 500 triệu VNĐ/tháng (~USD 20,000)'
+            ],
+            chips: ['MVP 2 tuần', '12 Khách hàng', '20 Tài khoản Ads', '~500M VNĐ/tháng'],
+            tags: ['MarTech', 'PRD / FSD', 'TikTok Ads Agency', 'User Flows', 'Agile / Scrum']
+          },
+          {
+            id: 'novanet',
+            companyId: 'novaon',
+            type: 'saas',
+            title: 'Novanet: Mạng Quảng cáo Hiển thị PC & Mobile',
+            company: 'Novaon Digital JSC',
+            domain: 'AdTech / Quảng cáo Hiển thị / DSP & SSP',
+            role: 'Business Analyst',
+            team: '4 người (1 BA, 2 Devs, 1 Tester)',
+            context: 'Nền tảng mạng quảng cáo số kết nối nhà quảng cáo (Advertisers) và hệ thống báo chí/website xuất bản nội dung (Publishers) trên cả PC và Mobile.',
+            roleApproach: 'Khảo sát nhu cầu thị trường, đặc tả 11 định dạng quảng cáo mới, phối hợp cùng CTO và đội ngũ kỹ thuật kick-off và rollout.',
+            whatIDid: [
+              'Nghiên cứu, khảo sát và phát triển 11 định dạng quảng cáo mới cùng các tính năng phân phối thông minh',
+              'Viết tài liệu đặc tả (PRD/SRS), chủ trì kick-off phiên bản mới với dev, tester và designer',
+              'Trực tiếp UAT, kiểm tra mã nhúng tracking và demo giải pháp với CTO',
+              'Đào tạo và hướng dẫn sử dụng sản phẩm cho phòng Media, Business Development và hỗ trợ khách hàng'
+            ],
+            impact: [
+              'Mở rộng hệ thống hỗ trợ 32 định dạng quảng cáo phong phú',
+              'Tích hợp thành công 50+ Publisher và mạng lưới website',
+              'Triển khai chiến dịch thành công cho 40+ Khách hàng doanh nghiệp'
+            ],
+            chips: ['50+ Publisher', '40+ Khách hàng', '32 Định dạng Ads', '11 Định dạng mới'],
+            tags: ['AdTech', 'Ad Network', 'PRD / SRS', 'Tracking Script', 'DSP & SSP']
+          },
+          {
+            id: 'onreport',
+            companyId: 'novaon',
+            type: 'saas',
+            title: 'OnReport: Báo cáo & Trực quan hóa Dữ liệu Đa kênh',
+            company: 'Novaon Digital JSC',
+            domain: 'MarTech / BI & Data Visualization',
+            role: 'Business Analyst',
+            team: '2 người (1 BA, 1 Dev)',
+            context: 'Nền tảng tổng hợp và trực quan hóa số liệu chiến dịch quảng cáo đa kênh (Facebook, Google, TikTok...) lên dashboard báo cáo tập trung theo thời gian thực.',
+            roleApproach: 'Phân tích điểm nghẽn trong việc làm báo cáo thủ công, đặc tả luồng kết nối API đa nguồn và chuẩn hóa bộ chỉ số đo lường hiệu quả.',
+            whatIDid: [
+              'Khảo sát nhu cầu khách hàng, phân tích và đặc tả các chức năng kết nối dữ liệu marketing đa nguồn',
+              'Thiết kế Dashboard trực quan, chuẩn hóa bộ chỉ số đo lường (CTR, CPC, CPA, ROAS)',
+              'Kiểm soát chất lượng dữ liệu, phối hợp cùng dev xử lý lỗi và hỗ trợ Sales demo bán sản phẩm',
+              'Quản lý và viết tài liệu hướng dẫn cho các phiên bản release'
+            ],
+            impact: [
+              'Thay thế quy trình xuất báo cáo Excel thủ công bằng dashboard tự động theo thời gian thực',
+              'Rút ngắn thời gian làm báo cáo cho đội ngũ account và nâng cao tính minh bạch cho khách hàng',
+              'Chuẩn hóa hệ thống chỉ số phân tích hiệu quả chiến dịch đa kênh'
+            ],
+            chips: ['Đa nền tảng', 'Báo cáo Tự động', 'Chỉ số Real-time', 'Loại bỏ Excel'],
+            tags: ['Data Visualization', 'BI Dashboard', 'MarTech Analytics', 'API Mapping']
+          },
+          {
+            id: 'onlead',
+            companyId: 'novaon',
+            type: 'service',
+            title: 'Dịch vụ OnLead Management: Tối ưu Vòng đời Lead',
+            company: 'Novaon Digital JSC',
+            domain: 'Dịch vụ Giải pháp / Quản lý Lead / MarTech',
+            role: 'Business Analyst & Solution Architect',
+            team: '4 người (1 BA, 2 Devs, 1 Tester)',
+            context: 'Gói dịch vụ và giải pháp công nghệ toàn diện giúp doanh nghiệp thu thập, lọc sạch, phân bổ và tối ưu hóa toàn bộ vòng đời sử dụng dữ liệu khách hàng tiềm năng (lead).',
+            roleApproach: 'Khảo sát quy trình thu thập lead của doanh nghiệp, nhận diện điểm rò rỉ dữ liệu, xây dựng giải pháp kết nối CRM và trực tiếp thuyết trình trước Ban Lãnh đạo.',
+            whatIDid: [
+              'Khảo sát các nguồn dữ liệu chất lượng cao phục vụ phát triển giải pháp',
+              'Thu thập yêu cầu từ khách hàng và các bộ phận nghiệp vụ liên quan',
+              'Viết tài liệu giải pháp, thiết kế wireframe và quy trình luân chuyển dữ liệu lead tự động',
+              'Xây dựng bộ giải pháp tối ưu vòng đời dữ liệu lead cho khách hàng doanh nghiệp',
+              'Trực tiếp trình bày và bảo vệ giải pháp trước các Trưởng bộ phận và Ban Giám đốc (C-level)'
+            ],
+            impact: [
+              'Đóng gói và thuyết trình giải pháp thành công trong 1 tuần trước C-level',
+              'Triển khai cho 10+ thương hiệu lớn ngành Ô tô (bao gồm BMW, KIA, Honda, v.v.)',
+              'Chuẩn hóa luồng thẩm định lead, rút ngắn thời gian phản hồi khách hàng'
+            ],
+            clients: ['BMW', 'KIA', 'Honda', '10+ Hãng Ô tô'],
+            pdfFile: 'OnLead Management.pdf',
+            pdfName: 'OnLead Management Solution Deck.pdf',
+            chips: ['Thuyết trình 1 Tuần', '10+ Hãng Ô tô', 'Bản Present (PDF)', 'Tích hợp CRM'],
+            tags: ['Dịch vụ Giải pháp', 'Tối ưu hóa Lead', 'Solution Deck', 'Ngành Ô tô B2B', 'Pre-Sales']
+          },
+          {
+            id: 'tech-ocos',
+            companyId: 'novaon',
+            type: 'service',
+            title: 'Dịch vụ Tech OCOS: Khám & Tối ưu Hóa Website (CRO)',
+            company: 'Novaon Digital JSC',
+            domain: 'Dịch vụ Giải pháp / Khám Website & Tối ưu Tỷ lệ Chuyển đổi (CRO)',
+            role: 'Solution Owner & Business Analyst',
+            team: '1 người (Phụ trách Độc lập)',
+            context: 'Nhận thấy khó khăn của các thương hiệu trong việc tối ưu website và tỷ lệ chuyển đổi, gói dịch vụ Tech OCOS ra đời nhằm "khám bệnh" toàn diện website, nhận diện điểm tắc nghẽn UX/UI và tối ưu lưu lượng truy cập từ quảng cáo.',
+            roleApproach: 'Xây dựng bộ tiêu chuẩn đánh giá website, phát triển gói dịch vụ Tech OCOS và trực tiếp xây dựng slide thuyết trình giải pháp trước C-level.',
+            whatIDid: [
+              'Khảo sát hành vi người dùng và phân tích các điểm hạn chế về trải nghiệm và tốc độ tải trang',
+              'Xây dựng phương pháp đánh giá "khám website" và lập lộ trình cải tiến giao diện, luồng mua hàng thân thiện',
+              'Thiết kế giải pháp tối ưu hóa tỷ lệ chuyển đổi (CRO) cho traffic đổ về từ các chiến dịch quảng cáo',
+              'Trực tiếp xây dựng tài liệu và thuyết trình giải pháp trước Hội đồng Trưởng bộ phận & C-level'
+            ],
+            impact: [
+              'Hoàn thiện và thuyết trình giải pháp trong 1 tuần trước Ban Lãnh đạo C-level',
+              'Triển khai thành công cho 3 thương hiệu lớn: Vietcombank, May Sông Hồng, và Play Nutrition',
+              'Cải thiện rõ rệt luồng trải nghiệm khách hàng và tối ưu hiệu quả chuyển đổi từ ngân sách quảng cáo'
+            ],
+            clients: ['Vietcombank', 'May Sông Hồng', 'Play Nutrition'],
+            pdfFile: 'Tech Service - Tech OCOS.pdf',
+            pdfName: 'Tech Service - Tech OCOS.pdf',
+            chips: ['Thuyết trình 1 Tuần', 'Tối ưu CRO', 'Vietcombank', 'May Sông Hồng', 'Play Nutrition'],
+            tags: ['Dịch vụ Giải pháp', 'Khám UX / UI', 'Tối ưu Chuyển đổi CRO', 'Bản Present (PDF)', 'Doanh nghiệp B2B']
+          },
+          {
+            id: 'kvhotel',
+            companyId: 'kiotviet',
+            type: 'saas',
+            title: 'KVHotel: Phần mềm Quản lý Khách sạn & Homestay',
+            company: 'KiotViet Technology Corporation',
+            domain: 'Quản lý Khách sạn / Hospitality SaaS',
+            role: 'Product Executive',
+            team: '~10 người (Dev, QA, UI/UX)',
+            context: 'Phần mềm quản lý dành cho khách sạn & homestay từ giai đoạn nghiên cứu thị trường đến triển khai tính năng.',
+            roleApproach: 'Nghiên cứu thị trường & đối thủ, thu thập nhu cầu khách hàng, vẽ sơ đồ BPMN và phối hợp đội ngũ 10 người.',
+            whatIDid: [
+              'Nghiên cứu thị trường và đối thủ trong lĩnh vực quản lý khách sạn/homestay',
+              'Chuyển hoá feedback khách hàng thành User Stories và sơ đồ quy trình BPMN',
+              'Thiết kế quy trình khai báo tạm vắng tạm trú tự động cho homestay',
+              'Điều phối đội ngũ liên phòng ban ~10 người đảm bảo tiến độ'
+            ],
+            impact: [
+              'Hỗ trợ xử lý 39 ticket yêu cầu thực tế từ khách hàng',
+              'Release tính năng khai báo lưu trú giúp giảm thời gian xử lý thủ công từ 2 tiếng xuống 10 phút/lượt',
+              'Tăng độ chính xác khai báo lên 100%, loại bỏ hoàn toàn rủi ro tuân thủ'
+            ],
+            chips: ['2 tiếng → 10 phút', '100% Chính xác', '39 Ticket xử lý', 'Team ~10 người'],
+            tags: ['Hospitality SaaS', 'BPMN 2.0', 'Khai báo Lưu trú', 'User Stories', 'UAT']
+          },
+          {
+            id: 'ai-workflow',
+            companyId: 'personal',
+            type: 'methodology',
+            title: 'Sáng kiến: Ứng dụng AI vào Quy trình Làm việc BA',
+            company: 'Thực hành phát triển năng lực cá nhân',
+            domain: 'Phương pháp luận AI / Nâng cao Năng lực BA',
+            role: 'Chủ trì sáng kiến',
+            team: 'Cá nhân / Áp dụng vào dự án thực tế',
+            context: 'Tích hợp chủ động AI vào quy trình BA hàng ngày từ soạn thảo tài liệu, thiết kế wireframe đến chuẩn bị phỏng vấn.',
+            roleApproach: 'Hoàn thành khóa học "AI for BA" và xây dựng bộ toolkit với 20+ prompt chuyên dụng thử nghiệm thực tế.',
+            whatIDid: [
+              'Tạo bộ 20+ prompt AI chuyên dụng hỗ trợ soạn tài liệu, vẽ wireframe & câu hỏi phỏng vấn',
+              'Dùng AI rà soát câu hỏi phỏng vấn loại bỏ tình trạng sót edge-case',
+              'Ứng dụng công cụ AI tăng tốc vẽ wireframe low-fi'
+            ],
+            impact: [
+              'Rút ngắn thời gian soạn tài liệu từ 2 ngày xuống còn 1 ngày',
+              'Giảm thời gian vẽ wireframe từ 2 ngày xuống ~15 phút (tính năng phức tạp) và ~5 phút (tính năng cơ bản)',
+              'Giảm số buổi họp chốt scope với khách hàng từ 2-3 buổi xuống 1 buổi duy nhất'
+            ],
+            chips: ['2 ngày → 1 ngày', '15 phút Wireframe', '20+ Prompt AI', 'Nhanh gấp 2 lần'],
+            tags: ['Kỹ thuật Prompt AI', 'Năng suất BA', 'Generative AI', 'Agile Elicitation']
+          }
+        ]
+      }
+    };
+
+    let lang = localStorage.getItem('portfolio-lang') || 'en';
+    let currentCompanyFilter = 'all';
+    let currentTypeFilter = 'all';
+
+    function setCompanyFilter(companyId) {
+      currentCompanyFilter = companyId;
+      renderFilterButtons();
+      renderGrid();
+    }
+
+    function setTypeFilter(typeId) {
+      currentTypeFilter = typeId;
+      renderFilterButtons();
+      renderGrid();
+    }
+
+    function renderFilterButtons() {
+      const d = DATA[lang];
+      const isVi = lang === 'vi';
+      const f = d.filters;
+
+      // Company Tabs
+      const companies = [
+        { id: 'all', label: f.allCompany, count: d.items.length },
+        { id: 'wanosoft', label: f.wanosoft, count: 2 },
+        { id: 'novaon', label: f.novaon, count: 5 },
+        { id: 'kiotviet', label: f.kiotviet, count: 1 },
+        { id: 'personal', label: f.personal, count: 1 }
+      ];
+
+      document.getElementById('company-tabs').innerHTML = companies.map(c => `
+        <button class="tab-btn ${currentCompanyFilter === c.id ? 'active' : ''}" onclick="setCompanyFilter('${c.id}')">
+          <span>${c.label}</span>
+        </button>
+      `).join('');
+
+      // Type Pills
+      const types = [
+        { id: 'all', label: f.allType },
+        { id: 'saas', label: f.saas },
+        { id: 'service', label: f.service },
+        { id: 'methodology', label: f.methodology }
+      ];
+
+      document.getElementById('type-pills').innerHTML = `
+        <span class="type-label">${f.typeLabel}</span>
+        ${types.map(t => `
+          <button class="pill-btn ${currentTypeFilter === t.id ? 'active' : ''}" onclick="setTypeFilter('${t.id}')">
+            ${t.label}
+          </button>
+        `).join('')}
+      `;
+    }
+
+    function renderGrid() {
+      const d = DATA[lang];
+      const isVi = lang === 'vi';
+      const arrowSvg = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>`;
+      const pdfSvg = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>`;
+
+      // Filter items
+      let filtered = d.items;
+      if (currentCompanyFilter !== 'all') {
+        filtered = filtered.filter(item => item.companyId === currentCompanyFilter);
+      }
+      if (currentTypeFilter !== 'all') {
+        filtered = filtered.filter(item => item.type === currentTypeFilter);
+      }
+
+      if (filtered.length === 0) {
+        document.getElementById('projects-grid').innerHTML = `
+          <div style="grid-column: span 12; padding: 3rem; text-align: center; color: var(--gray-500);">
+            ${isVi ? 'Không tìm thấy sản phẩm/dịch vụ phù hợp với bộ lọc.' : 'No products or services found matching the selected filters.'}
+          </div>
+        `;
+        return;
+      }
+
+      document.getElementById('projects-grid').innerHTML = filtered.map(p => {
+        const isFlagship = p.isFlagship;
+        const isService = p.type === 'service';
+        const isNew = p.isNew;
+
+        // Determine span width
+        let spanClass = 'span-6';
+        if (isFlagship && currentCompanyFilter === 'all' && currentTypeFilter === 'all') {
+          spanClass = 'span-12';
+        } else if (filtered.length === 1) {
+          spanClass = 'span-12';
+        }
+
+        // Card classes
+        let cardClass = `p-card ${spanClass}`;
+        if (isFlagship) cardClass += ' p-card-flagship';
+
+        // Badge
+        let badgeHtml = '';
+        if (isFlagship) {
+          badgeHtml = `<span class="flagship-badge">★ ${isVi ? 'Dự án Tiêu biểu' : 'Flagship Case Study'}</span>`;
+        } else if (isNew) {
+          badgeHtml = `<span class="category-badge badge-new">🚀 ${isVi ? 'Dự án Mới Tham Gia' : 'Active / New Join'}</span>`;
+        } else if (isService) {
+          badgeHtml = `<span class="category-badge badge-service">📄 ${isVi ? 'Dịch vụ Giải pháp' : 'Tech Service / Solution'}</span>`;
+        } else if (p.type === 'methodology') {
+          badgeHtml = `<span class="category-badge badge-methodology">🤖 ${isVi ? 'Phương pháp luận AI' : 'AI Methodology'}</span>`;
+        } else {
+          badgeHtml = `<span class="category-badge badge-product">📊 ${isVi ? 'Sản phẩm SaaS' : 'SaaS Product'}</span>`;
+        }
+
+        // Metrics / Chips
+        let metricsHtml = '';
+        if (isFlagship) {
+          metricsHtml = `
+            <div class="bento-metrics">
+              <div class="bento-metric"><span class="bento-metric-val">27+</span><span class="bento-metric-lbl">${isVi ? 'Sprint hoàn thành' : 'Sprints Done'}</span></div>
+              <div class="bento-metric"><span class="bento-metric-val">~7 MM</span><span class="bento-metric-lbl">${isVi ? 'Khối lượng/Sprint' : 'Effort/Sprint'}</span></div>
+              <div class="bento-metric"><span class="bento-metric-val">6</span><span class="bento-metric-lbl">${isVi ? 'Người trong Squad' : 'Squad Members'}</span></div>
+              <div class="bento-metric"><span class="bento-metric-val">~20%</span><span class="bento-metric-lbl">${isVi ? 'Tỉ lệ thay đổi' : 'Change Rate'}</span></div>
+            </div>
+          `;
+        } else if (p.chips && p.chips.length > 0) {
+          metricsHtml = `
+            <div class="impact-chips">
+              ${p.chips.map((chip, idx) => {
+                const colors = ['chip-gold', 'chip-blue', 'chip-green', 'chip-orange', 'chip-purple'];
+                const cColor = isService ? 'chip-orange' : (isNew ? 'chip-green' : colors[idx % colors.length]);
+                return `<span class="chip ${cColor}">${chip}</span>`;
+              }).join('')}
+            </div>
+          `;
+        }
+
+        // Deliverables preview list
+        const deliverablesPreview = p.whatIDid.slice(0, 2).map(item => `<li>${item}</li>`).join('');
+
+        // Service Specific Box (Clients & PDF)
+        let serviceClientsHtml = '';
+        if (isService && p.clients) {
+          serviceClientsHtml = `
+            <div class="service-clients-box">
+              <div class="service-clients-title">
+                🏢 ${d.deployedClientsLabel}
+              </div>
+              <div class="client-tags">
+                ${p.clients.map(c => `<span class="client-tag">${c}</span>`).join('')}
+              </div>
+            </div>
+            <a href="${p.pdfFile || p.pdfName}" target="_blank" class="pdf-deck-btn" onclick="event.stopPropagation();">
+              ${pdfSvg} <span>${d.viewPdf}</span>
+            </a>
+          `;
+        }
+
+        return `
+          <div class="${cardClass}" onclick="openModal('${p.id}')">
+            <div class="card-meta-top">
+              ${badgeHtml}
+              <span class="card-company-pill">${p.company}</span>
+            </div>
+            
+            <h3 class="card-title">${p.title}</h3>
+            <div class="card-domain">${p.domain} &middot; <span style="font-weight:400; color:var(--gray-500);">${p.role}</span></div>
+            
+            <p class="card-desc">${p.context}</p>
+            
+            ${metricsHtml}
+
+            <ul class="card-deliverables">
+              ${deliverablesPreview}
+            </ul>
+
+            ${serviceClientsHtml}
+
+            <div class="card-footer">
+              <span style="font-size:0.75rem; color:var(--gray-500);">${p.team || ''}</span>
+              <span class="card-cta">${d.viewDetails} ${arrowSvg}</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function render() {
+      const d = DATA[lang];
+      const isVi = lang === 'vi';
+      document.documentElement.lang = lang;
+      document.title = isVi ? 'Dự án & Case Studies — Nguyễn Lê Hải | Business Analyst' : 'Projects & Case Studies — Nguyen Le Hai | Business Analyst';
+
+      // Navbar
+      document.getElementById('lang-toggle').textContent = d.nav.lang;
+      document.getElementById('mobile-lang').textContent = `Switch to ${d.nav.lang}`;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const map = { nav_home: d.nav.home, nav_about: d.nav.about, nav_skills: d.nav.skills, nav_projects: d.nav.projects, nav_experience: d.nav.experience, nav_contact: d.nav.contact };
+        if (map[key]) el.textContent = map[key];
+      });
+
+      // Header
+      document.getElementById('page-label').textContent = d.header.label;
+      document.getElementById('page-title').textContent = d.header.title;
+      document.getElementById('page-subtitle').textContent = d.header.subtitle;
+      document.getElementById('header-stats').innerHTML = d.header.stats.map(s => `
+        <div class="h-stat">
+          <span class="h-stat-val">${s.val}</span>
+          <span class="h-stat-lbl">${s.lbl}</span>
+        </div>
+      `).join('');
+
+      // Filter buttons & Grid
+      renderFilterButtons();
+      renderGrid();
+
+      // Footer
+      document.getElementById('year').textContent = new Date().getFullYear();
+    }
+
+    // Modal
+    function openModal(projectId) {
+      const d = DATA[lang];
+      const isVi = lang === 'vi';
+      const item = d.items.find(p => p.id === projectId);
+      if (!item) return;
+
+      document.getElementById('modal-meta').textContent = `${item.company} • ${item.domain} • ${item.role}`;
+      document.getElementById('modal-title').textContent = item.title;
+      document.getElementById('modal-close-btn').textContent = d.modalClose;
+
+      // Special HROS architectural modules block
+      let modulesHtml = '';
+      if (item.modules && item.modules.length > 0) {
+        modulesHtml = `
+          <div class="modal-section-label">${isVi ? 'Các Phân hệ Kiến trúc Nghiệp vụ Cốt lõi (Core Architecture Modules)' : 'Core Architecture Modules'}</div>
+          <div class="arch-modules-grid">
+            ${item.modules.map(m => `
+              <div class="arch-module-card">
+                <div class="arch-module-title">⚙️ ${m.title}</div>
+                <div class="arch-module-desc">${m.desc}</div>
+              </div>
+            `).join('')}
+          </div>
+        `;
+      }
+
+      // Special Service PDF banner
+      let pdfBannerHtml = '';
+      if (item.pdfFile || item.pdfName) {
+        const filePath = item.pdfFile || item.pdfName;
+        pdfBannerHtml = `
+          <div class="modal-pdf-banner">
+            <div class="modal-pdf-info">
+              <span class="modal-pdf-icon">📄</span>
+              <div>
+                <div class="modal-pdf-title">${isVi ? 'Tài liệu Thuyết trình & Đề xuất Giải pháp (Solution Deck)' : 'Solution Presentation & Architecture Blueprint Deck'}</div>
+                <div class="modal-pdf-desc">${item.pdfName || item.pdfFile} &middot; ${isVi ? 'Trình bày trước Trưởng bộ phận & Ban Giám đốc C-Level' : 'Presented directly to Department Heads & C-Level Leadership'}</div>
+              </div>
+            </div>
+            <a href="${filePath}" target="_blank" class="modal-pdf-action">
+              📥 ${isVi ? 'Xem / Tải Bản Present (PDF)' : 'Open / Download Solution Deck (PDF)'}
+            </a>
+          </div>
+        `;
+      }
+
+      // Special Deployed Clients List
+      let clientsHtml = '';
+      if (item.clients && item.clients.length > 0) {
+        clientsHtml = `
+          <div class="modal-section-label">${isVi ? 'Khách hàng Doanh nghiệp Tiêu biểu Đã Triển khai' : 'Deployed Enterprise Clients & Brands'}</div>
+          <div class="client-tags" style="margin-top:0.5rem;">
+            ${item.clients.map(c => `<span class="client-tag" style="font-size:0.85rem; padding:0.35rem 0.8rem; background:#EDE8DF;">🏢 ${c}</span>`).join('')}
+          </div>
+        `;
+      }
+
+      document.getElementById('modal-body').innerHTML = `
+        <div class="modal-section-label">${isVi ? 'Bối cảnh dự án & Bài toán Doanh nghiệp' : 'Context & Problem Statement'}</div>
+        <p class="modal-text">${item.context}</p>
+
+        <div class="modal-section-label">${isVi ? 'Vai trò BA & Phương pháp tiếp cận' : 'My Role & Approach'}</div>
+        <p class="modal-text">${item.roleApproach || ''}</p>
+
+        ${modulesHtml}
+
+        <div class="modal-section-label">${isVi ? 'Công việc cụ thể đã triển khai (Key Deliverables)' : 'Key Deliverables & What I Did'}</div>
+        <ul class="modal-list">
+          ${item.whatIDid.map(s => `<li>${s}</li>`).join('')}
+        </ul>
+
+        <div class="modal-section-label">${isVi ? 'Kết quả & Tác động số liệu (Impact & Metrics)' : 'Impact & Metrics'}</div>
+        <ul class="modal-list">
+          ${item.impact.map(s => `<li>${s}</li>`).join('')}
+        </ul>
+
+        ${clientsHtml}
+        ${pdfBannerHtml}
+
+        <div class="modal-section-label" style="margin-top:2rem;">${isVi ? 'Công nghệ & Kỹ năng Áp dụng (Skills & Tools)' : 'Applied Skills & Tech Stack'}</div>
+        <div class="client-tags" style="margin-top:0.5rem;">
+          ${(item.tags || []).map(t => `<span class="client-tag" style="font-size:0.75rem; background:#F2EFE9; color:var(--accent);">${t}</span>`).join('')}
+        </div>
+      `;
+
+      document.getElementById('modal-overlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('modal-overlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('modal-close-btn').addEventListener('click', closeModal);
+    document.getElementById('modal-overlay').addEventListener('click', (e) => {
+      if (e.target === document.getElementById('modal-overlay')) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    // Language Toggle
+    function toggleLang() {
+      lang = lang === 'en' ? 'vi' : 'en';
+      localStorage.setItem('portfolio-lang', lang);
+      render();
+    }
+    document.getElementById('lang-toggle').addEventListener('click', toggleLang);
+    document.getElementById('mobile-lang').addEventListener('click', () => { toggleLang(); closeMobileMenu(); });
+
+    // Mobile Menu
+    function openMobileMenu() { document.getElementById('mobile-menu').classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeMobileMenu() { document.getElementById('mobile-menu').classList.remove('open'); document.body.style.overflow = ''; }
+    document.getElementById('hamburger').addEventListener('click', openMobileMenu);
+    document.getElementById('mobile-close').addEventListener('click', closeMobileMenu);
+
+    // Init
+    render();
+
+    // Check if URL has hash (e.g. #ai-chatbot, #hros, #onhub, #novanet, #onreport, #onlead, #tech-ocos, #kvhotel, #ai-workflow)
+    const hash = window.location.hash.replace('#', '');
+    if (hash && DATA.en.items.some(p => p.id === hash)) {
+      openModal(hash);
+    }
+  </script>
+</body>
+
+</html>
