@@ -4,7 +4,7 @@ Personal portfolio website of **Nguyen Le Hai**, Business Analyst.
 
 ## 🌐 Live Website
 
-> **[hainguyen-hyper.github.io](https://hainguyen-hyper.github.io)** *(update this after deploy)*
+> **[hainguyen-hyper.github.io](https://hai-nguyen-21.github.io/index.html)** *(update this after deploy)*
 
 ## 📁 Project Structure
 
