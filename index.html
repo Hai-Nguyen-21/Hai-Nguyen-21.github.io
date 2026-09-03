@@ -492,22 +492,17 @@
         display: none !important;
       }
 
+      .hero-marquee-wrap {
+        top: clamp(5rem, 13vh, 7rem);
+      }
+
       .hero-body {
-        padding-top: clamp(150px, 28vh, 220px);
+        /* Keep the main copy below the full marquee line on narrow screens. */
+        padding-top: calc(clamp(5rem, 13vh, 7rem) + clamp(5rem, 15vw, 8.5rem) + 2rem);
       }
 
       .hero-subline {
         display: none;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .hero-avatar {
-        display: none !important;
-      }
-
-      .hero-body {
-        padding-top: 130px;
       }
     }
 
