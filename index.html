@@ -987,6 +987,14 @@
       box-shadow: 0 32px 64px rgba(0, 0, 0, 0.38), 0 0 0 1px rgba(139, 107, 61, 0.2);
     }
 
+    .p-card-personal { background:linear-gradient(145deg,#11100e 0%,#211c13 58%,#12110f 100%); border-color:rgba(198,166,107,.52); color:#f7f1e7; box-shadow:0 18px 45px rgba(25,20,12,.18); }
+    .p-card-personal::before { content:''; position:absolute; inset:0; pointer-events:none; background:radial-gradient(circle at 88% 8%,rgba(198,166,107,.2),transparent 32%); }
+    .p-card-personal:hover { border-color:#c6a66b; box-shadow:0 28px 60px rgba(24,18,9,.3); }
+    .p-card-personal .card-title { color:#f7f1e7; }
+    .p-card-personal .card-desc,.p-card-personal .card-deliverables li { color:rgba(247,241,231,.72); }
+    .p-card-personal .card-company-pill,.p-card-personal .card-footer>span:first-child { color:rgba(247,241,231,.5)!important; }
+    .p-card-personal .card-footer { border-color:rgba(247,241,231,.12); }
+
     .flagship-badge {
       display: inline-block;
       font-size: 0.62rem;
@@ -2176,7 +2184,7 @@
           ctaProjects: 'View Projects', ctaContact: 'Get in Touch',
           stats: [
             { value: '4+', label: 'Years Experience' },
-            { value: '4', label: 'Major Projects' },
+            { value: '5', label: 'Major Projects' },
             { value: '7', label: 'Products / Services' },
             { value: '3', label: 'Domains (MarTech · Hospitality · AI)' },
           ]
@@ -2239,10 +2247,10 @@
             wanosoft: 'Wanosoft (2)',
             novaon: 'Novaon Digital (5)',
             kiotviet: 'KiotViet (1)',
-            personal: 'Self-Directed (1)',
+            personal: 'Self-Directed (2)',
             typeLabel: 'Category:',
             allType: 'All Types',
-            saas: 'SaaS Products (5)',
+            saas: 'SaaS Products (7)',
             service: 'Tech Services (2)',
             methodology: 'AI Methodology (1)'
           },
@@ -2435,6 +2443,34 @@
               tags: ['Hospitality SaaS', 'BPMN 2.0', 'Guest Declaration', 'User Stories', 'UAT']
             },
             {
+              id: 'anstep-intelligence', companyId: 'personal', type: 'saas', isNew: true,
+              title: 'AN’STEP Intelligence: Ads, Orders & Profitability System',
+              company: 'Personal Project · Production MVP', domain: 'CRM Analytics / Retail Operations / Marketing Intelligence',
+              role: 'Product Owner · Business Analyst · Solution Designer · Developer', team: 'Solo project · Built and deployed in 3 days',
+              context: 'A production CRM analytics system connecting Facebook Ads, Pancake POS and financial data—turning fragmented retail operations into traceable, decision-ready profitability insights.',
+              roleApproach: 'Independently led discovery, AS-IS/TO-BE redesign, PRD/SRS, data modeling, solution architecture, Google Apps Script development, testing and production rollout.',
+              whatIDid: [
+                'Built an automated Facebook Ads and Pancake POS pipeline with immutable raw data and reconciliation controls',
+                'Designed 7-day Last Paid Touch attribution, exception mapping and order-level financial P&L',
+                'Created an executive KPI dashboard, verified snapshots, T+7 close and controlled daily/weekly reporting',
+                'Produced PRD, SRS, Business Rules, User Stories, Use Cases, BPMN, ERD, API specifications and UAT'
+              ],
+              impact: [
+                'Completed and deployed 100% of the production MVP in 3 days as a solo build',
+                'Reduced daily reporting time from approximately 120 minutes to under 10 minutes',
+                'Achieved at least 90% automatic Ads-to-Order attribution in live operations',
+                'Reconciled Spend and COD within 1 VND and eliminated UNKNOWN orders before period close'
+              ],
+              modules: [
+                { title: 'Automated Data Pipeline', desc: 'Scheduled and validated Ads/POS ingestion' },
+                { title: 'Attribution Engine', desc: '7-day Last Paid Touch with exception control' },
+                { title: 'Order-level P&L', desc: 'Actual profitability after every material cost' },
+                { title: 'Reconciliation & Reporting', desc: 'Verified snapshots, T+7 close and decision reports' }
+              ],
+              chips: ['3-Day Production MVP', '120 → <10 min', '≥90% Auto-attribution', '≤1 VND Reconciliation'],
+              tags: ['Google Apps Script', 'Google Sheets', 'Facebook Marketing API', 'Pancake Open API', 'Data Modeling', 'Financial P&L']
+            },
+            {
               id: 'ai-workflow', companyId: 'personal', type: 'methodology',
               title: 'AI-Assisted BA Workflow Optimization',
               company: 'Self-Directed Capability Building', domain: 'AI Methodology / BA Upskilling',
@@ -2558,7 +2594,7 @@
           ctaProjects: 'Xem dự án', ctaContact: 'Liên hệ ngay',
           stats: [
             { value: '4+', label: 'Năm kinh nghiệm' },
-            { value: '4', label: 'Dự án lớn đã làm' },
+            { value: '5', label: 'Dự án lớn đã làm' },
             { value: '7', label: 'Sản phẩm & dịch vụ' },
             { value: '3', label: 'Lĩnh vực (MarTech · Hospitality · AI)' },
           ]
@@ -2621,10 +2657,10 @@
             wanosoft: 'Wanosoft (2)',
             novaon: 'Novaon Digital (5)',
             kiotviet: 'KiotViet (1)',
-            personal: 'Cá nhân (1)',
+            personal: 'Cá nhân (2)',
             typeLabel: 'Phân loại:',
             allType: 'Tất cả',
-            saas: 'Sản phẩm SaaS (5)',
+            saas: 'Sản phẩm SaaS (7)',
             service: 'Dịch vụ Công nghệ (2)',
             methodology: 'Phương pháp AI (1)'
           },
@@ -2815,6 +2851,34 @@
               ],
               chips: ['2 tiếng → 10 phút', '100% Chính xác', '39 Ticket xử lý', 'Team ~10 người'],
               tags: ['Hospitality SaaS', 'BPMN 2.0', 'Khai báo Lưu trú', 'User Stories', 'UAT']
+            },
+            {
+              id: 'anstep-intelligence', companyId: 'personal', type: 'saas', isNew: true,
+              title: 'AN’STEP Intelligence: Hệ thống Phân tích Quảng cáo, Đơn hàng & Lợi nhuận',
+              company: 'Dự án cá nhân · MVP vận hành thực tế', domain: 'CRM Analytics / Vận hành Bán lẻ / Marketing Intelligence',
+              role: 'Product Owner · Business Analyst · Solution Designer · Developer', team: 'Cá nhân thực hiện · Hoàn thiện và triển khai trong 3 ngày',
+              context: 'Hệ thống CRM Analytics kết nối Facebook Ads, Pancake POS và dữ liệu tài chính, biến quy trình bán lẻ phân mảnh thành insight lợi nhuận minh bạch và sẵn sàng cho quyết định.',
+              roleApproach: 'Độc lập phụ trách khảo sát nghiệp vụ, AS-IS/TO-BE, PRD/SRS, mô hình dữ liệu, kiến trúc giải pháp, phát triển Google Apps Script, kiểm thử và triển khai thực tế.',
+              whatIDid: [
+                'Xây dựng pipeline Facebook Ads và Pancake POS tự động với dữ liệu RAW bất biến và kiểm soát đối soát',
+                'Thiết kế Last Paid Touch 7 ngày, hàng đợi ngoại lệ và P&L đến từng đơn hàng',
+                'Xây dựng dashboard KPI, snapshot kiểm duyệt, khóa kỳ T+7 và báo cáo ngày/tuần có kiểm soát',
+                'Hoàn thiện PRD, SRS, Business Rules, User Stories, Use Cases, BPMN, ERD, API Specification và UAT'
+              ],
+              impact: [
+                'Hoàn thiện và triển khai 100% production MVP trong 3 ngày với vai trò solo end-to-end',
+                'Giảm thời gian báo cáo hằng ngày từ khoảng 120 phút xuống dưới 10 phút',
+                'Đạt tối thiểu 90% tự động gắn đơn hàng với quảng cáo trong vận hành thực tế',
+                'Đối soát Spend và COD trong ngưỡng 1 VNĐ, xử lý toàn bộ đơn UNKNOWN trước khi chốt kỳ'
+              ],
+              modules: [
+                { title: 'Data Pipeline Tự động', desc: 'Đồng bộ Ads/POS theo lịch với kiểm tra dữ liệu' },
+                { title: 'Attribution Engine', desc: 'Last Paid Touch 7 ngày và kiểm soát ngoại lệ' },
+                { title: 'P&L theo Đơn hàng', desc: 'Lợi nhuận thực tế sau toàn bộ chi phí trọng yếu' },
+                { title: 'Đối soát & Báo cáo', desc: 'Snapshot xác nhận, khóa kỳ T+7 và báo cáo quyết định' }
+              ],
+              chips: ['Production MVP 3 ngày', '120 → <10 phút', '≥90% Auto-attribution', 'Đối soát ≤1 VNĐ'],
+              tags: ['Google Apps Script', 'Google Sheets', 'Facebook Marketing API', 'Pancake Open API', 'Mô hình Dữ liệu', 'Financial P&L']
             },
             {
               id: 'ai-workflow', companyId: 'personal', type: 'methodology',
@@ -3219,8 +3283,9 @@
         const tc = typeConfig[item.type] || typeConfig.saas;
         const badgeLabel = isVi ? tc.badgeLabelVi : tc.badgeLabel;
         const isFlagship = !!item.isFlagship;
+        const isPersonalCase = item.id === 'anstep-intelligence';
         const spanClass = isFlagship ? 'span-12' : (items.length === 1 ? 'span-12' : (items.length === 2 ? 'span-6' : 'span-4'));
-        const cardClass = isFlagship ? 'p-card p-card-flagship' : 'p-card';
+        const cardClass = isFlagship ? 'p-card p-card-flagship' : (isPersonalCase ? 'p-card p-card-personal' : 'p-card');
 
         const chipsHtml = item.chips ? `
           <div class="impact-chips">
@@ -3256,6 +3321,7 @@
         return `
           <div class="${cardClass} ${spanClass}" onclick="openModal('${item.id}')">
             ${isFlagship ? `<span class="flagship-badge">★ ${isVi ? 'Flagship · Dự án Tiêu biểu' : 'Flagship Project'}</span>` : ''}
+            ${isPersonalCase ? `<span class="flagship-badge">◆ ${isVi ? 'Dự án Cá nhân · Đã triển khai' : 'Personal Project · Deployed'}</span>` : ''}
             <div class="card-meta-top">
               <span class="category-badge ${tc.badgeClass}">${badgeLabel}</span>
               <div style="display:flex;gap:0.4rem;align-items:center;">
