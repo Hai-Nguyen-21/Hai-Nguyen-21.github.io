@@ -1021,7 +1021,7 @@
     <div class="container">
       <p class="section-label" id="page-label">Featured Case Studies &amp; Products</p>
       <h1 class="page-title" id="page-title">Digital Products &amp; Solutions Delivered</h1>
-      <p class="page-subtitle" id="page-subtitle">A comprehensive breakdown of major SaaS products, consulting tech services, and AI initiatives delivered across Wanosoft, Novaon Digital, and KiotViet.</p>
+      <p class="page-subtitle" id="page-subtitle">A comprehensive breakdown of major SaaS products, consulting tech services, and AI initiatives delivered across Wanosoft, Novaon Digital, KiotViet, and IITech.</p>
       
       <div class="header-stats" id="header-stats">
         <!-- Injected by JS -->
@@ -1080,11 +1080,11 @@
         header: {
           label: 'Featured Case Studies & Products',
           title: 'Digital Products & Solutions Delivered',
-          subtitle: 'A comprehensive breakdown of major SaaS products, consulting tech services, and AI initiatives delivered across Wanosoft, Novaon Digital, and KiotViet.',
+          subtitle: 'A comprehensive breakdown of major SaaS products, consulting tech services, and AI initiatives delivered across Wanosoft, Novaon Digital, KiotViet, and IITech.',
           stats: [
-            { val: '10', lbl: 'Products & Services' },
+            { val: '11', lbl: 'Products & Services' },
             { val: '27+', lbl: 'Sprints Delivered' },
-            { val: '4', lbl: 'Core Domains' },
+            { val: '5', lbl: 'Core Domains' },
             { val: '100%', lbl: 'Feasibility & Quality Track' }
           ]
         },
@@ -1093,10 +1093,11 @@
           wanosoft: 'Wanosoft (2)',
           novaon: 'Novaon Digital (5)',
           kiotviet: 'KiotViet (1)',
+          iitech: 'IITech (1)',
           personal: 'Self-Directed (2)',
           typeLabel: 'Category:',
           allType: 'All Types',
-          saas: 'SaaS Products (7)',
+          saas: 'SaaS Products (8)',
           service: 'Tech Services (2)',
           methodology: 'AI Methodology (1)'
         },
@@ -1125,7 +1126,7 @@
             ],
             impact: [
               'Managed a 6-person delivery squad end-to-end, maintaining stable throughput of ~7 MM/sprint',
-              '27+ sprints delivered since Oct 2024, averaging 4 features released per sprint',
+              '27+ sprints delivered (Oct 2024 – Sep 2026), averaging 4 features released per sprint',
               'Stable scope control with only ~20% of PRDs needing post-sprint revision',
               'Turnaround time for change escalations maintained at 2–3 days',
               'Sustained "Good" client satisfaction rating; awarded "Talented Young Employee 2025"'
@@ -1377,6 +1378,42 @@
             ],
             chips: ['2d → 1d Docs', '15min Wireframes', '20+ AI Prompts', '50% Faster'],
             tags: ['AI Prompt Engineering', 'BA Productivity', 'Generative AI', 'Agile Elicitation']
+          },
+          {
+            id: 'binder-user-profiles',
+            companyId: 'iitech',
+            type: 'saas',
+            isNew: true,
+            title: 'Binder: User Profiles — 360° Central Portfolio Module',
+            company: 'IITech (EdTech · Australia & Vietnam)',
+            domain: 'EdTech / School Management System (SIS + LMS)',
+            role: 'Business Analyst',
+            team: '7 members (1 BA, 1 PM, 1 PO, 1 UI/UX, 1 Tech Lead, 2 QA)',
+            context: 'Binder is a purpose-built Centralized School & LMS Management Platform (SIS + LMS) developed by IITech for K-12 schools in Australia (Victoria DET standard) and Vietnam. The User Profiles module is the platform\'s 360° Central Portfolio — a unified dashboard aggregating data from all system modules (Attendance, LMS, Wellbeing, Finance, Assets, Helpdesk) into a single, permission-aware profile view for Students, Staff and Parents.',
+            roleApproach: 'Independently re-defined and authored the BRD for User Profiles from scratch — synthesizing existing Figma designs, cross-module data contracts, meeting notes and stakeholder interviews into a structured, unified functional specification across three persona perspectives (Student, Staff, Parent).',
+            whatIDid: [
+              'Conducted stakeholder sessions with PM, PO and Tech Lead to define scope boundaries between User Profiles and User Management modules',
+              'Authored functional requirements covering 3 distinct personas: Student 360° Profile, Staff Profile and Parent Portal — including Header, Dashboard Widgets, Tab Structure (Attendance, Learning, Wellbeing, Billing, Documents, Audit Log)',
+              'Designed data lineage mapping: traced each displayed field back to its source module (User Management, CICO Attendance, LMS, Finance, Wellbeing, Helpdesk)',
+              'Specified RBAC + ABAC permission model with "Zero-leakage" principle — defining field-level visibility, legal restriction flags and data freshness indicators per persona and role',
+              'Produced widget registry architecture supporting tenant/campus-level configurable dashboards instead of hard-coded layout',
+              'Identified 3 previously undiscovered system modules (Finance & Revenue, Admission & Enrollment, Access & Tracking extensions) through menu reconciliation analysis'
+            ],
+            impact: [
+              'Resolved ambiguity across 12 open discussion points in a single stakeholder review session (24/09/2026), covering data architecture, Household management, legal case restrictions and Billing scope',
+              'Established clear Scope 1 / 2 / 3 phased delivery plan, preventing scope creep before development sprint begins',
+              'Zero-leakage RBAC model designed to satisfy GDPR, ISO 27001 and Victoria DET compliance requirements',
+              'Widget registry design enables reuse across any tenant/campus without re-engineering the dashboard layout'
+            ],
+            modules: [
+              { title: 'Student 360° Profile', desc: 'Header, dashboard widgets, Attendance, Learning, Wellbeing, Billing, Contacts, Documents & Audit Log' },
+              { title: 'Staff Profile', desc: 'Employment context, Calendar, Timecard, Assets, Helpdesk and role-scoped field visibility' },
+              { title: 'Parent Portal', desc: 'Child switcher, published Learning & Attendance, Billing and consent-aware document access' },
+              { title: 'Data Lineage & Contracts', desc: 'Field-by-field source mapping across CICO, LMS, Finance, Wellbeing and Helpdesk modules' },
+              { title: 'RBAC + ABAC Permission Model', desc: 'Zero-leakage access: role, campus, class, household — ISO 27001 & GDPR compliant' }
+            ],
+            chips: ['3-Persona BRD', 'Zero-Leakage RBAC', 'GDPR + ISO 27001', 'Widget Registry Design'],
+            tags: ['EdTech SaaS', 'SIS + LMS', 'BRD / FRS', 'RBAC + ABAC', 'Data Lineage', 'Stakeholder Management']
           }
         ]
       },
@@ -1385,11 +1422,11 @@
         header: {
           label: 'Dự án & Sản phẩm Tiêu biểu',
           title: 'Sản phẩm Số & Giải pháp Đã Triển khai',
-          subtitle: 'Tổng hợp chi tiết các sản phẩm SaaS, dịch vụ giải pháp công nghệ tư vấn B2B và sáng kiến ứng dụng AI đã triển khai tại Wanosoft, Novaon Digital và KiotViet.',
+          subtitle: 'Tổng hợp chi tiết các sản phẩm SaaS, dịch vụ giải pháp công nghệ tư vấn B2B và sáng kiến ứng dụng AI đã triển khai tại Wanosoft, Novaon Digital, KiotViet và IITech.',
           stats: [
-            { val: '10', lbl: 'Sản phẩm & Dịch vụ' },
+            { val: '11', lbl: 'Sản phẩm & Dịch vụ' },
             { val: '27+', lbl: 'Sprint hoàn thành' },
-            { val: '4', lbl: 'Lĩnh vực chuyên môn' },
+            { val: '5', lbl: 'Lĩnh vực chuyên môn' },
             { val: '100%', lbl: 'Đảm bảo tính khả thi' }
           ]
         },
@@ -1398,10 +1435,11 @@
           wanosoft: 'Wanosoft (2)',
           novaon: 'Novaon Digital (5)',
           kiotviet: 'KiotViet (1)',
+          iitech: 'IITech (1)',
           personal: 'Sáng kiến Cá nhân (2)',
           typeLabel: 'Phân loại:',
           allType: 'Tất cả Loại hình',
-          saas: 'Sản phẩm SaaS (7)',
+          saas: 'Sản phẩm SaaS (8)',
           service: 'Dịch vụ Giải pháp (2)',
           methodology: 'Phương pháp AI (1)'
         },
@@ -1431,7 +1469,7 @@
             impact: [
               'Quản lý đội delivery 6 người (4 Dev, 1 QA, 1 UI/UX), phụ trách backlog & sprint execution',
               'Duy trì khối lượng công việc ~7 MM/sprint ổn định theo Scrum',
-              'Dự án triển khai từ 10/2024 đến nay (27+ sprint hoàn thành, trung bình release 4 tính năng/sprint)',
+              'Dự án triển khai từ 10/2024 đến 09/2026 (27+ sprint hoàn thành, trung bình release 4 tính năng/sprint)',
               'Yêu cầu ổn định, chỉ ~20% BRD/PRD cần điều chỉnh sau khi bắt đầu sprint',
               'Giải quyết yêu cầu thay đổi trong 2–3 ngày; Đạt giải thưởng "Nhân viên trẻ tài năng" năm 2025'
             ],
@@ -1680,6 +1718,42 @@
             ],
             chips: ['2 ngày → 1 ngày', '15 phút Wireframe', '20+ Prompt AI', 'Nhanh gấp 2 lần'],
             tags: ['Kỹ thuật Prompt AI', 'Năng suất BA', 'Generative AI', 'Agile Elicitation']
+          },
+          {
+            id: 'binder-user-profiles',
+            companyId: 'iitech',
+            type: 'saas',
+            isNew: true,
+            title: 'Binder: User Profiles — Central Portfolio 360°',
+            company: 'IITech (EdTech · Úc & Việt Nam)',
+            domain: 'EdTech / Hệ thống Quản lý Trường học (SIS + LMS)',
+            role: 'Business Analyst',
+            team: '7 người (1 BA, 1 PM, 1 PO, 1 UI/UX, 1 Tech Lead, 2 QA)',
+            context: 'Binder là nền tảng quản lý trường học tích hợp SIS + LMS được IITech phát triển cho trường K-12 tại Úc (tiêu chuẩn Victoria DET) và Việt Nam. Module User Profiles là "Central Portfolio / 360° View" — dashboard tổng hợp dữ liệu từ toàn bộ các module hệ thống (Điểm danh, LMS, Wellbeing, Tài chính, Tài sản, Helpdesk) thành một giao diện duy nhất, phân quyền theo thời gian thực cho 3 nhóm người dùng: Học sinh, Nhân viên và Phụ huynh.',
+            roleApproach: 'Độc lập tái định nghĩa và soạn thảo toàn bộ BRD cho module User Profiles từ đầu — tổng hợp Figma design hiện có, data contract liên module, biên bản họp và phỏng vấn stakeholder thành bộ đặc tả chức năng thống nhất theo 3 góc nhìn persona.',
+            whatIDid: [
+              'Tổ chức và dẫn dắt phiên review stakeholder với PM, PO và Tech Lead để xác định ranh giới phạm vi giữa User Profiles và User Management',
+              'Soạn thảo đặc tả chức năng cho 3 persona: Student 360° Profile, Staff Profile và Parent Portal — bao gồm Header, Dashboard Widget, cấu trúc Tab (Điểm danh, Học tập, Wellbeing, Tài chính, Tài liệu, Audit Log)',
+              'Lập bản đồ data lineage: truy ngược từng trường hiển thị về module nguồn (User Management, CICO Attendance, LMS, Finance, Wellbeing, Helpdesk)',
+              'Thiết kế mô hình phân quyền RBAC + ABAC với nguyên tắc "Zero-leakage" — xác định field-level visibility, legal restriction flag và data freshness indicator theo từng persona và role',
+              'Đề xuất kiến trúc Widget Registry cho phép tenant/campus tự cấu hình dashboard thay vì layout cố định',
+              'Phát hiện 3 module hệ thống chưa được công khai (Finance & Revenue, Admission & Enrollment, Access & Tracking mở rộng) qua đối chiếu menu thực tế vs. trang marketing'
+            ],
+            impact: [
+              'Giải quyết 12 điểm mở trong 1 buổi review stakeholder (24/09/2026): kiến trúc dữ liệu, Household management, legal case restriction và phạm vi Billing',
+              'Xác lập kế hoạch phân kỳ Scope 1 / 2 / 3 rõ ràng, ngăn scope creep trước khi bắt đầu sprint phát triển',
+              'Mô hình Zero-leakage RBAC thiết kế để đáp ứng GDPR, ISO 27001 và tiêu chuẩn Victoria DET (Úc)',
+              'Widget Registry cho phép tái sử dụng dashboard layout trên mọi tenant/campus mà không cần re-engineering'
+            ],
+            modules: [
+              { title: 'Student 360° Profile', desc: 'Header, widget dashboard, Điểm danh, Học tập, Wellbeing, Tài chính, Liên hệ, Tài liệu & Audit Log' },
+              { title: 'Staff Profile', desc: 'Bối cảnh công tác, Lịch, Timecard, Tài sản, Helpdesk và phân quyền hiển thị trường theo role' },
+              { title: 'Parent Portal', desc: 'Child switcher, Học tập & Điểm danh đã công bố, Thanh toán và tài liệu theo consent' },
+              { title: 'Data Lineage & Contracts', desc: 'Ánh xạ nguồn từng field qua CICO, LMS, Finance, Wellbeing và Helpdesk' },
+              { title: 'Mô hình RBAC + ABAC', desc: 'Zero-leakage: role, campus, lớp, household — tuân thủ ISO 27001 & GDPR' }
+            ],
+            chips: ['BRD 3 Persona', 'Zero-Leakage RBAC', 'GDPR + ISO 27001', 'Widget Registry'],
+            tags: ['EdTech SaaS', 'SIS + LMS', 'BRD / FRS', 'RBAC + ABAC', 'Data Lineage', 'Quản lý Stakeholder']
           }
         ]
       }
@@ -1712,6 +1786,7 @@
         { id: 'wanosoft', label: f.wanosoft, count: 2 },
         { id: 'novaon', label: f.novaon, count: 5 },
         { id: 'kiotviet', label: f.kiotviet, count: 1 },
+        { id: 'iitech', label: f.iitech, count: 1 },
         { id: 'personal', label: f.personal, count: 2 }
       ];
 

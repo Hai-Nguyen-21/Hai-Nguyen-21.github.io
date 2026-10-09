@@ -72,6 +72,20 @@ I'm currently deepening my business foundation with a degree in Business Adminis
 
 ## 4. PRODUCTS & SERVICES BY COMPANY (Case Studies)
 
+### 0. IITECH (FREELANCE — EDTECH SAAS)
+
+- **Company:** IITech | **Domain:** EdTech / School Management SaaS (SIS + LMS)
+- **Role:** Lead Business Analyst (Freelancer) | **Timeline:** 08/2026 – 10/2026 (3 months)
+- **Project:** Binder — User Profiles (Central Portfolio 360°)
+- **Team Size:** 7 members (1 BA, 1 PM, 1 PO, 1 UI/UX, 1 Tech Lead, 2 QA)
+- **Key Responsibilities & Deliverables:**
+  - Redefined and drafted the complete end-to-end BRD for the User Profiles module — serving as the central nervous system / 360° view aggregating student, staff, and parent data across Attendance (CICO), LMS, Wellbeing, Finance, Assets, and Helpdesk.
+  - Formulated a zero-leakage RBAC + ABAC data access and permission model adhering to Victoria DET (Australia), ISO 27001, and GDPR compliance standards.
+  - Designed configurable Widget Registry architecture enabling multi-campus / tenant customizations without hardcoded layouts.
+  - Led stakeholder alignment session with PM, PO, and Tech Lead resolving 12 critical open architecture questions and locking down Phase 1 MVP scope.
+
+---
+
 ### A. WANOSOFT CO., LTD.
 
 #### 1. AI Chatbot for Cybersecurity Analysis ⭐ (Flagship Case Study)
@@ -86,7 +100,7 @@ I'm currently deepening my business foundation with a degree in Business Adminis
   - Managed requirement changes and led UAT for AI-powered features.
 - **Impact & Metrics:**
   - Managed a 6-person delivery squad end-to-end, maintaining stable throughput of **~7 MM/sprint**.
-  - **27+ sprints delivered** since Oct 2024, averaging **4 features released per sprint**.
+  - **27+ sprints delivered** from Oct 2024 to Sep 2026, averaging **4 features released per sprint**.
   - Stable scope control with only **~20% of PRDs needing post-sprint revision**.
   - Turnaround time for change escalations maintained at **2–3 days**.
   - Sustained **"Good" client satisfaction**; awarded **"Talented Young Employee 2025"**.
@@ -249,6 +263,20 @@ Trong hơn 4 năm qua, tôi đã làm việc ở cả hai môi trường **outso
 
 ## 3. DANH MỤC SẢN PHẨM & DỊCH VỤ THEO CÔNG TY
 
+### 0. IITECH (FREELANCER — EDTECH SAAS)
+
+- **Công ty:** IITech | **Lĩnh vực:** EdTech / Hệ thống Quản lý Trường học (SIS + LMS)
+- **Vai trò:** Lead Business Analyst (Freelancer) | **Thời gian:** 08/2026 – 10/2026 (3 tháng)
+- **Dự án:** Binder — User Profiles (Central Portfolio 360°)
+- **Quy mô:** 7 thành viên (1 BA, 1 PM, 1 PO, 1 UI/UX, 1 Tech Lead, 2 QA)
+- **Trách nhiệm & Kết quả cốt lõi:**
+  - Tái định nghĩa và biên soạn toàn bộ BRD chuẩn hoá cho module User Profiles — đóng vai trò "Central Portfolio / 360° View" tích hợp dữ liệu từ 6 phân hệ (Điểm danh CICO, LMS, Wellbeing, Tài chính, Tài sản, Helpdesk).
+  - Thiết kế mô hình phân quyền RBAC + ABAC với nguyên tắc Zero-leakage tuân thủ các tiêu chuẩn giáo dục Victoria DET (Úc), ISO 27001 và GDPR.
+  - Đề xuất kiến trúc Widget Registry cho phép các cơ sở/tenant trường tự cấu hình dashboard linh hoạt.
+  - Chủ trì phiên làm việc với PM, PO và Tech Lead tháo gỡ 12 điểm kiến trúc then chốt, chốt phạm vi phân kỳ MVP Scope 1 / 2 / 3.
+
+---
+
 ### A. WANOSOFT CO., LTD.
 
 #### 1. AI Chatbot phân tích An ninh mạng ⭐ (Dự án Tiêu biểu)
@@ -262,7 +290,7 @@ Trong hơn 4 năm qua, tôi đã làm việc ở cả hai môi trường **outso
   - Quản lý thay đổi yêu cầu, lead đội ngũ BA và trực tiếp dẫn dắt UAT.
 - **Kết quả & Tác động số liệu:**
   - Quản lý squad 6 người, duy trì khối lượng công việc ổn định **~7 MM/sprint**.
-  - **27+ sprint hoàn thành** từ 10/2024 đến nay, trung bình **4 tính năng release/sprint**.
+  - **27+ sprint hoàn thành** từ 10/2024 đến 09/2026, trung bình **4 tính năng release/sprint**.
   - Yêu cầu kiểm soát tốt, chỉ **~20% PRD cần chỉnh sửa sau khi bắt đầu sprint**.
   - Tốc độ xử lý yêu cầu thay đổi nhanh trong **2–3 ngày**; Đạt danh hiệu **"Nhân viên trẻ tài năng 2025"**.
 
